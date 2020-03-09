@@ -44,29 +44,29 @@
 									<div class="col-12 col-md-6">
 										<div class="form-group material-input">
 											<input type="text" class="form-control input-tp" name="fname" id="fname">
-											<label for="fname" class="title-font text-uppercase">First Name</label>
+											<label for="fname" class="title-font text-uppercase">الاسم بالكامل</label>
 										</div>
 									</div>
 									<div class="col-12 col-md-6">
 										<div class="form-group material-input">
 											<input type="text" class="form-control input-tp" name="lname" id="lname">
-											<label for="lname" class="title-font text-uppercase">Last Name</label>
+											<label for="lname" class="title-font text-uppercase">اصف عنوان الرسالة</label>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group material-input">
 											<input type="email" class="form-control input-tp" name="email" id="email">
-											<label for="email" class="title-font text-uppercase">Email Address</label>
+											<label for="email" class="title-font text-uppercase">البريد الالكتروني</label>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group material-input">
 											<textarea id="message" name="message" class="form-control input-tp"></textarea>
-											<label for="message" class="title-font text-uppercase">Enter your message</label>
+											<label for="message" class="title-font text-uppercase">اكتب رسالتك</label>
 										</div>
 									</div>
 									<div class="col-12">
-										<button type="submit" class="btn btn-theme float-left">Send Message</button>
+										<button type="submit" class="btn btn-theme float-left">ارسال</button>
 									</div>
 								</div>
 								<div id="success" class="alert alert-success mt-20" style="display: none">Your message has been sent successfully :)</div>

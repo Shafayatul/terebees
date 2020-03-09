@@ -15,11 +15,10 @@ if(window.$router == true){
 
     $(function() {
 
-        var navbar_nav = $('.navbar-nav'),
-            site_header = $('.site-header'),
+        var site_header = $('.site-header'),
             wHeight = window.innerHeight,
             hHeight = site_header.outerHeight(),
-            wWidth = $(window).width(),
+            Width = $(window).width(),
             fitscreen = wHeight-hHeight,
             fitscreen = wHeight-hHeight;
 

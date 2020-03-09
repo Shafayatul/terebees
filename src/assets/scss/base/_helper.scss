@@ -151,6 +151,12 @@
 	background-image: -webkit-linear-gradient(left, #fe3e0b 0%, #fc0247 100%); /* Chrome10-25,Safari5.1-6 */
 	background-image: linear-gradient(left, #fe3e0b 0%, #fc0247 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+.gradient-bg-btn {
+	background-image: linear-gradient(left, #A32C12 0%,#F83A0F 100%);
+	background-image: -moz-linear-gradient(left, #A32C12 0%,#F83A0F 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(left, #A32C12 0%,#F83A0F 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(left, #A32C12 0%,#F83A0F 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
 .gradient-hover {
 	position: relative;
 	z-index: 1;
@@ -200,6 +206,9 @@
 	&:focus {
 		color: #fff;
 	}
+}
+.btn-theme-1{
+	@extend .gradient-bg-btn;
 }
 
 .btn-dark {

@@ -28,7 +28,7 @@
 								<table id="class-schedule-table" class="table-class-schedule table table-bordered">
 									<thead class="title-font text-white">
 										<tr>
-											<th>Class Name</th>
+											<th>اسم التمرين</th>
 											<th>Monday</th>
 											<th>Tuseday</th>
 											<th>Wednesday</th>

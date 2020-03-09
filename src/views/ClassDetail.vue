@@ -15,7 +15,7 @@
 						<li> <router-link to="/class" data-text="Home">Class</router-link></li>
 						<li> <router-link to="/class-detail" data-text="Home">Detail</router-link></li>
 					</ul>
-					<svg version="1.1" class="bc-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
+					<svg version="1.1" class="bc-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
 						<g>
 							<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 	"/>
 							<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 	"/>
@@ -34,23 +34,23 @@
 									<span class="gradient-border transition"></span>
 								</figure>
 								<div class="excerpt">
-									<h4 class="text-uppercase fw-700 text-white">We Are Squat Here is our standard blog post</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+									<h4 class="text-uppercase fw-700 text-white">عنوان التمرينف</h4>
+									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
+									
 									<blockquote class="text-italic">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود
 									</blockquote>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
 								</div>
 							</article> <!-- end .blog-post -->
 							<div class="row align-items-center">
 								<div class="col-12 col-md-6">
 									<ul class="social-icons flex list-unstyled mb-0">
-										<li class="social-share">Share this post on:</li>
-										<li><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+										<li class="social-share">مشاركة هذا المنشور على :</li>
 										<li><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="javascript:void(0)"><i class="fa fa-behance"></i></a></li>
-										<li><a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
+										<li><a class="mr-2" href="javascript:void(0)"><i class="fa fa-behance"></i></a></li>
+										<li><a class="mr-2" href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+										<li><a class="mr-2" href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
 									</ul>
 								</div> <!-- end .post-share -->
 
@@ -135,12 +135,12 @@
 								<figure class="author-thumb text-center">
 									<img src="@/assets/img/class_details/layer-3.png" class="img-fluid" alt="">
 									<figcaption class="mt-30">
-										<h4 class="h6 text-white fw-700 text-uppercase">Mark Tylor Junior</h4>
-										<p>Senior Fitness Trainer</p>
+										<h4 class="h6 text-white fw-700 text-uppercase">محمد ابو شماله</h4>
+										<p>مدرب اللياقة البدنية</p>
 									</figcaption>
 								</figure>
 								<div class="text-center">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<p>والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود.</p>
 									<div class="buttons-group flex align-center justify-center mt-30">
 										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border mr-10">Facebook</a>
 										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border mr-10">Instagram</a>
@@ -150,7 +150,7 @@
 							</section> <!-- end .widget -->
 							<section class="widget widget-class-info mb-50">
 								<div class="widget-title">
-									<h4 class="h6 text-white fw-700 text-uppercase mb-0">Class Information</h4>
+									<h4 class="h6 text-white fw-700 text-uppercase mb-0">تفاصيل التدريب</h4>
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
 										<polygon class="svg-fill-text" points="20,0 0,60 10,60 30,0 "/>
 										<polygon class="svg-fill-text" points="40,0 20,60 25,60 45,0 "/>

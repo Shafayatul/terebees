@@ -56,7 +56,7 @@ export default{
     .step-2{fill:#FC0247;}
  .ft-icon {
     background-image: -webkit-gradient(linear, left top, right top, from(#fe3e0b), to(#fa004a));
-    padding:5px;
+    padding:5px 7px;
     border-radius: 68%;
 }
 .ft-icon:hover{

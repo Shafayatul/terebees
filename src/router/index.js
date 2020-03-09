@@ -25,8 +25,10 @@ const routes = [
   {
     path: '/404',
     component: NotFound,
+    name: 'NotFound',
     meta: {
-      footerTop: false
+      footerTop: false,
+      header:false,
     }
   },
   {
@@ -105,6 +107,7 @@ const routes = [
     }
   }
 ]
+
 
 const router = new VueRouter({
   mode: 'history',

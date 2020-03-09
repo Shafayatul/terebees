@@ -113,7 +113,7 @@
                   <article class="about-article">
                   <h2 class="">معلومات عنا</h2>                   
                     <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                    <a href="#" class="btn btn-theme mt-30">اعرف اكثر</a>
+                    <a href="#" class="btn btn-theme-1 mt-30">اعرف اكثر</a>
                   </article>
               </div>
                           
@@ -130,7 +130,7 @@
         <div class="container z-index-1 p-relative">
             <div class="row">
                 <!-- end .col-12 -->
-                  <div class="col-md-6 col-12 p2">
+                  <div class="col-md-4 col-12 p2">
                     
                       <div class="overlay cart-overlay">
                         <div class="rel">
@@ -172,7 +172,7 @@
                                   
                   </div>
               </div>
-              <div class="col-12 col-md-6 section-heading mb-100 text-center">
+              <div class="col-12 col-md-6 offset-1 section-heading mb-100 text-center">
                   <p class="gradient-text text-uppercase fw-500 inline-flex align-items-center">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 30" style="enable-background:new 0 0 19 30;" xml:space="preserve">
                         <g>
@@ -256,9 +256,12 @@
         <!-- end .chat -->
       </section>
       <!-- end #our-services -->
-      <section id="our-trainers" class="top-full bottom-half p-relative ov-hidden">
-        <div class="watermark-title">Trainer</div>
+      <section id="our-trainers" class=" bottom-half top-half p-relative ov-hidden">
+        <div class="watermark-title " >
+         
+        </div>
         <div class="container z-index-1 p-relative">
+                 <img src="@/assets/img/trainers.png" class="img-fluid trainer-imgs" alt="" >  
             <div class="row">
               <div class="section-heading mb-100 col-12 text-center">
                   <p class="gradient-text text-uppercase fw-500 inline-flex align-items-center">
@@ -291,7 +294,7 @@
                      <div class="col-12 col-md-6 col-lg-6">
                            <h3 class="text-white text-uppercase fw-700 text-white mb-30">اسم الجدول</h3>
                            <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                           <a href="#" class="btn btn-theme mt-30 text-white">اعرف المزيد</a>
+                           <a href="#" class="btn btn-theme-1 mt-30 text-white">اعرف المزيد</a>
                      </div>
                     <!-- end .col-12 col-lg-5 lg-push-1 -->
                     <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -302,7 +305,7 @@
                      <div class="col-12 col-md-6 col-lg-6">
                            <h3 class="text-white text-uppercase fw-700 text-white mb-30">اسم الجدول</h3>
                            <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                           <a href="#" class="btn btn-theme mt-30 text-white">اعرف المزيد</a>
+                           <a href="#" class="btn btn-theme-1 mt-30 text-white">اعرف المزيد</a>
                      </div>
                     <!-- end .col-12 col-lg-5 lg-push-1 -->
                     <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -313,7 +316,7 @@
                      <div class="col-12 col-md-6 col-lg-6">
                            <h3 class="text-white text-uppercase fw-700 text-white mb-30">اسم الجدول</h3>
                            <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                           <a href="#" class="btn btn-theme mt-30 text-white">اعرف المزيد</a>
+                           <a href="#" class="btn btn-theme-1 mt-30 text-white">اعرف المزيد</a>
                      </div>
                     <!-- end .col-12 col-lg-5 lg-push-1 -->
                     <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -502,16 +505,17 @@
                         </figcaption>
                     </figure>
                     <!-- end .pt-image -->
-                    <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
+                     <!-- end .pt-image -->
+                   <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme"><i class="ti-unlock mr-15"></i>Enroll Now</a>
-                          <span class="pt-tag gradient-text text-uppercase fw-700 title-font">$200.00</span>
-                          <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Weight Lifting Women</h4>
-                          <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock mr-15"></i>Enroll Now</a>
+                          <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
+                          <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">اسم التدريب</h4>
+                          <p>اسم التدريب</p>
                           <ul class="list-double-arrow">
-                              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                              <li>Lorem ipsum dolor sit amet consec.</li>
-                              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
                           </ul>
                         </div>
                     </div>
@@ -530,16 +534,17 @@
                         </figcaption>
                     </figure>
                     <!-- end .pt-image -->
-                    <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
+                     <!-- end .pt-image -->
+                   <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme"><i class="ti-unlock mr-15"></i>Enroll Now</a>
-                          <span class="pt-tag gradient-text text-uppercase fw-700 title-font">$200.00</span>
-                          <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Weight Lifting Women</h4>
-                          <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock mr-15"></i>Enroll Now</a>
+                          <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
+                          <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">اسم التدريب</h4>
+                          <p>اسم التدريب</p>
                           <ul class="list-double-arrow">
-                              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                              <li>Lorem ipsum dolor sit amet consec.</li>
-                              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
                           </ul>
                         </div>
                     </div>
@@ -558,16 +563,16 @@
                         </figcaption>
                     </figure>
                     <!-- end .pt-image -->
-                    <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
+                   <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme"><i class="ti-unlock mr-15"></i>Enroll Now</a>
-                          <span class="pt-tag gradient-text text-uppercase fw-700 title-font">$200.00</span>
-                          <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Weight Lifting Women</h4>
-                          <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock mr-15"></i>Enroll Now</a>
+                          <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
+                          <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">اسم التدريب</h4>
+                          <p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </p>
                           <ul class="list-double-arrow">
-                              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-                              <li>Lorem ipsum dolor sit amet consec.</li>
-                              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                              <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
                           </ul>
                         </div>
                     </div>
@@ -620,7 +625,7 @@
                     <!-- end .blog-image -->
                     <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme"><i class="ti-arrow-right mr-15"></i>Read more</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-arrow-right mr-15"></i>Read more</a>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Standard Blog Post 01</h4>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p>
                           <div class="blog-tags flex">
@@ -648,7 +653,7 @@
                     <!-- end .blog-image -->
                     <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme"><i class="ti-arrow-right mr-15"></i>Read more</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-arrow-right mr-15"></i>Read more</a>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Standard Blog Post 02</h4>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p>
                           <div class="blog-tags flex">
@@ -724,6 +729,10 @@ export default {
 .trainer-slider{
 	position: relative;
 }
+.item-card .pt-caption{
+  right: 40px !important;
+  left: 0 !important;
+}
 .custom-arrow{
 	position :absolute;
 	right: 41.6%;
@@ -739,7 +748,31 @@ export default {
 	height: 100%;
 	background-size: cover;
 }
-.slick-man{
-  overflow: hidden;
+
+.list-double-arrow{
+  color:#fff;
+ 
+}
+.list-double-arrow li{
+  padding-right: 0;
+  padding-left: inherit;
+
+}
+.list-double-arrow li::before {
+	   content: "\e662";   
+    font-family: "themify";
+   right: 0;
+    margin-right: -24px;
+    position: absolute;
+    left: inherit;
+    top: 0;
+}
+.item-card-hover p{
+  color: #fff;
+}
+.trainer-imgs{
+  position: absolute;
+  top: -103px !important;
+  left: 78px;
 }
 </style>

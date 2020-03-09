@@ -15,7 +15,7 @@
 						<li> <router-link to="/blog-single" data-text="Home">Blog</router-link></li>
 						<li> <router-link to="/blog-single" data-text="Home">Details</router-link></li>
 					</ul>
-					<svg version="1.1" class="bc-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 210 200" xml:space="preserve">
+						<svg version="1.1" class="bc-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
 						<g>
 							<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 	"/>
 							<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 	"/>
@@ -198,11 +198,13 @@
 							</section> <!-- end .widget -->
 							<section class="widget widget-popular-posts mb-50">
 								<div class="widget-title">
+										
 									<h4 class="h6 text-white fw-700 text-uppercase mb-0">مقالات مشهورة</h4>
-									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
-										<polygon class="svg-fill-text" points="20,0 0,60 10,60 30,0 "/>
+								    	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" xml:space="preserve">
+										<polygon class="svg-fill-text" points="20,0 0,60 10,60 30,0 "/>									
 										<polygon class="svg-fill-text" points="40,0 20,60 25,60 45,0 "/>
-									</svg>
+									    </svg>
+													
 								</div>
 								<ul class="widget-post-list  mb-0 mt-30 pr-0">
 									<li class="flex widget-post">

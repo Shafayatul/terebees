@@ -561,14 +561,14 @@ a:hover {
   position: relative;
 }
 
-.list-double-arrow li::before {
-  content: "\e661";
+/* .list-double-arrow li::before {
+  content: "\e662";
   font-family: 'themify';
   left: 0;
   margin-right: 13px;
   position: absolute;
   top: 0;
-}
+} */
 
 .primary-color {
   color: #fa004a;
@@ -622,7 +622,6 @@ a:hover {
   background: -webkit-gradient(linear, left top, right top, from(#fc0247), to(#fe3e0b));
   background: linear-gradient(to right, #fc0247 0%, #fe3e0b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1577,7 +1576,7 @@ a:hover {
   transform: scaleY(1);
 }
 
-> .navbar-nav > li:first-child a {
+.navbar-nav > li:first-child a {
   margin-left: 0;
 }
 
@@ -1727,6 +1726,7 @@ a:hover {
 .header-sticky .navbar-nav > li > a {
   padding-bottom: 24px;
   padding-top: 25px;
+  font-weight: bold;
 }
 
 /* 
@@ -2557,7 +2557,6 @@ a:hover {
   background-size: 80%;
   -webkit-animation: animate 5s linear infinite;
           animation: animate 5s linear infinite;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 

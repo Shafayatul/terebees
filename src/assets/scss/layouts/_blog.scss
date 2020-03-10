@@ -76,13 +76,14 @@
 	}
 
 	blockquote {
-		padding: 30px 30px 30px 53px;
+		padding: 30px 53px 30px 30px ;
 		position: relative;
+		background-color: #111318 ;
 		&::before {
 			background-color: $primary-color;
 			bottom: 30px;
 			content: "";
-			right: 0;
+			right: 30px;
 			position: absolute;
 			top: 30px;
 			width: 3px;
@@ -238,7 +239,7 @@
 		}
 		&:hover {
 			&::before {
-				margin-right: 10px;
+				margin-left: 10px;
 				width: 30px;
 			}
 			a {
@@ -304,4 +305,10 @@
 
 .comment-heading {
   	margin-top: -5px;
+}
+.section{
+	padding: 25px auto !important;
+}
+.trainer-body{
+	color: #fff;
 }

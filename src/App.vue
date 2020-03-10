@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     
-    <!-- <div class="preloader-wrap flex align-center justify-center">
+    <div class="preloader-wrap flex align-center justify-center">
 			<div class="preloader flex"><div class="dash uno"></div><div class="dash dos"></div><div class="dash tres"></div><div class="dash cuatro"></div></div>
-		</div> -->
+		</div>
     
 		<Header />
 

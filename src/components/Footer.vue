@@ -1,7 +1,7 @@
 <template>
     <footer class="site-footer" :class="$route.meta.footerTop === true ? 'bottom-full': 'section-full'" v-if="$route.path !== '/404'">
         <div class="footer-top-shape"  v-if="$route.meta.footerTop === true">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 341" style="enable-background:new 0 0 1920 341;" xml:space="preserve">                
+             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 341" style="enable-background:new 0 0 1920 341;" xml:space="preserve">                
                 <g>
                     <polygon class="step-2" points="0,270 0,270 0,341 959.9,191 1920,341 1920,270 960,120   "/>
                     <polygon class="step-1" points="0,200 0,200 0,251 959.9,101 1920,251 1920,200 960,50    "/>
@@ -27,9 +27,9 @@
                         <li><router-link to="/contact">  تواصل معنا</router-link></li>
                     </ul>
                     <div class="buttons-group flex align-items-center justify-center mt-30 d-flex d-sm-none">
-                        <a href="#" class="btn btn-sm btn-bottom-border mr-20"></a>
-                        <a href="#" class="btn btn-sm btn-bottom-border mr-20"><i class="fas fa-instagram"></i></a>
-                        <a href="#" class="btn btn-sm btn-bottom-border"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="btn-sm btn-bottom-border mr-20"></a>
+                        <a href="#" class="btn-sm btn-bottom-border mr-20"><i class="fas fa-instagram"></i></a>
+                        <a href="#" class="btn-sm btn-bottom-border"><i class="fa fa-linkedin"></i></a>
                     </div>
                     <div class="buttons-group text-center">
                         <a href="#" class="btn btn-bottom-border ">فيسبوك<i class="mr-2 fa fa-facebook ft-icon"></i></a>

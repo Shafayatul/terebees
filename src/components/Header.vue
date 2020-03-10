@@ -1,6 +1,7 @@
 <template>
-    <header class="site-header navbar navbar-expand-lg">
-        <div class="container">
+
+    <header class="site-header navbar navbar-expand-lg" :class="$route.meta.header === true ? 'bottom-full': 'section-full'" v-if="$route.path !== '/404'">
+        <div class="container" v-if="$route.meta.header === true">
             <router-link to="/" class="navbar-brand" data-text="Home">
                 <img src="@/assets/img/logo-color.png" alt="Squat">
             </router-link><!-- end .navbar-brand -->
@@ -28,6 +29,7 @@
                             <li><router-link to="/clasess">Classes</router-link></li>
                             <li><router-link to="/class-detail">Class Details</router-link></li>
                             <li><router-link to="/our-trainer">Our Trainers</router-link></li>
+                            <li><router-link to="/Ask_Trainer">Ask Trainers</router-link></li>
                             <li><router-link to="/gallery">Gallery</router-link></li>
                             <li><router-link to="/404">404</router-link></li>
                         </ul>

@@ -5,9 +5,9 @@ window.$router = true;
     alert(window.$router);
 }, 5000);*/
 
-// $(window).on('load', function() {
-//     $('.preloader-wrap').fadeOut();
-// });
+$(window).on('load', function() {
+    $('.preloader-wrap').fadeOut();
+});
 setInterval(() => {
 if(window.$router == true){
 
@@ -15,10 +15,11 @@ if(window.$router == true){
 
     $(function() {
 
-        var site_header = $('.site-header'),
+        var navbar_nav = $('.navbar-nav'),
+            site_header = $('.site-header'),
             wHeight = window.innerHeight,
             hHeight = site_header.outerHeight(),
-            Width = $(window).width(),
+            wWidth = $(window).width(),
             fitscreen = wHeight-hHeight,
             fitscreen = wHeight-hHeight;
 
@@ -66,7 +67,7 @@ if(window.$router == true){
             $('.site-main').removeClass('dark-bg');
             $('body').addClass('dark-bg');
         } else {
-            // $('.navbar-nav').addClass('nav-dark');
+            $('.navbar-nav').addClass('navbar-nav');
             $('.animated-ham').addClass('anim-ham-dark');
         }
 
@@ -87,7 +88,7 @@ if(window.$router == true){
         // mfp image
         $('.mfp-image-single').magnificPopup({
             type: 'image',
-            removalDelay: 0, //delay removal by X to allow out-animation
+            removalDelay: 500, //delay removal by X to allow out-animation
             callbacks: {
                 beforeOpen: function() {
                     // just a hack that adds mfp-anim class to markup 
@@ -160,68 +161,23 @@ if(window.$router == true){
             return result;
         }
 
-        // console.log(convertHex('#fc0247',80));
+        // console.log(convertHex('#fc0247',80));      
 
-        // check if testimonial carousel exists
-        if ($("#home-2-slider")[0]){
-            $("#home-2-slider").slick({
-                infinite: true,
-                fade: true,
-                arrows: false,
-                dots: true,
-                autoplay: false,
-                slidesToShow: 1,
-                prevArrow: '<button class="slick-prev slick-arrow gradient-bg gradient-hover"><i class="ti-angle-left"></i></button>',
-                nextArrow: '<button class="slick-next slick-arrow gradient-bg gradient-hover"><i class="ti-angle-right"></i></button>'
+        function doAnimations(elements) {
+            var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            elements.each(function() {
+                var $this = $(this);
+                var $animationDelay = $this.data('delay');
+                var $animationType = 'animated ' + $this.data('animation');
+                $this.css({
+                    'animation-delay': $animationDelay,
+                    '-webkit-animation-delay': $animationDelay
+                });
+                $this.addClass($animationType).one(animationEndEvents, function() {
+                    $this.removeClass($animationType);
+                });
             });
         }
-       
-        if ($(".main-banner-slider")[0]){
-            $(".main-banner-slider").slick({
-              infinite: false,
-                fade: true,
-                arrows: false,
-                dots: true,
-                autoplay: true,
-                draggable: false,
-                slidesToShow: 1,
-              
-            });
-        }
-        // check if testimonial carousel exists
-        if ($(".testimonials")[0]){
-            $('.testimonials').slick({
-                infinite: true,
-                fade: true,
-                arrows: false,
-                dots: false,
-                autoplay: true,
-                draggable: false,
-                slidesToShow: 1,
-                rtl: false,
-                prevArrow: '<button class="slick-prev slick-arrow gradient-bg gradient-hover"><i class="ti-angle-left"></i></button>',
-                nextArrow: '<button class="slick-next slick-arrow gradient-bg gradient-hover"><i class="ti-angle-right"></i></button>'
-            });
-        }
-        // check if trainer-slider exists
-
-        if ($('.slider').attr('dir', 'ltr')){
-            $('.trainer-slider').slick({
-                lazyLoad: 'ondemand',
-                infinite: true,
-                fade: true,
-                autoplay: false,
-                draggable: false,
-                rtl: false,
-                 slidesToScroll: -1,
-                slidesToShow: 1,
-                 cssEase: 'linear',
-                prevArrow: '<button class="slick-prev slick-arrow gradient-bg gradient-hover"><i class="ti-angle-left"></i></button>',
-                nextArrow: '<button class="slick-next slick-arrow gradient-bg gradient-hover"><i class="ti-angle-right"></i></button>'
-            });
-        }
-
-      
 
 
         if ($(".paroller")[0]){
@@ -303,7 +259,9 @@ if(window.$router == true){
         });
     });
 
- 
+    if ($("#contact-map")[0]) {
+      
+    }
 }
 }, 100);
 

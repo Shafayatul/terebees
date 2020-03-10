@@ -60,13 +60,13 @@
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="form-group material-input">
-											<textarea id="message" name="message" class="form-control input-tp"></textarea>
+										<div class="form-group material-input pt-5">
+											<textarea id="message" name="message" class="form-control text-ari "  rows="10"></textarea>
 											<label for="message" class="title-font text-uppercase">اكتب رسالتك</label>
 										</div>
 									</div>
 									<div class="col-12">
-										<button type="submit" class="btn btn-theme float-left">ارسال</button>
+										<button type="submit" class="btn sub btn-theme float-left">ارسال</button>
 									</div>
 								</div>
 								<div id="success" class="alert alert-success mt-20" style="display: none">Your message has been sent successfully :)</div>
@@ -89,4 +89,13 @@ export default {
   name: 'Contact'
 }
 </script>
+<style scoped>
+.text-ari{
+	background-color: #26282F;
+	height: auto;
+}
+.sub{
+	padding: 10px 40px !important;
+}
+</style>
 

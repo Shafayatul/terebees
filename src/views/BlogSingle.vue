@@ -28,7 +28,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-8">
-							<article class="blog-post mb-50">
+							<article class="blog-post mb-3">
 								<figure class="post-media p-relative mb-35">
 									<img src="@/assets/img/blog_details/layer-9.png" class="img-fluid" alt="">
 									<span class="gradient-border transition"></span>
@@ -69,7 +69,7 @@
 							<div class="row">
 								<div class="col-12 col-md-6">
 									<ul class="social-icons flex list-unstyled mb-0">
-										<li class="social-share">Share this post on:</li>
+										<li class="social-share">مشاركة هذا المنشور على :</li>
 										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 										<li><a class="ml-2" href="#"><i class="fa fa-behance"></i></a></li>
@@ -77,7 +77,7 @@
 									</ul>
 								</div> <!-- end .post-share -->
 
-								<div class="col-12 col-md-6 post-nav text-right">
+								<div class="col-12 col-md-6 post-nav text-left">
 									<a href="#" data-fs="12" class="btn btn-sm btn-dark">Next Post <i class="ti-arrow-right ml-10"></i></a>
 									<a href="#" data-fs="12" class="btn btn-sm btn-dark mr-10"><i class="ti-arrow-left mr-10"></i> Prev Post</a>
 								</div> <!-- end .post-nav -->
@@ -90,7 +90,7 @@
 									<h5 class="text-white text-uppercase fw-700">مقالات مشهورة</h5>
 									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
 									<ul class="social-icons flex  mb-0 list-unstyled">
-										<li class="social-share">Share this post on:</li>
+										<li class="social-share">مشاركة هذا المنشور على :</li>
 										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 										<li><a class="ml-2" href="#"><i class="fa fa-behance"></i></a></li>
@@ -190,9 +190,9 @@
 								<div class="text-center">
 									<p>والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
 									<div class="buttons-group flex align-center justify-center mt-30">
-										<a href="#" class="btn btn-sm btn-bottom-border mr-10">Facebook</a>
-										<a href="#" class="btn btn-sm btn-bottom-border mr-10">Instagram</a>
-										<a href="#" class="btn btn-sm btn-bottom-border">Linkedin</a>
+										<a href="#" class="btn btn-sm btn-bottom-border">تويتر</a>
+										<a href="#" class="btn btn-sm btn-bottom-border mr-10">فيسبوك</a>
+										<a href="#" class="btn btn-sm btn-bottom-border mr-10">انستجرام</a>
 									</div>
 								</div>
 							</section> <!-- end .widget -->

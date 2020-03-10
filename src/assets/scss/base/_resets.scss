@@ -14,7 +14,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $title-font;
 }
-
+.btn{
+	font-family: $font-stack !important;
+}
 a {
 	@include transition(all 0.2s ease 0s);
 	&:hover,

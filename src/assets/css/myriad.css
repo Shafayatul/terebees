@@ -1,31 +1,47 @@
 @font-face {
+    font-family: 'Kharabeesh';
+    src: url('../fonts/Kharabeesh-Font.ttf') format('ttf'),
+        url('../fonts/Kharabeesh-Font.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/MyriadArabic-Bold.woff2') format('woff2'),
-        url('../fonts/MyriadArabic-Bold.woff') format('woff');
+    src: url('../fonts/ArbFONTS-MyriadArabic-Bold.otf') format('otf'),
+        url('../fonts/ArbFONTS-MyriadArabic-Bold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Myriad Arabic';
+    src: url('../fonts/ArbFONTS-Graphology_Light.otf') format('otf'),
+        url('../fonts/ArbFONTS-Graphology_Light.otf') format('otf');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/MyriadArabic-BoldIt.woff2') format('woff2'),
-        url('../fonts/MyriadArabic-BoldIt.woff') format('woff');
+    src: url('../fonts/ArbFONTS-MyriadArabic-BoldIt.otf') format('otf'),
+        url('../fonts/ArbFONTS-MyriadArabic-BoldIt.otf') format('otf');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/MyriadArabic-It.woff2') format('woff2'),
-        url('../fonts/MyriadArabic-It.woff') format('woff');
+    src: url('../fonts/ArbFONTS-MyriadArabic-It.otf') format('otf'),
+        url('../fonts/ArbFONTS-MyriadArabic-It.otf') format('otf');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/MyriadArabic-Regular.woff2') format('woff2'),
-        url('../fonts/MyriadArabic-Regular.woff') format('woff');
+    src: url('../fonts/ArbFONTS-MyriadArabic-Regular.otf') format('otf'),
+        url('../fonts/ArbFONTS-MyriadArabic-Regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }

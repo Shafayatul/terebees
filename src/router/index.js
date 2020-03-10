@@ -6,6 +6,7 @@ import ClassSchedule from '../views/ClassSchedule.vue'
 import Clasess from '../views/Clasess.vue'
 import ClassDetail from '../views/ClassDetail.vue'
 import OurTrainer from '../views/OurTrainer.vue'
+import Ask_Trainer from '../views/Ask_Trainer.vue'
 import Gallery from '../views/Gallery.vue'
 import BlogList from '../views/BlogList.vue'
 import BlogSingle from '../views/BlogSingle.vue'
@@ -19,7 +20,8 @@ const routes = [
     name: 'home',
     component: Home,
     meta: {
-      footerTop: true
+      footerTop: true,
+      header: true
     }
   },
   {
@@ -39,7 +41,8 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -47,7 +50,8 @@ const routes = [
     name: 'classSchedule',
     component: ClassSchedule,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -55,7 +59,8 @@ const routes = [
     name: 'clasess',
     component: Clasess,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -63,7 +68,8 @@ const routes = [
     name: 'classDetail',
     component: ClassDetail,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -71,7 +77,8 @@ const routes = [
     name: 'ourTrainer',
     component: OurTrainer,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -79,7 +86,8 @@ const routes = [
     name: 'gallery',
     component: Gallery,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -87,7 +95,8 @@ const routes = [
     name: 'blogList',
     component: BlogList,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -95,7 +104,8 @@ const routes = [
     name: 'blogSingle',
     component: BlogSingle,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
     }
   },
   {
@@ -103,7 +113,17 @@ const routes = [
     name: 'contact',
     component: Contact,
     meta: {
-      footerTop: false
+      footerTop: false,
+      header: true
+    }
+  },
+  {
+    path: '/Ask_Trainer',
+    name: 'Ask_Trainer',
+    component:Ask_Trainer,
+    meta: {
+      footerTop: false,
+      header: true
     }
   }
 ]

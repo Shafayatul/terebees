@@ -87,7 +87,7 @@ img{max-width: 100%;}
 }
 .site-footer{
     background: #010208 !important;
-    border-top: 5px solid #fa004a;
+    border-top: 5px solid #FD1831;
 }
 .site-footer.bottom-full{
     border-top: 0;
@@ -102,11 +102,14 @@ img{max-width: 100%;}
     font-family: "themify" !important;
 }
 h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5{
-    font-family: 'Myriad Arabic' !important;
+    font-family:$title-font-1!important;
 }
 .navbar-nav{
     font-family: $font-stack !important;
 }
 .list-unstyled{
     padding-right: 0;
+}
+.font-weight-bold {
+  font-size: 18px;
 }

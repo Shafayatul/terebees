@@ -28,7 +28,7 @@
 		> a {
 			color: #fff;
 			display: block;
-			font-size: 16px;
+			font-size: 15px;
 			padding: 35px 22px 34px;
 			position: relative;
 			font-weight: bold;
@@ -54,6 +54,7 @@
 			> a {
 				&::before {
 					@include transform(scaleX(1));
+					color:#C24410;
 				}
 				span {
 					@include transform(scaleX(0));

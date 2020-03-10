@@ -319,6 +319,11 @@
 		@include transform(rotateY(-90deg));
 		@include position(absolute, 0, 0, 0, 0);
 		@include transition(all 0.3s ease-out 0s);
+		opacity: 5;
+	   background: linear-gradient(rgba(14, 1, 1, 0.5), rgba(9, 1, 1, 0.63));
+	   a{
+		   color: #fff;
+	   }
 	}
 	.btn {
 		border: 0 none;
@@ -549,7 +554,7 @@
 	}
 }
 .cart-overlay{
-	 top: -350px !important;
+	 top: -390px !important;
 	 right:-100px;
      .over-text {
      position: absolute;

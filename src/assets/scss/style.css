@@ -133,7 +133,7 @@ Last Update: 22.02.2019
 ------------------------------------------------------------*/
 body {
   color: #8d939f;
-  font-family: "Myriad Arabic";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
   font-size: 14px;
   line-height: 1.7;
   /* Better Font Rendering =========== */
@@ -143,7 +143,11 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Myriad Arabic";
+  font-family: "Kharabeesh Font";
+}
+
+.btn {
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
 }
 
 a {
@@ -478,7 +482,7 @@ a:hover {
 }
 
 .title-font {
-  font-family: "Myriad Arabic";
+  font-family: "Kharabeesh Font";
 }
 
 .section-full {
@@ -561,14 +565,14 @@ a:hover {
   position: relative;
 }
 
-/* .list-double-arrow li::before {
-  content: "\e662";
+.list-double-arrow li::before {
+  content: "\e661";
   font-family: 'themify';
   left: 0;
   margin-right: 13px;
   position: absolute;
   top: 0;
-} */
+}
 
 .primary-color {
   color: #fa004a;
@@ -622,6 +626,7 @@ a:hover {
   background: -webkit-gradient(linear, left top, right top, from(#fc0247), to(#fe3e0b));
   background: linear-gradient(to right, #fc0247 0%, #fe3e0b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -631,6 +636,15 @@ a:hover {
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background-image: linear-gradient(left, #fe3e0b 0%, #fc0247 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.gradient-bg-btn, .btn-theme-1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#A32C12), to(#F83A0F));
+  background-image: linear-gradient(left, #A32C12 0%, #F83A0F 100%);
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background-image: linear-gradient(left, #A32C12 0%, #F83A0F 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
@@ -672,7 +686,7 @@ a:hover {
   border: 0 none;
   border-radius: 0;
   color: #fff;
-  font-family: "Myriad Arabic";
+  font-family: "Kharabeesh Font";
   font-size: 15px;
   padding: 18px 50px 20px;
   position: relative;
@@ -1519,7 +1533,7 @@ a:hover {
 }
 
 .navbar-nav {
-  font-family: "Myriad Arabic";
+  font-family: "Kharabeesh Font";
   text-transform: uppercase;
 }
 
@@ -1530,9 +1544,10 @@ a:hover {
 .navbar-nav > li > a {
   color: #fff;
   display: block;
-  font-size: 16px;
+  font-size: 15px;
   padding: 35px 22px 34px;
   position: relative;
+  font-weight: bold;
 }
 
 .navbar-nav > li > a::before {
@@ -1564,6 +1579,7 @@ a:hover {
 .navbar-nav > li:hover > a::before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+  color: #C24410;
 }
 
 .navbar-nav > li:hover > a span {
@@ -1576,7 +1592,7 @@ a:hover {
   transform: scaleY(1);
 }
 
-.navbar-nav > li:first-child a {
+> .navbar-nav > li:first-child a {
   margin-left: 0;
 }
 
@@ -1713,6 +1729,7 @@ a:hover {
 
 .header-sticky .navbar-nav li a {
   color: #030409;
+  font-weight: bold;
 }
 
 .header-sticky .logo-sticky {
@@ -1726,7 +1743,6 @@ a:hover {
 .header-sticky .navbar-nav > li > a {
   padding-bottom: 24px;
   padding-top: 25px;
-  font-weight: bold;
 }
 
 /* 
@@ -1749,7 +1765,7 @@ a:hover {
 }
 
 .banner-content h3 {
-  font-family: "Myriad Arabic";
+  font-family: "Kharabeesh Font";
   font-size: 100px;
   font-style: italic;
   font-weight: 700;
@@ -1896,12 +1912,14 @@ a:hover {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  left: 48%;
+  left: 45%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
   list-style-type: none;
+  position: absolute;
+  bottom: 8%;
 }
 
 .main-banner-slider .slick-man li {
@@ -2051,9 +2069,9 @@ a:hover {
 }
 
 .about-article h2 {
-  font-size: 36px;
+  font-size: 70px;
   margin-bottom: 26px;
-  color: #fd2722;
+  color: #EE380E;
 }
 
 #about .watermark-title {
@@ -2358,6 +2376,7 @@ a:hover {
 
 .cart-overlay {
   top: -350px !important;
+  right: -100px;
 }
 
 .cart-overlay .over-text {
@@ -2420,7 +2439,7 @@ a:hover {
 }
 
 .breadcrumb-nav::before {
-  background-color: #fa004a;
+  background-color: #6E0001;
   content: "";
   height: 100%;
   left: 0;
@@ -2543,7 +2562,7 @@ a:hover {
 }
 
 .watermark-title {
-  font-family: "Myriad Arabic";
+  font-family: "Kharabeesh Font";
   font-size: 500px;
   font-weight: 700;
   line-height: 0.95;
@@ -2557,6 +2576,7 @@ a:hover {
   background-size: 80%;
   -webkit-animation: animate 5s linear infinite;
           animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
@@ -2599,8 +2619,8 @@ a:hover {
   padding: 30px;
   width: 60%;
   position: absolute;
+  right: 0;
   bottom: 0;
-  left: 0;
 }
 
 .blog-post .tags a {
@@ -2680,6 +2700,7 @@ a:hover {
 .blog-post blockquote {
   padding: 30px 30px 30px 53px;
   position: relative;
+  background-color: #111318;
 }
 
 .blog-post blockquote::before {
@@ -2784,6 +2805,8 @@ a:hover {
   top: 0;
   width: 50px;
   right: calc(50% + 15px);
+  -webkit-transform: skewX(34deg);
+          transform: skewX(34deg);
 }
 
 .search-widget span {
@@ -2859,7 +2882,7 @@ a:hover {
 }
 
 .archive-list-child li:hover::before {
-  margin-right: 10px;
+  margin-left: 10px;
   width: 30px;
 }
 
@@ -2936,6 +2959,12 @@ a:hover {
   display: none;
 }
 
+.footer-top-shape image {
+  width: 100%;
+  background-size: cover;
+  height: auto;
+}
+
 .site-footer {
   background-color: #010208;
 }
@@ -2945,6 +2974,11 @@ a:hover {
   font-size: 13px;
   padding: 0 22px;
   position: relative;
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+}
+
+.footer-nav li a .btn {
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
 }
 
 .footer-nav li a::before {
@@ -3559,7 +3593,7 @@ a:hover {
 
 body {
   text-align: right !important;
-  font-family: "Myriad Arabic" !important;
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
 }
 
 /*------------------------------------------------
@@ -3570,7 +3604,7 @@ img {
 }
 
 .navbar-brand img {
-  max-width: 180px;
+  max-width: 120px;
 }
 
 .grey-background {
@@ -3607,7 +3641,7 @@ img {
 
 .site-footer {
   background: #010208 !important;
-  border-top: 5px solid #fa004a;
+  border-top: 5px solid #FD1831;
 }
 
 .site-footer.bottom-full {
@@ -3624,10 +3658,14 @@ img {
 }
 
 h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5 {
-  font-family: 'Myriad Arabic' !important;
+  font-family: "Kharabeesh Font" !important;
 }
 
 .navbar-nav {
-  font-family: "Myriad Arabic" !important;
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
+}
+
+.list-unstyled {
+  padding-right: 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,18 +5,28 @@
 	img[src*=".svg"] {
 	  	display: none;
 	}
+	image{
+		width: 100%;
+		background-size: cover;
+		height: auto;
+	}
 }
 
 .site-footer {
 	background-color: #010208;
-}
+	}
 
 .footer-nav {
+	
 	li a {
 		color: $text-color;
 		font-size: 13px;
-		padding: 0 22px;
+		padding: 0 21px;
 		position: relative;
+		font-family: $font-stack;
+		.btn{
+			font-family: $font-stack !important;		
+			}		
 		&::before {
 			background-color: #fff;
 			bottom: -14px;

@@ -26,7 +26,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0 text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -55,7 +55,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0  text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -84,7 +84,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0  text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -99,7 +99,7 @@
       <!-- end .main-banner -->
       
       <!-- end #features -->
-      <section id="about" class="section p-relative ov-hidden">
+      <section id="about" class="p-relative ov-hidden">
         <div class="watermark-title">معلومات عنا</div>
         <div class="container z-index-1 p-relative">
             <div class="row align-center">
@@ -181,7 +181,7 @@
                           </g>
                         </g>
                     </svg>
-                    <span class="ml-15 mr-15">نحن ترابيس. هذا هو مانقوم به</span>
+                    <span class="ml-15 mr-15 font-weight-bold">نحن ترابيس. هذا هو مانقوم به</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 30" style="enable-background:new 0 0 19 30;" xml:space="preserve">
                         <g>
                           <g>
@@ -272,7 +272,7 @@
                           </g>
                         </g>
                     </svg>
-                    <span class="ml-15 mr-15">نحن ترابيس. هذا هو مانقوم به</span>
+                    <span class="ml-15 mr-15 font-weight-bold">نحن ترابيس. هذا هو مانقوم به</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 30" style="enable-background:new 0 0 19 30;" xml:space="preserve">
                         <g>
                           <g>
@@ -282,7 +282,7 @@
                     </svg>
                   </p>
                   <h2 class="text-white fw-700 text-uppercase mb-25">جداول التدريب والتغذية</h2>
-                  <p class="mb-0 text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </p>
+                  <p class="mb-0 text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً <br> في المصاريف الشهرية </p>
               </div>
               <!-- end .col-12 -->
             </div>
@@ -482,7 +482,7 @@
                           </g>
                         </g>
                     </svg>
-                    <span class="ml-15 mr-15">We are Squat. this is what we do</span>
+                    <span class="ml-15 mr-15 font-weight-bold">We are Squat. this is what we do</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 30" style="enable-background:new 0 0 19 30;" xml:space="preserve">
                         <g>
                           <g>
@@ -508,7 +508,7 @@
                      <!-- end .pt-image -->
                    <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock mr-15"></i>Enroll Now</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock ml-15"></i>Enroll Now</a>
                           <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">اسم التدريب</h4>
                           <p>اسم التدريب</p>
@@ -537,7 +537,7 @@
                      <!-- end .pt-image -->
                    <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock mr-15"></i>Enroll Now</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock ml-15"></i>Enroll Now</a>
                           <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">اسم التدريب</h4>
                           <p>اسم التدريب</p>
@@ -565,7 +565,7 @@
                     <!-- end .pt-image -->
                    <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock mr-15"></i>Enroll Now</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-unlock ml-15"></i>Enroll Now</a>
                           <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">اسم التدريب</h4>
                           <p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </p>
@@ -588,7 +588,7 @@
       </section>
       <!-- end #our-pricing -->
       
-      <section id="latest-posts" class="section-full">
+      <section id="latest-posts" class="section-full pt-0">
         <div class="container">
             <div class="row">
               <div class="section-heading col-12 mb-100 text-center">
@@ -600,7 +600,7 @@
                           </g>
                         </g>
                     </svg>
-                    <span class="ml-15 mr-15">We are Squat. this is what we do</span>
+                    <span class="ml-15 mr-15 font-weight-bold">We are Squat. this is what we do</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 30" style="enable-background:new 0 0 19 30;" xml:space="preserve">
                         <g>
                           <g>
@@ -625,7 +625,7 @@
                     <!-- end .blog-image -->
                     <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme-1"><i class="ti-arrow-right mr-15"></i>Read more</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-arrow-right ml-15"></i>Read more</a>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Standard Blog Post 01</h4>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p>
                           <div class="blog-tags flex">
@@ -653,7 +653,7 @@
                     <!-- end .blog-image -->
                     <div class="item-card-hover gradient-border flex align-end" data-bgc="#030409,80">
                         <div>
-                          <a href="#" class="btn btn-theme-1"><i class="ti-arrow-right mr-15"></i>Read more</a>
+                          <a href="#" class="btn btn-theme-1"><i class="ti-arrow-right ml-15"></i>Read more</a>
                           <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">Standard Blog Post 02</h4>
                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p>
                           <div class="blog-tags flex">
@@ -723,6 +723,9 @@ export default {
 }
 </script>
 <style  scoped>
+.nav-dark li a{
+  color: #fff !important;
+}
 .main-banner-slider{
   overflow: hidden;
 }
@@ -745,8 +748,9 @@ export default {
     bottom: 70px;
 }
 .trainer-img{
-	height: 100%;
-	background-size: cover;
+	max-height: 100%;
+background-size: cover;
+height: 640px;
 }
 
 .list-double-arrow{
@@ -773,6 +777,15 @@ export default {
 .trainer-imgs{
   position: absolute;
   top: -103px !important;
-  left: 78px;
+  left: 58px;
+}
+.tzzzzext-white{
+ color:
+#C30000;
+right: 13%;
+position: absolute;
+top: -3%;
+font-size: 18px;
+font-weight: bold;
 }
 </style>

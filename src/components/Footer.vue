@@ -3,9 +3,9 @@
         <div class="footer-top-shape"  v-if="$route.meta.footerTop === true">
              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 341" style="enable-background:new 0 0 1920 341;" xml:space="preserve">                
                 <g>
-                    <polygon class="step-2" points="0,270 0,270 0,341 959.9,191 1920,341 1920,270 960,120   "/>
-                    <polygon class="step-1" points="0,200 0,200 0,251 959.9,101 1920,251 1920,200 960,50    "/>
-                    <polygon class="step-0" points="960,0 0,150 0,150 0,181 959.9,31 1920,181 1920,150  "/>
+                   <polygon class="step-2" points="960,161 0,311 0,342 960,192 1920,342 1920,311"/> <!--30-->
+                    <polygon class="step-1" points="960,91 0,241 0,292 960,142 1920,292 1920,241"/> <!--50-->
+                    <polygon class="step-0" points="960,0 0,150 0,221 960,71 1920,221 1920,150" /> <!--71-->
                 </g>
             </svg>
             
@@ -51,9 +51,9 @@ export default{
 
 </script>
 <style type="text/css">
-    .step-0{fill:#FE3E0B;}
-    .step-1{fill:#E5180A;}
-    .step-2{fill:#FC0247;}
+    .step-0{fill:#FF841E;}
+    .step-1{fill:#CA0000;}
+    .step-2{fill:#6E0001;}
  .ft-icon {
     background-image: -webkit-gradient(linear, left top, right top, from(#fe3e0b), to(#fa004a));
     padding:5px 7px;

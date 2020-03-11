@@ -60,7 +60,7 @@
             </div>
             <div id="fire-flame"></div>
           </section> 
-            <section  class="main-banner p-relative swiper-slide">
+           <section  class="main-banner p-relative swiper-slide">
             <div class="banner-content ov-hidden">
                 <div class="caption-mobile text-center">
                   <h3>طبيعي</h3>
@@ -88,7 +88,36 @@
                 </div>
             </div>
             <div id="fire-flame"></div>
-          </section>  
+          </section>
+           <section  class="main-banner p-relative swiper-slide">
+            <div class="banner-content ov-hidden">
+                <div class="caption-mobile text-center">
+                  <h3>طبيعي</h3>
+                  <!--<p class="mb-0 mt-20">Get in Shape Now!</p>-->
+                </div>
+                <div class="caption1" data-paroller-factor="0.2" data-paroller-type="foreground" data-paroller-direction="horizontal" >
+                  <h3>طبيعي</h3>                
+                </div>
+                <img src="@/assets/img/banner-man-2.png" class="man-desktop img-fluid" alt="">
+                <div class="caption2 text-right" data-paroller-factor="-0.2" data-paroller-type="foreground" data-paroller-direction="horizontal" >
+                  <!--<p>Fitness Reveals Pleasure</p>-->
+                  <h3>#خليك</h3>
+                </div>
+            </div>
+            <!-- end .banner-content -->
+            <div class="video-button right flex align-center">
+                <a href="https://vimeo.com/184323035" class="play-icon mfp-iframe">
+                <span class="gradient-bg flex align-center justify-center">
+                <i class="ti-control-play"></i>
+                </span>
+                </a>
+                <div>
+                  <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
+                  <p class="mb-0  text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
+                </div>
+            </div>
+            <div id="fire-flame"></div>
+          </section>    
   </VueSlickCarousel>
          
          
@@ -172,7 +201,7 @@
                                   
                   </div>
               </div>
-              <div class="col-12 col-md-6 offset-1 section-heading mb-100 text-center">
+              <div class="col-12 col-md-4 offset-2 section-heading mb-100 text-center">
                   <p class="gradient-text text-uppercase fw-500 inline-flex align-items-center">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 30" style="enable-background:new 0 0 19 30;" xml:space="preserve">
                         <g>

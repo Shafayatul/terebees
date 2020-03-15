@@ -32,7 +32,7 @@
 		> li > a {
 	    	padding: 10px 0;
 		  	&::before {
-		  		left: 0;
+		  		right: 0;
 		  	}
 		}
 		.submenu {
@@ -108,10 +108,19 @@
 	.comment-author-bio .title-font {
 	  	text-align: right !important;
 	}
+	.cart-overlay  {
+		position: initial;
+	}
+	.top-img {		
+		position: initial;
+	}
 }
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+	.ml{
+		margin-left: 0px !important;
+	}
 	.buttons-group .btn-bottom-border {
 		padding: 16px 20px 18px;
 	}
@@ -142,7 +151,10 @@
 	  	}
 	}
 	.section-heading h2 {
-	  	font-size: 28px;
+		font-size: 28px;
+		z-index: 2000;
+		opacity: 5;
+		position: relative;
 	}
 	.trainer-bio > .col-12:last-child,
 	.col-length-4:nth-last-child(-n+2),
@@ -183,7 +195,7 @@
 		> li > a {
 	  		padding: 10px 0;
 		  	&::before {
-		  		left: 0;
+		  		right: 0;
 		  	}
 		}
 		.submenu {
@@ -379,7 +391,17 @@
 	    right: -210px;
 	}
 }
-@media (max-width: 414px) {
+@media (max-width: 480px) {
+	.main-banner-slider .slick-man{
+		left: 28%;
+		bottom: 0;
+	}
+	.cart-overlay  {
+		position: initial;
+	}
+	.top-img {		
+		position: initial;
+	}
 	.btn {
 	    padding: 13px 45px 15px;
 	}
@@ -392,7 +414,7 @@
 	.banner-content {
 		align-items: center;
 		display: flex;
-		height: 100vh;
+		height: 25vh;
 		justify-content: center;
 		.man-desktop,
 		[class^="caption"] {
@@ -488,6 +510,13 @@
 	.error-message-404 img {
 	  	max-width: 100%;
 	}
+
+}
+@media (max-width: 372px)  {
+	.breadcrumb-nav li a{
+		font-size: 9px;
+	}
+	
 }
 @media (max-width: 480px) and (orientation: landscape)  {
 	.btn {
@@ -502,7 +531,7 @@
 	.banner-content {
 		align-items: center;
 		display: flex;
-		height: 100vh;
+		height: 25vh;
 		justify-content: center;
 		.man-desktop,
 		[class^="caption"] {

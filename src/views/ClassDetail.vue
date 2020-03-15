@@ -5,10 +5,8 @@
 				<h1 class="text-center text-white text-uppercase fw-700 mb-0">Class Details</h1>
 				<div class="bc-container flex align-items-center">
 					<svg version="1.1" class="bc-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
-						<g>
-							<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 	"/>
-							<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 	"/>
-						</g>
+						<polygon style="fill:#E31A1D" points="35,0 15,60 25,60 45,0 "/>
+						<polygon style="fill:#FC3E22" points="20,0 0,60 5,60 25,0 "/>
 					</svg>
 					<ul class="breadcrumb-nav d-flex align-center justify-center mb-0 list-unstyled">
 						<li> <router-link to="/" data-text="Home">Home</router-link></li>
@@ -16,10 +14,8 @@
 						<li> <router-link to="/class-detail" data-text="Home">Detail</router-link></li>
 					</ul>
 					<svg version="1.1" class="bc-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
-						<g>
-							<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 	"/>
-							<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 	"/>
-						</g>
+						<polygon style="fill:#E31A1D" points="20,0 0,60 10,60 30,0 "/>
+						<polygon style="fill:#FC3E22" points="40,0 20,60 25,60 45,0 "/>
 					</svg>
 				</div>
 			</section> <!-- end .page-header -->
@@ -142,9 +138,9 @@
 								<div class="text-center">
 									<p>والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود.</p>
 									<div class="buttons-group flex align-center justify-center mt-30">
-										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border mr-10">Facebook</a>
+										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border ">Facebook</a>
 										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border mr-10">Instagram</a>
-										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border">Linkedin</a>
+										<a href="javascript:void(0)" class="btn btn-sm btn-bottom-border mr-10">Linkedin</a>
 									</div>
 								</div>
 							</section> <!-- end .widget -->

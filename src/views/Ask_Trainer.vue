@@ -6,8 +6,8 @@
 				<div class="bc-container flex align-items-center">
 					<svg version="1.1" class="bc-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
 						<g>
-							<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 	"/>
-							<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 	"/>
+							<polygon style="fill:#E31A1D" points="35,0 15,60 25,60 45,0 "/>
+						     <polygon style="fill:#FC3E22" points="20,0 0,60 5,60 25,0 "/>
 						</g>
 					</svg>
 					<ul class="breadcrumb-nav d-flex align-center justify-center mb-0 list-unstyled">
@@ -16,8 +16,8 @@
 					</ul>
 					<svg version="1.1" class="bc-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
 						<g>
-							<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 	"/>
-							<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 	"/>
+							<polygon style="fill:#E31A1D" points="20,0 0,60 10,60 30,0 "/>
+						    <polygon style="fill:#FC3E22" points="40,0 20,60 25,60 45,0 "/>
 						</g>
 					</svg>
 				</div>
@@ -30,11 +30,11 @@
 							<div id="comments-container" class="mt-20">
 								<div class="comments-header flex space-between mb-50">									
                                     <div class="text-right">
-                                        <h2>اسئلة مشتركين ترابيس</h2>
+                                        <h2 class="gradient-text">اسئلة مشتركين ترابيس</h2>
                                     </div><!-- end .comments-type -->
 									<div class="comments-type fw-500 text-left">
 										<a href="javascript:void(0)" class="link-hover-1">Newest</a>
-										<a href="javascript:void(0)" class="link-hover-1 ml-30">Oldest</a>
+										<a href="javascript:void(0)" class="link-hover-1 ml-md-3 ml-sm-0">Oldest</a>
 									</div> 
 								</div> <!-- end .comments-header -->
 
@@ -198,7 +198,7 @@
 								<figure class="author-thumb text-center">
 									<img src="@/assets/img/blog_home/layer-5.png" class="img-fluid" alt="">
 									<figcaption class="mt-30">
-										<h4 class="h6 text-white fw-700 text-uppercase">محمد ابو شماله</h4>
+										<h3 class="text-white fw-700 text-uppercase">محمد ابو شماله</h3>
 										<p>مدرب اللياقة البدنية</p>
 									</figcaption>
 								</figure>

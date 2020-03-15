@@ -26,7 +26,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0 text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0 text-white">سوف تحب رؤيه هذا التدريب</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -55,7 +55,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0  text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0  text-white">سوف تحب رؤيه هذا التدريب</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -84,7 +84,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0  text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0  text-white">سوف تحب رؤيه هذا التدريب</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -113,7 +113,7 @@
                 </a>
                 <div>
                   <h6 class="text-uppercase tzzzzext-white">اهد المقدمةتلمتحركة</h6>
-                  <p class="mb-0  text-white">تعجب بالمقدمه لمتحركه لترابيس</p>
+                  <p class="mb-0  text-white">سوف تحب رؤيه هذا التدريب</p>
                 </div>
             </div>
             <div id="fire-flame"></div>
@@ -142,7 +142,7 @@
                   <article class="about-article">
                   <h2 class="">معلومات عنا</h2>                   
                     <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                    <a href="#" class="btn btn-theme-1 mt-30">اعرف اكثر</a>
+                    <button class="btn btn-theme-1 mb-30">اعرف اكثر</button>
                   </article>
               </div>
                           
@@ -225,10 +225,10 @@
             
             </div>
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-12 mx-auto col-md-6 col-lg-4">
                   <div class="item-card animated-border service-item p-relative ov-hidden">
                     <figure class="p-relative mb-0">
-                        <img src="@/assets/img/layer-5.png" class="img-fluid" alt="">
+                        <img src="@/assets/img/layer-5.png" class="img-fluid w-100" alt="">
                         <figcaption>
                           <h4 class="text-uppercase fw-700 dark-color fs-18">Fitness Service 03</h4>
                           <p>Lorem ipsum dolor amet podor</p>
@@ -246,7 +246,7 @@
               <div class="col-12 col-md-6 col-lg-4">
                   <div class="item-card animated-border service-item p-relative ov-hidden">
                     <figure class="p-relative mb-0">
-                        <img src="@/assets/img/layer-6.png" class="img-fluid" alt="">
+                        <img src="@/assets/img/layer-6.png" class="img-fluid w-100" alt="">
                         <figcaption>
                           <h4 class="text-uppercase fw-700 dark-color fs-18">Fitness Service 03</h4>
                           <p>Lorem ipsum dolor amet podor</p>
@@ -264,7 +264,7 @@
               <div class="col-12 col-md-6 col-lg-4">
                   <div class="item-card animated-border service-item p-relative ov-hidden">
                     <figure class="p-relative mb-0">
-                        <img src="@/assets/img/layer-4.png" class="img-fluid" alt="">
+                        <img src="@/assets/img/layer-4.png" class="img-fluid w-100" alt="">
                         <figcaption>
                           <h4 class="text-uppercase fw-700 dark-color fs-18">Fitness Service 03</h4>
                           <p>Lorem ipsum dolor amet podor</p>
@@ -323,7 +323,7 @@
                      <div class="col-12 col-md-6 col-lg-6">
                            <h3 class="text-white text-uppercase fw-700 text-white mb-30">اسم الجدول</h3>
                            <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                           <a href="#" class="btn btn-theme-1 mt-30 text-white">اعرف المزيد</a>
+                           <a href="#" class="btn btn-theme-1 mb-30 text-white">اعرف المزيد</a>
                      </div>
                     <!-- end .col-12 col-lg-5 lg-push-1 -->
                     <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -334,7 +334,7 @@
                      <div class="col-12 col-md-6 col-lg-6">
                            <h3 class="text-white text-uppercase fw-700 text-white mb-30">اسم الجدول</h3>
                            <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                           <a href="#" class="btn btn-theme-1 mt-30 text-white">اعرف المزيد</a>
+                           <a href="#" class="btn btn-theme-1 mb-30 text-white">اعرف المزيد</a>
                      </div>
                     <!-- end .col-12 col-lg-5 lg-push-1 -->
                     <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -345,7 +345,7 @@
                      <div class="col-12 col-md-6 col-lg-6">
                            <h3 class="text-white text-uppercase fw-700 text-white mb-30">اسم الجدول</h3>
                            <p class="text-white">الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  </p>
-                           <a href="#" class="btn btn-theme-1 mt-30 text-white">اعرف المزيد</a>
+                           <a href="#" class="btn btn-theme-1 mb-30 text-white">اعرف المزيد</a>
                      </div>
                     <!-- end .col-12 col-lg-5 lg-push-1 -->
                     <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
@@ -524,10 +524,10 @@
                   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br class="d-none d-sm-block">tempor incididunt ut labore dolore.</p>
               </div>
               <!-- end .col-12 -->
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-12 col-md-6 col-lg-4 col-length-3">
                   <div class="item-card animated-border item-card-pt p-relative">
                     <figure class="pt-image p-relative mb-0">
-                        <img src="@/assets/img/layer-10.png" class="img-fluid" alt="">
+                        <img src="@/assets/img/layer-10.png" class="img-fluid w-100" alt="">
                         <figcaption class="pt-caption">
                           <h4 class="text-uppercase fw-700">Athletics Session</h4>
                           <p class="mb-0">Lorem ipsum dolor amet podor</p>
@@ -553,10 +553,10 @@
                   <!-- end .pt-item -->
               </div>
               <!-- end .col-12.col-md-4 -->
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-12 col-md-6 col-lg-4 col-length-3">
                   <div class="item-card animated-border item-card-pt p-relative">
                     <figure class="pt-image p-relative mb-0">
-                        <img src="@/assets/img/layer-11.png" class="img-fluid" alt="">
+                        <img src="@/assets/img/layer-11.png" class="img-fluid w-100" alt="">
                         <figcaption class="pt-caption">
                           <h4 class="text-uppercase fw-700">Athletics Session</h4>
                           <p class="mb-0">Lorem ipsum dolor amet podor</p>
@@ -582,10 +582,10 @@
                   <!-- end .pt-item -->
               </div>
               <!-- end .col-12.col-md-4 -->
-              <div class="col-12 col-md-6 col-lg-4">
+              <div class="col-12 col-md-6 col-lg-4 col-length-3">
                   <div class="item-card animated-border item-card-pt p-relative">
                     <figure class="pt-image p-relative mb-0">
-                        <img src="@/assets/img/layer-9.png" class="img-fluid" alt="">
+                        <img src="@/assets/img/layer-9.png" class="img-fluid w-100" alt="">
                         <figcaption class="pt-caption">
                           <h4 class="text-uppercase fw-700">Athletics Session</h4>
                           <p class="mb-0">Lorem ipsum dolor amet podor</p>
@@ -642,10 +642,10 @@
                   <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut labore dolore.</p>
               </div>
               <!-- end .col-12 -->
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-6 col-length-3">
                   <div class="item-card animated-border item-card-blog p-relative">
                     <figure class="blog-image p-relative mb-0">
-                        <img src="@/assets/img/post-1.jpg" class="img-fluid" alt="">
+                        <img src="@/assets/img/post-1.jpg" class="img-fluid w-100" alt="">
                         <figcaption class="blog-caption">
                           <h4 class="text-uppercase fw-700 dark-color">Standard Blog post 01</h4>
                           <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</p>

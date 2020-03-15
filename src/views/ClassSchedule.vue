@@ -5,8 +5,8 @@
 				<h1 class="text-center text-white text-uppercase fw-700 mb-0">Class Schedules</h1>
 				<div class="bc-container flex align-items-center">
 					<svg version="1.1" class="bc-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
-						<polygon style="fill:#E11D28" points="35,0 15,60 25,60 45,0 "/>
-						<polygon style="fill:#FA3E2E" points="20,0 0,60 5,60 25,0 "/>
+						<polygon style="fill:#E31A1D" points="35,0 15,60 25,60 45,0 "/>
+						<polygon style="fill:#FC3E22" points="20,0 0,60 5,60 25,0 "/>
 					</svg>
 
 					<ul class="breadcrumb-nav d-flex align-center justify-center mb-0 list-unstyled">
@@ -14,8 +14,8 @@
 						<li> <router-link to="/class-schedule" data-text="Home">Class</router-link></li>
 					</ul>
 					<svg version="1.1" class="bc-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 60" style="enable-background:new 0 0 45 60;" xml:space="preserve">
-						<polygon style="fill:#E11D28" points="20,0 0,60 10,60 30,0 "/>
-						<polygon style="fill:#FA3E2E" points="40,0 20,60 25,60 45,0 "/>
+						<polygon style="fill:#E31A1D" points="20,0 0,60 10,60 30,0 "/>
+						<polygon style="fill:#FC3E22" points="40,0 20,60 25,60 45,0 "/>
 					</svg>
 				</div>
 			</section> <!-- end .page-header -->
@@ -145,4 +145,9 @@ export default {
   name: 'ClassSchedule'
 }
 </script>
+<style scoped>
+.page-header {  
+    border-bottom: 2px solid;
+}
+</style>
 

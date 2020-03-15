@@ -38,7 +38,8 @@
 				content: attr(data-text);
 				font-weight: 500;
 				position: absolute;
-				left: 22px;
+				right: 22px;
+				left: initial;
 				@include transform(scaleX(0));
 				@include transform-origin(left top 0);
 				@include transition(all 0.3s ease 0s);
@@ -122,19 +123,19 @@
 }
 
 .navbar-toggler {
-	// border: 0 none;
-	// border-radius: 0;
-	// font-size: 14px;
-	// line-height: 1;
-	// padding: 0;
-	// &:focus {
-	// 	outline: none;
-	// }
+	border: 0 none;
+	border-radius: 0;
+	font-size: 14px;
+	line-height: 1;
+	padding: 0;
+	&:focus {
+		outline: none;
+	}
 }
 
 .navbar-toggler { 
 	position: relative;
-	margin-right: 15px;
+	margin-left: 15px;
 	padding: 0;
 	@include inline-flex();
 	@include transition(all 0.3s ease-out);
@@ -176,7 +177,7 @@
 
 	&.active .menu-icon__line-left {
 	    width: 15px;
-	    @include transform(translate(2px, 4px) rotate(45deg));
+	    @include transform(translate(-12px, 6px) rotate(45deg));
 	}
 
 	&.active .menu-icon__line-right {

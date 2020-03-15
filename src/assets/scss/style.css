@@ -143,7 +143,7 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Kharabeesh Font";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
 }
 
 .btn {
@@ -482,7 +482,7 @@ a:hover {
 }
 
 .title-font {
-  font-family: "Kharabeesh Font";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
 }
 
 .section-full {
@@ -490,7 +490,7 @@ a:hover {
 }
 
 .section {
-  padding: 75px 0;
+  padding: 25px 0;
 }
 
 .top-half {
@@ -686,7 +686,7 @@ a:hover {
   border: 0 none;
   border-radius: 0;
   color: #fff;
-  font-family: "Kharabeesh Font";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
   font-size: 15px;
   padding: 18px 50px 20px;
   position: relative;
@@ -1533,7 +1533,7 @@ a:hover {
 }
 
 .navbar-nav {
-  font-family: "Kharabeesh Font";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
   text-transform: uppercase;
 }
 
@@ -1557,7 +1557,8 @@ a:hover {
   content: attr(data-text);
   font-weight: 500;
   position: absolute;
-  left: 22px;
+  right: 22px;
+  left: initial;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: left top 0;
@@ -1660,8 +1661,20 @@ a:hover {
 }
 
 .navbar-toggler {
+  border: 0 none;
+  border-radius: 0;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler {
   position: relative;
-  margin-right: 15px;
+  margin-left: 15px;
   padding: 0;
   display: -webkit-inline-box;
   display: -moz-inline-flex;
@@ -1710,8 +1723,8 @@ a:hover {
 
 .navbar-toggler.active .menu-icon__line-left {
   width: 15px;
-  -webkit-transform: translate(2px, 4px) rotate(45deg);
-  transform: translate(2px, 4px) rotate(45deg);
+  -webkit-transform: translate(-12px, 6px) rotate(45deg);
+  transform: translate(-12px, 6px) rotate(45deg);
 }
 
 .navbar-toggler.active .menu-icon__line-right {
@@ -1765,7 +1778,7 @@ a:hover {
 }
 
 .banner-content h3 {
-  font-family: "Kharabeesh Font";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
   font-size: 100px;
   font-style: italic;
   font-weight: 700;
@@ -2121,6 +2134,13 @@ a:hover {
   left: 0;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+  opacity: 5;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(14, 1, 1, 0.5)), to(rgba(9, 1, 1, 0.63)));
+  background: linear-gradient(rgba(14, 1, 1, 0.5), rgba(9, 1, 1, 0.63));
+}
+
+.item-card .item-card-hover a {
+  color: #fff;
 }
 
 .item-card .btn {
@@ -2375,8 +2395,8 @@ a:hover {
 }
 
 .cart-overlay {
-  top: -350px !important;
-  right: -100px;
+  top: -390px !important;
+  right: -130px;
 }
 
 .cart-overlay .over-text {
@@ -2562,7 +2582,7 @@ a:hover {
 }
 
 .watermark-title {
-  font-family: "Kharabeesh Font";
+  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
   font-size: 500px;
   font-weight: 700;
   line-height: 0.95;
@@ -2698,7 +2718,7 @@ a:hover {
 }
 
 .blog-post blockquote {
-  padding: 30px 30px 30px 53px;
+  padding: 30px 53px 30px 30px;
   position: relative;
   background-color: #111318;
 }
@@ -2707,7 +2727,7 @@ a:hover {
   background-color: #fa004a;
   bottom: 30px;
   content: "";
-  right: 0;
+  right: 30px;
   position: absolute;
   top: 30px;
   width: 3px;
@@ -2951,6 +2971,14 @@ a:hover {
   margin-top: -5px;
 }
 
+.section {
+  padding: 25px auto !important;
+}
+
+.trainer-body {
+  color: #fff;
+}
+
 .footer-top-shape svg {
   display: block;
 }
@@ -2972,7 +3000,7 @@ a:hover {
 .footer-nav li a {
   color: #8d939f;
   font-size: 13px;
-  padding: 0 22px;
+  padding: 0 21px;
   position: relative;
   font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
 }
@@ -3042,7 +3070,7 @@ a:hover {
     padding: 10px 0;
   }
   .navbar-nav > li > a::before {
-    left: 0;
+    right: 0;
   }
   .navbar-nav .submenu {
     border-left: 2px solid #fa004a;
@@ -3121,9 +3149,18 @@ a:hover {
   .comment-author-bio .title-font {
     text-align: right !important;
   }
+  .cart-overlay {
+    position: initial;
+  }
+  .top-img {
+    position: initial;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .ml {
+    margin-left: 0px !important;
+  }
   .buttons-group .btn-bottom-border {
     padding: 16px 20px 18px;
   }
@@ -3155,6 +3192,9 @@ a:hover {
   }
   .section-heading h2 {
     font-size: 28px;
+    z-index: 2000;
+    opacity: 5;
+    position: relative;
   }
   .trainer-bio > .col-12:last-child,
   .col-length-4:nth-last-child(-n+2),
@@ -3190,7 +3230,7 @@ a:hover {
     padding: 10px 0;
   }
   .navbar-nav > li > a::before {
-    left: 0;
+    right: 0;
   }
   .navbar-nav .submenu {
     border-left: 2px solid #fa004a;
@@ -3369,7 +3409,17 @@ a:hover {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
+  .main-banner-slider .slick-man {
+    left: 28%;
+    bottom: 0;
+  }
+  .cart-overlay {
+    position: initial;
+  }
+  .top-img {
+    position: initial;
+  }
   .btn {
     padding: 13px 45px 15px;
   }
@@ -3386,7 +3436,7 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
+    height: 25vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3487,6 +3537,12 @@ a:hover {
   }
 }
 
+@media (max-width: 372px) {
+  .breadcrumb-nav li a {
+    font-size: 9px;
+  }
+}
+
 @media (max-width: 480px) and (orientation: landscape) {
   .btn {
     padding: 13px 45px 15px;
@@ -3504,7 +3560,7 @@ a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
+    height: 25vh;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -3667,5 +3723,9 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5 {
 
 .list-unstyled {
   padding-right: 0;
+}
+
+.font-weight-bold {
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */

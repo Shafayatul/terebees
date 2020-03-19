@@ -101,8 +101,7 @@
 
 <script>
 import AuthService from '@/services/AuthService.js';
-
-
+import client from '../module/client'
 export default {
  
   data() {
@@ -111,7 +110,7 @@ export default {
       first_name: '',
       last_name: '',
       family: '',
-      age: null,
+      age: 0,
       email: '',
       password:'',
       password_confirmation: '',      
@@ -139,28 +138,56 @@ export default {
 
     };
   },
+  created(){
+      // GET /someUrl
+    client().get('/articles').then(response => {
+
+    // get body data
+    console.log(response)
+
+  }, response => {
+    // error callback
+  });
+  },
   methods: {
-    async signUp() {
-       try {
-        //  this.$refs.form.signUp()
+    signUp(){
+
         const credentials = {
          first_name: this.first_name,
          last_name: this.last_name,
          family: this.family,
          age: this.age,
-         email: '',
+         email: this.email,
          password: this.password,
-         password_confirmation: this.password_confirmation,
-         profile_image: this.profile_image,
-
-
-
+         password_confirmation: this.password_confirmation
+        //  profile_image: this.profile_image,
         };
-        const response = await AuthService.signUp(credentials);
-        this.msg = response.msg;        
-      } catch (error) {
-        this.msg = error.response.data.msg;
-      }
+        console.log(credentials);
+
+        // this.$http.post('/api', data, {
+        //   headers: {
+        //       'Content-Type': 'multipart/form-data'
+        //   }
+        // })
+
+        client().post('/customer/signup', 
+                  {
+                    first_name: "aa",
+                    last_name: "bb",
+                    family: "abir",
+                    age: 33,
+                    email: "ema5il@gmail.com",
+                    password: "email@gmail.com",
+                    password_confirmation: "email@gmail.com"
+
+                  }
+                )
+              .then(function (response) {
+                console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error.data);
+              });
     }
   }
 };

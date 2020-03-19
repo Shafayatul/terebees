@@ -21,9 +21,6 @@ global .$ = jQuery
 
 Vue.config.productionTip = false
 
-var VueResource = require('vue-resource');
-
-Vue.use(VueResource);
 
 
 new Vue({

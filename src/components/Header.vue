@@ -1,60 +1,160 @@
 <template>
-
-    <header class="site-header navbar navbar-expand-lg" :class="$route.meta.header === true ? 'bottom-full': 'section-full'" v-if="$route.path !== '/404'">
-        <div class="container" v-if="$route.meta.header === true">
-            <router-link to="/" class="navbar-brand" data-text="Home">
-                <img src="@/assets/img/logo-color.png" alt="Squat">
-            </router-link><!-- end .navbar-brand -->
-            <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#primary-nav">
-                <span class="menu-icon hover-target">
-                    <span class="menu-icon__line menu-icon__line-left"></span>
-                    <span class="menu-icon__line"></span>
-                    <span class="menu-icon__line menu-icon__line-right"></span>
-                </span>
-            </button> <!-- end .navbar-toggler -->
-            <nav id="primary-nav" class="primary-nav collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="has-submenu">
-                        <router-link to="/login" data-text="تسجيل الدخول "><span>تسجيل الدخول </span></router-link>
-                    </li>
-                    <li class="has-submenu">
-                        <router-link to="/" data-text="الرئيسية"><span>الرئيسية</span></router-link>
-                    </li>
-                    <li><router-link to="/about" data-text="About"><span>تسجيل الدخول</span></router-link></li>
-                    <li><router-link to="/class-schedule" data-text="Schedules"><span>المقالات الرياضية </span></router-link></li>
-                    <li><a href="javascript:void(0)" data-text="Pricing"><span>إسأل المدرب</span></a></li>
-                    <li>
-                        <router-link to="#" data-text="Pages"><span>Pages</span></router-link>
-                        <ul class="submenu">
-                            <li><router-link to="/clasess">Classes</router-link></li>
-                            <li><router-link to="/class-detail">Class Details</router-link></li>
-                            <li><router-link to="/our-trainer">Our Trainers</router-link></li>
-                            <li><router-link to="/Ask_Trainer">Ask Trainers</router-link></li>
-                            <li><router-link to="/gallery">Gallery</router-link></li>
-                            <li><router-link to="/404">404</router-link></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <router-link to="#" data-text="Blog"><span>Blog</span></router-link>
-                        <ul class="submenu">
-                            <li><router-link to="/blog-list">Blog List</router-link></li>
-                            <li><router-link to="/blog-single">Blog Details</router-link></li>
-                        </ul>
-                    </li>
-                    <li><router-link to="/contact" data-text="Contact"><span> تواصل معنا</span></router-link></li>
-                  <!--   <li><div id="google_translate_element"></div></li> -->
-                </ul> <!-- end .navbar-nav -->
-            </nav> <!-- end #primary-nav -->
-        </div> <!-- end .container -->
-    </header> <!-- end .site-header -->
-
+  <header
+    v-if="$route.path !== '/404'"
+    class="site-header navbar navbar-expand-lg"
+    :class="$route.meta.header === true ? 'bottom-full': 'section-full'"
+  >
+    <div
+      v-if="$route.meta.header === true"
+      class="container"
+    >
+      <router-link
+        to="/"
+        class="navbar-brand"
+        data-text="Home"
+      >
+        <img
+          src="@/assets/img/logo-color.png"
+          alt="Squat"
+        >
+      </router-link><!-- end .navbar-brand -->
+      <button
+        class="navbar-toggler white"
+        type="button"
+        data-toggle="collapse"
+        data-target="#primary-nav"
+      >
+        <span class="menu-icon hover-target">
+          <span class="menu-icon__line menu-icon__line-left" />
+          <span class="menu-icon__line" />
+          <span class="menu-icon__line menu-icon__line-right" />
+        </span>
+      </button> <!-- end .navbar-toggler -->
+      <nav
+        id="primary-nav"
+        class="primary-nav collapse navbar-collapse"
+      >
+        <ul class="navbar-nav ml-auto">
+          <li class="has-submenu">
+            <router-link
+              to="/login"
+              data-text="تسجيل الدخول "
+            >
+              <span>تسجيل الدخول </span>
+            </router-link>
+          </li>
+          <li class="has-submenu">
+            <router-link
+              to="/"
+              data-text="الرئيسية"
+            >
+              <span>الرئيسية</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/about"
+              data-text="About"
+            >
+              <span>تسجيل الدخول</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/class-schedule"
+              data-text="Schedules"
+            >
+              <span>المقالات الرياضية </span>
+            </router-link>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0)"
+              data-text="Pricing"
+            ><span>إسأل المدرب</span></a>
+          </li>
+          <li>
+            <router-link
+              to="#"
+              data-text="Pages"
+            >
+              <span>Pages</span>
+            </router-link>
+            <ul class="submenu">
+              <li>
+                <router-link to="/clasess">
+                  Classes
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/class-detail">
+                  Class Details
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/our-trainer">
+                  Our Trainers
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/Ask_Trainer">
+                  Ask Trainers
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/gallery">
+                  Gallery
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/404">
+                  404
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <router-link
+              to="#"
+              data-text="Blog"
+            >
+              <span>Blog</span>
+            </router-link>
+            <ul class="submenu">
+              <li>
+                <router-link to="/blog-list">
+                  Blog List
+                </router-link>
+              </li>
+              <li>
+                <router-link to="/blog-single">
+                  Blog Details
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <router-link
+              to="/contact"
+              data-text="Contact"
+            >
+              <span> تواصل معنا</span>
+            </router-link>
+          </li>
+          <!--   <li><div id="google_translate_element"></div></li> -->
+        </ul> <!-- end .navbar-nav -->
+      </nav> <!-- end #primary-nav -->
+    </div> <!-- end .container -->
+  </header> <!-- end .site-header -->
 </template>
 
 <script>
-export default{
-    name: 'Header'
-}
 
+
+export default {
+     name: 'Header',
+  
+};
 </script>
 <style  scoped>
 

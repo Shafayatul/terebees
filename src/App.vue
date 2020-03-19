@@ -1,16 +1,16 @@
 <template>
   <div id="app">
+    <!-- <div class="preloader-wrap flex align-center justify-center">
+      <div class="preloader flex">
+        <div class="dash uno" /><div class="dash dos" /><div class="dash tres" /><div class="dash cuatro" />
+      </div>
+    </div> -->
     
-    <div class="preloader-wrap flex align-center justify-center">
-			<div class="preloader flex"><div class="dash uno"></div><div class="dash dos"></div><div class="dash tres"></div><div class="dash cuatro"></div></div>
-		</div>
-    
-		<Header />
+    <Header />
 
-    <router-view/>
+    <router-view />
 
     <Footer />
-
   </div>
 </template>
 <script>
@@ -19,7 +19,16 @@
   
  
   export default{
-    name: 'app',   
+    name: 'App', 
+    components: {    
+      Header,
+      Footer
+    },
+    watch:{
+        $route (){
+            window.$router = true;
+        }
+    },   
     created(){
        let htmlEl=document.querySelector("html");
         htmlEl.setAttribute('dir','rtl');
@@ -29,19 +38,10 @@
         } else {
           return false;
         }
-      }, 
-    components: {    
-      Header,
-      Footer
-
-    },
-    watch:{
-        $route (){
-            window.$router = true;
-        }
-    }
-
+      },
+      changeRTL () {
+        this.$vuetify.rtl = true
+      },
   }
 </script>
 <style scoped>
-

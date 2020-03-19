@@ -13,6 +13,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.png">
     <title>tarabees</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+/>
   </head>
   <body >
     <noscript>
@@ -37,7 +41,7 @@
   -->
   <script src="<%= BASE_URL %>js/main.js"></script> 
   
-  <script id="fragShader" type="text/plain">
+  <!-- <script id="fragShader" type="text/plain">
       precision mediump float;
       uniform vec2 u_resolution;
       uniform float u_time;
@@ -82,8 +86,8 @@
           gl_FragColor = vec4(c * cos(shift * gl_FragCoord.y / u_resolution.y), 1.0);
           gl_FragColor.xyz *= 1.0-grad;
       }
-  </script>
-  <script type="text/javascript">
+  </script> -->
+  <!-- <script type="text/javascript">
     setInterval(() => {
     if(window.$router == true){
       var _PIXI       = PIXI,
@@ -132,7 +136,7 @@
       });
     }
     }, 100);
-  </script>
+  </script> -->
   <script>
     setInterval(() => {
         if(window.$router == true){

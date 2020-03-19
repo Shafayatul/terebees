@@ -10,7 +10,10 @@ import Ask_Trainer from '../views/Ask_Trainer.vue'
 import Gallery from '../views/Gallery.vue'
 import BlogList from '../views/BlogList.vue'
 import BlogSingle from '../views/BlogSingle.vue'
+import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
+import login from '../auth/Login.vue'
+import SignupCustomer from '../auth/SignupCustomer.vue'
 
 Vue.use(VueRouter)
 
@@ -39,7 +42,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    component: About,
     meta: {
       footerTop: false,
       header: true
@@ -108,6 +111,7 @@ const routes = [
       header: true
     }
   },
+ 
   {
     path: '/contact',
     name: 'contact',
@@ -125,7 +129,23 @@ const routes = [
       footerTop: false,
       header: true
     }
-  }
+  },
+  { path: '/login',
+    component: login,
+    name: 'login',
+    meta: {
+      footerTop: false,
+      header: true
+    }
+   },
+  { path: '/signup',
+   component:SignupCustomer,
+    meta: {
+    footerTop: false,
+    header: true
+    }
+  },
+  { path: '*', redirect: '/' }
 ]
 
 
@@ -134,5 +154,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
 
 export default router

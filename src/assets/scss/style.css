@@ -20,14 +20,14 @@ Last Update: 22.02.2019
     + Footer / #footer
 
 -------------------------------------------------------------------*/
-@import url(c:\project\vue-tarabees-master\src\assets\css\font-awesome.min.css);
-@import url(c:\project\vue-tarabees-master\src\assets\css\bootstrap.min.css);
-@import url(c:\project\vue-tarabees-master\src\assets\css\themify-icons.css);
-@import url(c:\project\vue-tarabees-master\src\assets\css\myriad.css);
-@import url(c:\project\vue-tarabees-master\src\assets\css\magnific-popup.css);
-@import url(c:\project\vue-tarabees-master\src\assets\css\animate.min.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\font-awesome.min.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\bootstrap.min.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\themify-icons.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\myriad.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\magnific-popup.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\animate.min.css);
 /* Slider */
-@import url(c:\project\vue-tarabees-master\src\assets\css\style.css);
+@import url(c:\xampp\htdocs\terebees\src\assets\css\style.css);
 .slick-slider {
   position: relative;
   display: block;

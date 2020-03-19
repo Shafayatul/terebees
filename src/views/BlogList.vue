@@ -1,5 +1,5 @@
 <template>
-  <main class="site-main dark-bg">
+  <main class="site-main dark-bg"  v-if="posts.length > 0">
 
 			<section class="page-header">
 				<h1 class="text-center text-white text-uppercase fw-700 mb-0">المقالات الرياضية</h1>
@@ -25,14 +25,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-8">
-
-
-
-
-
 							<article class="blog-post mb-50"  v-for="post in posts" :key="post.id">
 								<figure class="post-media animated-border p-relative mb-35">
-									<img v-bind:src="''+post.image.path+''" class="img-fluid" alt="">
+									<img v-bind:src="''+post.image.path+''" class="img-fluid w-100" alt="">
 									<span class="gradient-border transition"></span>
 									<figcaption class="transition">
 										<div class="tags">
@@ -77,7 +72,7 @@
 								<form action="#" class="search-widget flex align-items-center">
 									<span class="ti-search flex align-center justify-center"></span>
 									<div class="form-group material-input mb-0 w-100">
-										<input type="search" id="search-post" class="form-control input-tp" name="s">
+										<input type="search" placeholder="search"  class="form-control input-tp" v-model="advanced">
 										<label for="search-post" class="title-font text-uppercase">ابحث عن مقالة...</label>
 									</div>
 								</form>
@@ -232,14 +227,30 @@ export default {
   data(){
 	  return{
 		  posts : [],
+		  advanced: null,
 		  meta : {}
 	  }
   },
+//    computed: {
+//     filteredResources (){
+//       if(this.searchQuery){
+//       return this.posts.filter((post)=>{
+//         return this.searchQuery.toLowerCase().split(' ').every(v => post.title.toLowerCase().includes(v))
+//       })
+//       }else{
+//         return this.posts;
+//       }
+//     }
+//   },
+watch: {
+       advanced(after, before) {
+            this.getData();
+        }
+    },
   methods:{
-
     getData(page=1) {
 	  axios.get("http://api.tarabees.com//api/articles?page="+page, 
-				  {},
+				  {params: { advanced: this.advanced }},
 				  { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
 		)
 		.then((response) => {

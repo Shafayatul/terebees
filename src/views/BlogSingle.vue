@@ -360,7 +360,7 @@ export default {
     //   this.$router.push('/login');
     // }
     // this.username = this.$store.getters.getUser.username;
-	this.articles = await AuthService.articles();
+	  this.articles = AuthService.articles();
 	
   },
 //   methods: {

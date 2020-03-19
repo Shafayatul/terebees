@@ -25,9 +25,14 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-8">
-							<article class="blog-post mb-50">
+
+
+
+
+
+							<article class="blog-post mb-50"  v-for="post in posts" :key="post.id">
 								<figure class="post-media animated-border p-relative mb-35">
-									<img src="@/assets/img/blog_home/layer-1.png" class="img-fluid" alt="">
+									<img v-bind:src="''+post.image.path+''" class="img-fluid" alt="">
 									<span class="gradient-border transition"></span>
 									<figcaption class="transition">
 										<div class="tags">
@@ -36,103 +41,35 @@
 											<a href="#">Adventure</a>
 										</div>
 										<ul class="post-meta list-unstyled flex mt-10 mb-0">
-											<li class="posted-by"><a href="#">Jonathan Lorrence</a></li>
-											<li class="posted-at"><a href="#">3rd Jan, 2019</a></li>
-											<li class="likes-count"><a href="#"><i class="ti-heart"></i> 45 Likes</a></li>
-											<li class="comments-count"><a href="#"><i class="ti-comment"></i> 06 Comments</a></li>
+											<li class="posted-by"><a href="#">Not Found</a></li>
+											<li class="posted-at"><a href="#">{{post.published_at}}</a></li>
+											<li class="likes-count"><a href="#"><i class="ti-heart"></i> {{ post.comments.data.length }} Likes</a></li>
+											<li class="comments-count"><a href="#"><i class="ti-comment"></i> {{ post.comments.data.length }} Comments</a></li>
 										</ul>
 									</figcaption>
 								</figure>
 								<div class="excerpt">
-									<a href="blog-single.php" class="read-more hover-effect-1 left gradient-bg"><i class="ti-plus"></i></a>									
-									<h4 class="text-uppercase fw-700"><a class="text-white" href="blog-single.php">عنوان المقالة الرياضية</a></h4>
-									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
-									
+									<a v-bind:href="'/article/'+post.id+''" class="read-more hover-effect-1 left gradient-bg"><i class="ti-plus"></i></a>									
+									<h4 class="text-uppercase fw-700"><a class="text-white" href="blog-single.php">{{ post.title }}</a></h4>
+									<p>{{ post.content }}</p>
 								</div>
-							</article> <!-- end .blog-post -->
-							<article class="blog-post mb-50">
-								<figure class="post-media animated-border p-relative mb-35">
-									<img src="@/assets/img/blog_home/layer-2.png" class="img-fluid" alt="">
-									<span class="gradient-border transition"></span>
-									<figcaption class="transition">
-										<div class="tags">
-											<a href="#">Lifestyle</a>
-											<a href="#">Travel</a>
-											<a href="#">Adventure</a>
-										</div>
-										<ul class="post-meta list-unstyled flex mt-10 mb-0">
-											<li class="posted-by"><a href="#">Jonathan Lorrence</a></li>
-											<li class="posted-at"><a href="#">3rd Jan, 2019</a></li>
-											<li class="likes-count"><a href="#"><i class="ti-heart"></i> 45 Likes</a></li>
-											<li class="comments-count"><a href="#"><i class="ti-comment"></i> 06 Comments</a></li>
-										</ul>
-									</figcaption>
-								</figure>
-							    <div class="excerpt">
-									<a href="blog-single.php" class="read-more hover-effect-1 left gradient-bg"><i class="ti-plus"></i></a>									
-									<h4 class="text-uppercase fw-700"><a class="text-white" href="blog-single.php">عنوان المقالة الرياضية</a></h4>
-									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
-									
-								</div>
-							</article> <!-- end .blog-post -->
-							<article class="blog-post mb-50">
-								<figure class="post-media animated-border p-relative mb-35">
-									<img src="@/assets/img/blog_home/layer-3.png" class="img-fluid" alt="">
-									<span class="gradient-border transition"></span>
-									<figcaption class="transition">
-										<div class="tags">
-											<a href="#">Lifestyle</a>
-											<a href="#">Travel</a>
-											<a href="#">Adventure</a>
-										</div>
-										<ul class="post-meta list-unstyled flex mt-10 mb-0">
-											<li class="posted-by"><a href="#">Jonathan Lorrence</a></li>
-											<li class="posted-at"><a href="#">3rd Jan, 2019</a></li>
-											<li class="likes-count"><a href="#"><i class="ti-heart"></i> 45 Likes</a></li>
-											<li class="comments-count"><a href="#"><i class="ti-comment"></i> 06 Comments</a></li>
-										</ul>
-									</figcaption>
-								</figure>
-								<div class="excerpt">
-									<a href="blog-single.php" class="read-more hover-effect-1 left gradient-bg"><i class="ti-plus"></i></a>									
-									<h4 class="text-uppercase fw-700"><a class="text-white" href="blog-single.php">عنوان المقالة الرياضية</a></h4>
-									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
-									
-								</div>
-							</article> <!-- end .blog-post -->
-							<article class="blog-post mb-50">
-								<figure class="post-media animated-border p-relative mb-35">
-									<img src="@/assets/img/blog_home/layer-4.png" class="img-fluid" alt="">
-									<span class="gradient-border transition"></span>
-									<figcaption class="transition">
-										<div class="tags">
-											<a href="#">Lifestyle</a>
-											<a href="#">Travel</a>
-											<a href="#">Adventure</a>
-										</div>
-										<ul class="post-meta list-unstyled flex mt-10 mb-0">
-											<li class="posted-by"><a href="#">Jonathan Lorrence</a></li>
-											<li class="posted-at"><a href="#">3rd Jan, 2019</a></li>
-											<li class="likes-count"><a href="#"><i class="ti-heart"></i> 45 Likes</a></li>
-											<li class="comments-count"><a href="#"><i class="ti-comment"></i> 06 Comments</a></li>
-										</ul>
-									</figcaption>
-								</figure>
-								<div class="excerpt">
-									<a href="blog-single.php" class="read-more hover-effect-1 left gradient-bg"><i class="ti-plus"></i></a>									
-									<h4 class="text-uppercase fw-700"><a class="text-white" href="blog-single.php">عنوان المقالة الرياضية</a></h4>
-									<p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود</p>
-									
-								</div>
-							</article> <!-- end .blog-post -->
+							</article>
+
+
+
+
+
 							
 							<ul class="pagination flex justify-center mb-0">
-								<li><a href="#"><i class="ti-arrow-right"></i></a></li>
-								<li><a href="#">01</a></li>
-								<li><a href="#">02</a></li>
-								<li><a href="#">03</a></li>
-								<li><a href="#">04</a></li>
-								<li><a href="#"><i class="ti-arrow-left"></i></a></li>
+								<li v-if="(meta.current_page - 1) > 0" v-on:click="getData(meta.current_page-1)"><a href="#"><i class="ti-arrow-right"></i></a></li>
+								<li v-if="(meta.current_page - 3) > 0" v-on:click="getData(meta.current_page-3)"><a>{{meta.current_page-3}}</a></li>
+								<li v-if="(meta.current_page - 2) > 0" v-on:click="getData(meta.current_page-2)"><a>{{meta.current_page-2}}</a></li>
+								<li v-if="(meta.current_page - 1) > 0" v-on:click="getData(meta.current_page-1)"><a>{{meta.current_page-1}}</a></li>
+								<li><a href="">{{meta.current_page}}</a></li>
+								<li v-if="(meta.current_page +1) <= meta.last_page" v-on:click="getData(meta.current_page+1)"><a>{{meta.current_page+1}}</a></li>
+								<li v-if="(meta.current_page +2) <= meta.last_page" v-on:click="getData(meta.current_page+2)"><a>{{meta.current_page+2}}</a></li>
+								<li v-if="(meta.current_page +3) <= meta.last_page" v-on:click="getData(meta.current_page+3)"><a>{{meta.current_page+3}}</a></li>
+								<li v-if="(meta.current_page +1) <= meta.last_page" v-on:click="getData(meta.current_page+1)"><a href="#"><i class="ti-arrow-left"></i></a></li>
 							</ul>
 						</div> <!-- end .col-12.col-lg-8 -->
 						<aside id="widget-area" class="col-12 col-lg-4">
@@ -289,8 +226,35 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  name: 'BlogList'
+  name: 'BlogList',
+  data(){
+	  return{
+		  posts : [],
+		  meta : {}
+	  }
+  },
+  methods:{
+
+    getData(page=1) {
+	  axios.get("http://api.tarabees.com//api/articles?page="+page, 
+				  {},
+				  { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+		)
+		.then((response) => {
+			this.posts = response.data.data;
+			this.meta = response.data.meta;
+			console.log(this.meta)
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+    }
+  },
+  created(){
+	  this.getData();
+  }
 }
 </script>
 

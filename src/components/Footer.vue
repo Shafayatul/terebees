@@ -1,5 +1,6 @@
 <template>
-    <footer class="site-footer" :class="$route.meta.footerTop === true ? 'bottom-full': 'section-full'" v-if="$route.path !== '/404'">
+    <footer class="site-footer"  v-if="$route.path !== '/login'">
+        <div v-if="$route.meta.footer === true" :class="$route.meta.footer === true ? 'bottom-full': 'section-full'">  
         <div class="footer-top-shape"  v-if="$route.meta.footerTop === true">
              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 341" style="enable-background:new 0 0 1920 341;" xml:space="preserve">                
                 <g>
@@ -39,6 +40,7 @@
                     <p class="text-center mt-45 mb-0">Copyright (c) 2018, All Rights Reserved to Me</p>
                 </div>
             </div> <!-- end .row -->
+        </div>
         </div> <!-- end .container -->
     </footer> <!-- end .site-footer -->
 

@@ -45,7 +45,7 @@
               <div 
                 class="excerpt"
                 v-for="article in articles"
-                :key="article.title"
+                :key="article.e"
               >
                 <h4 class="text-uppercase fw-700 text-white">{{ article.title }}</h4>									
                 <p >

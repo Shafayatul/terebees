@@ -15,7 +15,7 @@
       >
         <img
           src="@/assets/img/logo-color.png"
-          alt="Squat"
+          alt="logo"
         >
       </router-link><!-- end .navbar-brand -->
       <button

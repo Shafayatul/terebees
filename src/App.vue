@@ -5,12 +5,13 @@
         <div class="dash uno" /><div class="dash dos" /><div class="dash tres" /><div class="dash cuatro" />
       </div>
     </div> -->
-    
+    <component  :is="layout" >
     <Header />
 
     <router-view />
 
     <Footer />
+    </component>
   </div>
 </template>
 <script>
@@ -23,6 +24,11 @@
     components: {    
       Header,
       Footer
+    },
+    data() {
+      return {
+         layout: 'div'
+      }
     },
     watch:{
         $route (){

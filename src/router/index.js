@@ -1,13 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Dashboard from '../Dashboard/Dashboard.vue'
+import Admin from '../Dashboard/Admin.vue'
+import Articals from '../Dashboard/Articals.vue'
+import AskCouch from '../Dashboard/AskCouch.vue'
+import Gallery from '../Dashboard/Gallery.vue'
+import Training from '../Dashboard/Training'
+import Packages from '../Dashboard/Packages.vue'
 import NotFound from '../views/NotFound.vue'
 import ClassSchedule from '../views/ClassSchedule.vue'
 import Clasess from '../views/Clasess.vue'
 import ClassDetail from '../views/ClassDetail.vue'
 import OurTrainer from '../views/OurTrainer.vue'
 import Ask_Trainer from '../views/Ask_Trainer.vue'
-import Gallery from '../views/Gallery.vue'
+// import Gallery from '../views/Gallery.vue'
 import BlogList from '../views/BlogList.vue'
 import BlogSingle from '../views/BlogSingle.vue'
 import About from '../views/About.vue'
@@ -24,8 +31,26 @@ const routes = [
     component: Home,
     meta: {
       footerTop: true,
-      header: true
+      header: true,
+      footer: true
     }
+  },
+  {
+    path: '',
+    name: '',
+    redirect: "/dashboard",
+    component: Dashboard,
+    meta:{footer: false},    
+    children: [       
+      { path: '/dashboard', component: Admin, name:' لوحة التحكم',},
+      { path: '/dashboard/askCouch', component: AskCouch, name:' إسأل المدرب',},
+      { path: '/dashboard/gallery', component: Gallery, name: 'مكتبة الفيديو',},
+      { path: '/dashboard/training', component: Training , name:' جداول التدريب ',},
+      { path: '/dashboard/packages', component: Packages , name:' الحزم',},
+      { path: '/dashboard/articals', component: Articals , name:'المقالات الرياضية', },     
+
+      // ...other sub routes
+    ],   
   },
   {
     path: '/404',
@@ -34,6 +59,7 @@ const routes = [
     meta: {
       footerTop: false,
       header:false,
+      
     }
   },
   {
@@ -45,7 +71,9 @@ const routes = [
     component: About,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
+
     }
   },
   {
@@ -54,7 +82,8 @@ const routes = [
     component: ClassSchedule,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
   {
@@ -63,7 +92,8 @@ const routes = [
     component: Clasess,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
   {
@@ -72,7 +102,8 @@ const routes = [
     component: ClassDetail,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
   {
@@ -81,7 +112,8 @@ const routes = [
     component: OurTrainer,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
   {
@@ -99,7 +131,8 @@ const routes = [
     component: BlogList,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
   {
@@ -108,7 +141,8 @@ const routes = [
     component: BlogSingle,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
  
@@ -118,7 +152,8 @@ const routes = [
     component: Contact,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
     }
   },
   {
@@ -127,7 +162,9 @@ const routes = [
     component:Ask_Trainer,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      footer: true
+
     }
   },
   { path: '/login',
@@ -135,16 +172,13 @@ const routes = [
     name: 'login',
     meta: {
       footerTop: false,
-      header: true
+      header: false,
+      footer: true
+      
     }
    },
-  { path: '/signup',
-   component:SignupCustomer,
-    meta: {
-    footerTop: false,
-    header: true
-    }
-  },
+  
+  
   { path: '*', redirect: '/' }
 ]
 
@@ -154,6 +188,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
 
 
 export default router

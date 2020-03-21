@@ -3,38 +3,10 @@
     <div class="container">  
       <v-data-table        
         :headers="headers"
-        :items="desserts"        
-        sort-by="title"
+        :items="desserts"       
+        sort-by="Name"
         class="elevation-1"
       >
-        <template v-slot:body="{ items }">
-          <tbody>
-            <tr
-              v-for="item in items"
-              :key="item.id"
-            >
-              <td>{{ item.title }}</td>
-              <td>{{ item.content }}</td>
-              <td>{{ item.published_at }}</td>
-              
-              <td>منشور</td>
-              <td>   
-                <v-icon
-                  small
-                  class="mr-2"
-                  @click="editItem(item)"
-                >
-                  mdi-pencil
-                </v-icon>
-                <v-icon
-                  small
-                  @click="deleteItem(item)"
-                >
-                  mdi-delete
-                </v-icon></td>
-            </tr>
-          </tbody>
-        </template>
         <template v-slot:top>
           <v-toolbar
             flat
@@ -144,8 +116,26 @@
             </v-dialog>
           </v-toolbar>
         </template>
-              
-    
+         <template slot="items" slot-scope="props">
+                  <td>{{ props.item.title }}</td>                 
+                  <td class="text-xs-right">{{ props.item.content }}</td>
+                 
+         </template>
+        <template v-slot:item.actions="{ item }">
+          <v-icon
+            small
+            class="mr-2"
+            @click="editItem(item)"
+          >
+            mdi-pencil
+          </v-icon>
+          <v-icon
+            small
+            @click="deleteItem(item)"
+          >
+            mdi-delete
+          </v-icon>
+        </template>
         <template v-slot:no-data>
           <v-btn
             color="primary"
@@ -176,7 +166,6 @@ import axios from 'axios';
         { text: 'الحاله', value: 'الحاله' },       
         { text: 'Actions', value: 'actions', sortable: false },
       ],
-    meta : {},  
     desserts: [ ],
       editedIndex: -1,
       editedItem: {
@@ -208,7 +197,7 @@ import axios from 'axios';
 
     methods: {
          initialize(page=1) {
-	       axios.get("http://api.tarabees.com//api/articles?page="+page, 
+	  axios.get("http://api.tarabees.com//api/articles?page="+page, 
 				  {params: {  }},
 				  { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
 		)

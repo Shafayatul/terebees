@@ -159,7 +159,7 @@ export default {
          age: this.age,
          email: this.email,
          password: this.password,
-         password_confirmation: this.password_confirmation
+         password_confirmation: this.password_confirmation,
         //  profile_image: this.profile_image,
         };
         console.log(credentials);
@@ -171,16 +171,7 @@ export default {
         // })
 
         client().post('/customer/signup', 
-                  {
-                    first_name: "aa",
-                    last_name: "bb",
-                    family: "abir",
-                    age: 33,
-                    email: "ema5il@gmail.com",
-                    password: "email@gmail.com",
-                    password_confirmation: "email@gmail.com"
-
-                  }
+                   credentials
                 )
               .then(function (response) {
                 console.log(response);

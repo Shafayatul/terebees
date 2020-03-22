@@ -3,6 +3,7 @@
     id="inspire"
     class="site-main dark-bg"
   >
+  <section class="login">
     <v-container
       fill-height
     >
@@ -65,6 +66,7 @@
         </v-col>
       </v-layout>
     </v-container>
+  </section>
   </v-app>
 </template>
 <script>
@@ -91,7 +93,7 @@ export default {
     const token = response.token;
     const user = response.user;
     this.$store.dispatch('login', { token, user });
-    this.$router.push('/');
+    this.$router.push('/dashboard');
     } catch (error) {
      this.msg = error.response.data.msg;
     }
@@ -99,4 +101,12 @@ export default {
     }
 };
 </script>
+<style scoped>
+.login{
+  background: #8e0e00;
+  background: -webkit-gradient(linear,left bottom,left top,from(#000),color-stop(#8e0e00),to(#fc811d));
+  background: linear-gradient(0deg,#000,#8e0e00,#fc811d);
+  height: 100%;
+}
+</style>
    

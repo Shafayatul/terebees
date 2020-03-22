@@ -17,6 +17,7 @@ import Ask_Trainer from '../views/Ask_Trainer.vue'
 // import Gallery from '../views/Gallery.vue'
 import BlogList from '../views/BlogList.vue'
 import BlogSingle from '../views/BlogSingle.vue'
+import Subscribe from '../views/Subscriptions.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import login from '../auth/Login.vue'
@@ -126,7 +127,7 @@ const routes = [
     }
   },
   {
-    path: '/blog-list',
+    path: '/article',
     name: 'blogList',
     component: BlogList,
     meta: {
@@ -136,7 +137,7 @@ const routes = [
     }
   },
   {
-    path: '/blog-single',
+    path: '/article/:id',
     name: 'blogSingle',
     component: BlogSingle,
     meta: {
@@ -167,7 +168,27 @@ const routes = [
 
     }
   },
-  { path: '/login',
+  { path: '/singup',
+    component: SignupCustomer,
+    name: 'singup',
+    meta: {
+      footerTop: false,
+      header: false,
+      footer: true
+      
+    }
+   },
+  { path: '/subscribe',
+    component: Subscribe,
+    name: 'Subscribe',
+    meta: {
+      footerTop: false,
+      header: true,
+      footer: true
+      
+    }
+   },
+   { path: '/',
     component: login,
     name: 'login',
     meta: {
@@ -180,6 +201,7 @@ const routes = [
   
   
   { path: '*', redirect: '/' }
+  
 ]
 
 

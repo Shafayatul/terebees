@@ -1023,6 +1023,7 @@
                   <a
                     href="#"
                     class="btn btn-theme-1"
+                    v-on="on"
                   ><i class="ti-unlock ml-15" />Enroll Now</a>
                   <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
                   <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">
@@ -1067,6 +1068,7 @@
                 <div>
                   <a
                     href="#"
+                 
                     class="btn btn-theme-1"
                   ><i class="ti-unlock ml-15" />Enroll Now</a>
                   <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
@@ -1263,6 +1265,7 @@
                   <a
                     href="#"
                     class="btn btn-theme-1"
+                    v-on="on"
                   ><i class="ti-arrow-right ml-15" />Read more</a>
                   <h4 class="fw-700 text-uppercase fs-18 text-white mb-15">
                     Standard Blog Post 02
@@ -1280,10 +1283,12 @@
             </div>
             <!-- end .blog-item -->
           </div>
+
           <!-- end .col-12.col-lg-4 -->
         </div>
         <!-- end .row -->
       </div>
+    
       <!-- end .container -->
     </section>
     <!-- end #latest-posts -->
@@ -1291,13 +1296,15 @@
 </template>
 
 <script>
+//  import Subscriptions from './Subscriptions'
  import VueSlickCarousel from 'vue-slick-carousel'
  import 'vue-slick-carousel/dist/vue-slick-carousel.css' 
 export default {
   name: 'Home',
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel  },
   data() {
     return {
+      dialog: false,
        settings: {
           arrows: false,
           dots: true,

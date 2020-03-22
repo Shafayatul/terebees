@@ -6,8 +6,7 @@ const url = 'http://api.tarabees.com//api/';
 
 export default {
 	login(credentials) {
-		return axios
-			.post(url + '/customer/login', credentials)
+		return axios.post(url + 'customer/login', credentials)
 			.then(response => response.data);
 	},
 	signUp(credentials) {

@@ -164,15 +164,15 @@
   </v-app>
 </template>
 <script>
-  
+  import AuthService from '@/services/AuthService.js';
   export default {
      props: {
       source: String,
     },   
     data () {
       return {
-        drawer: null,
-        color: 'success',
+        drawer: null,       
+        username: '',
         notifications: [
         'Mike John Responded to your email',
         'You have 5 new tasks',

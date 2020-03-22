@@ -99,15 +99,11 @@
                 </figcaption>
               </figure>
               <div class="excerpt">
-                <a
-                  :href="'/article/'+post.id+''"
+                <router-link :to="'/article/' + post.id" 
                   class="read-more hover-effect-1 left gradient-bg"
-                ><i class="ti-plus" /></a>									
+                ><i class="ti-plus" /></router-link>									
                 <h4 class="text-uppercase fw-700">
-                  <a
-                    class="text-white"
-                    href="blog-single.php"
-                  >{{ post.title }}</a>
+                 <router-link :to="'/article/' + post.id" >{{ post.title }}</router-link>
                 </h4>
                 <p>{{ post.content }}</p>
               </div>

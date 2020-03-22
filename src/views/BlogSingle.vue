@@ -26,7 +26,7 @@
           <div class="col-12 col-lg-8">
             <article class="blog-post mb-3">
               <figure class="post-media p-relative mb-35">
-                <img src="@/assets/img/blog_details/layer-9.png" class="img-fluid" alt="">
+                <img  :src="''+post.data.image.path+''" class="img-fluid w-100" alt="" />
                 <span class="gradient-border transition"></span>
                 <figcaption class="transition">
                   <div class="tags">
@@ -34,27 +34,24 @@
                     <a href="#">Travel</a>
                     <a href="#">Adventure</a>
                   </div>
+                 
                   <ul class="post-meta list-unstyled flex mt-10 mb-0">
-                    <li class="posted-by"><a href="#">Jonathan Lorrence</a></li>
-                    <li class="posted-at"><a href="#">3rd Jan, 2019</a></li>
-                    <li class="likes-count"><a href="#"><i class="ti-heart"></i> 45 Likes</a></li>
-                    <li class="comments-count"><a href="#"><i class="ti-comment"></i> 06 Comments</a></li>
+                    <li class="posted-by"><a href="#"> Not Found</a></li>
+                    <li class="posted-at"><a href="#">{{ post.data.published_at }}</a></li>
+                    <li class="likes-count "><a href="#"><i class="ti-heart"></i>{{ post.data.comments.data.length }} Likes Likes </a></li>
+                    <li class="comments-count mr-2"><a href="#"><i class="ti-comment"></i>{{ post.data.comments.data.length }} </a></li>
                   </ul>
                 </figcaption>
               </figure>
               <div 
                 class="excerpt"
-                v-for="article in articles"
-                :key="article.e"
+                     
               >
-                <h4 class="text-uppercase fw-700 text-white">{{ article.title }}</h4>									
+                <h4 class="text-uppercase fw-700 text-white">{{ post.data.title }}</h4>									
                 <p >
-                  الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود
+                 {{ post.data.content }}
                 </p>
-                <p> الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود </p>
-                <blockquote class="text-italic">
-                  الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود
-                </blockquote>
+               
 									
               </div>
               <div class="row">
@@ -78,8 +75,9 @@
               </div> <!-- end .post-share -->
 
               <div class="col-12 col-md-6 post-nav text-left">
-                <a href="#" data-fs="12" class="btn btn-sm btn-dark">Next Post <i class="ti-arrow-right ml-10"></i></a>
-                <a href="#" data-fs="12" class="btn btn-sm btn-dark mr-10"><i class="ti-arrow-left mr-10"></i> Prev Post</a>
+                <a href="#" data-fs="12" class="btn btn-sm btn-dark" 
+               @click="nextPage">Next Post <i class="ti-arrow-right ml-10"></i></a>
+                <a href="#" data-fs="12" class="btn btn-sm btn-dark mr-10" @click="prevPage"><i class="ti-arrow-left mr-10"></i> Prev Post</a>
               </div> <!-- end .post-nav -->
             </div> <!-- end .flex -->
             <div class="article-author flex mt-80">
@@ -100,7 +98,7 @@
             </div> <!-- end .article-author -->
             <div id="comments-container" class="mt-80">
               <div class="comments-header flex space-between mb-50">
-                <h5 class="text-uppercase fw-700 text-white mb-0">02 Comments</h5>
+                <h5 class="text-uppercase fw-700 text-white mb-0">{{ post.data.comments.data.length }}  Comments</h5>
                 <div class="comments-type fw-500 text-right">
                   <a href="#" class="link-hover-1">Newest</a>
                   <a href="#" class="link-hover-1 ml-30">Oldest</a>
@@ -325,51 +323,31 @@
 </template>
 
 <script>
-import AuthService from '@/services/AuthService.js';
+import axios from 'axios';
 export default {
-  data() {
-    return {
-	  articles: [],
-	  totalarticles: 0,
-      loading: false
-     
-    };
-  },
-  methods: {
-      getarticles() {
-        this.loading = true;
-
-        const options = {
-          embedAssets: true,
-          offset: this.articles.length
-  };
-    AuthService.getCollection('articles', options)
-        .then(result => {
-          this.articles.push(...result.data);
-          this.totalarticles = result.meta.total;
-          this.loading = false;
-        })
-        .catch(err => {
-          this.loading = false;
-          throw err;
-        })
-      }
-    },
+ data() {
+   return {
+    post: {},
+    // comments: [],
+    // showCommentBox: false,
+  }
+ },
+ methods:  {
+   getPost() {
+    axios.get("http://api.tarabees.com//api/articles/" + this.$route.params.id)
+   	  .then(res => {
+            this.post = res.data
+            this.meta = res.meta;
+          }).catch(res => {
+            console.log(res)
+          })
+   },
+  
+ },
   created() {
-    // if (!this.$store.getters.isLoggedIn) {
-    //   this.$router.push('/login');
-    // }
-    // this.username = this.$store.getters.getUser.username;
-	  this.articles = AuthService.articles();
-	
-  },
-//   methods: {
-//     logout() {
-//       this.$store.dispatch('logout');
-//       this.$router.push('/login');
-//     }
-//   }
-};
+      this.getPost()
+    }
+}
 </script>
 <style scoped>
 

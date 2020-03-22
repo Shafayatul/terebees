@@ -113,25 +113,13 @@
               </li>
             </ul>
           </li>
-          <li class="has-submenu">
-            <router-link
-              to="#"
-              data-text="Blog"
+          <li>
+            <router-link 
+              to="/article"
+              data-text="المقالات الرياضية"
             >
-              <span>Blog</span>
+              <span>المقالات الرياضية </span>
             </router-link>
-            <ul class="submenu">
-              <li>
-                <router-link to="/blog-list">
-                  Blog List
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/blog-single">
-                  Blog Details
-                </router-link>
-              </li>
-            </ul>
           </li>
           <li>
             <router-link

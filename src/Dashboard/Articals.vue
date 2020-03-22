@@ -27,11 +27,13 @@
                   mdi-pencil
                 </v-icon>
                 <v-icon
+                v-model="deleted_at"
                   small
                   @click="deleteItem(item)"
                 >
                   mdi-delete
-                </v-icon></td>
+                </v-icon>
+              </td>
             </tr>
           </tbody>
         </template>
@@ -49,7 +51,9 @@
             <v-spacer />
             <v-dialog
               v-model="dialog"
-              max-width="500px"
+              fullscreen
+              hide-overlay
+              transition="dialog-bottom-transition"
             >
               <template v-slot:activator="{ on }">
                 <v-btn
@@ -62,9 +66,29 @@
                 </v-btn>
               </template>
               <v-card>
-                <v-card-title>
-                  <span class="headline">{{ formTitle }}</span>
-                </v-card-title>
+                <v-toolbar
+                  dark
+                  color="primary"
+                >
+                  <v-toolbar-title><span class="headline">{{ formTitle }}</span></v-toolbar-title>
+                  <v-spacer />
+                  <v-toolbar-items>
+                    <v-btn
+                      dark
+                      text
+                      @click="dialog = false"
+                    >
+                      Save
+                    </v-btn>
+                    <v-btn
+                      icon
+                      dark
+                      @click="dialog = false"
+                    >
+                      <v-icon>mdi-close</v-icon>
+                    </v-btn>
+                  </v-toolbar-items>
+                </v-toolbar>
 
                 <v-card-text>
                   <v-container>
@@ -72,51 +96,60 @@
                       <v-col
                         cols="12"
                         sm="6"
-                        md="4"
+                        md="10"
+                        lg="10"
                       >
                         <v-text-field
                           v-model="editedItem.title"
-                          label="Dessert name"
+                          label="العنوان"
+                          outlined
+                        />
+                      </v-col>                   
+                      <v-col
+                        lg="2"
+                        md="2"
+                      >
+                        <v-switch
+                          v-model="selectable"
+                          label="نشر"
                         />
                       </v-col>
                       <v-col
                         cols="12"
                         sm="6"
-                        md="4"
+                        md="6"
+                        lg="6"
+                      >
+                        <v-file-input
+                          v-model="editedItem.image"
+                          placeholder="إختر صورة المقال"
+                          label="صورة المقال"
+                          outlined
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="6"
+                        lg="6"
                       >
                         <v-text-field
+                          v-model="editedItem.url"
+                          label="رابط للفيدبو"
+                          outlined
+                        />
+                      </v-col>                   
+                     
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="12"
+                        lg="12"
+                      >                    
+                        <ckeditor
                           v-model="editedItem.content"
-                          label="Calories"
-                        />
-                      </v-col>
-                      <v-col
-                        cols="12"
-                        sm="6"
-                        md="4"
-                      >
-                        <v-text-field
-                          v-model="editedItem.published_from"
-                          label="Fat (g)"
-                        />
-                      </v-col>
-                      <v-col
-                        cols="12"
-                        sm="6"
-                        md="4"
-                      >
-                        <v-text-field
-                          v-model="editedItem.carbs"
-                          label="Carbs (g)"
-                        />
-                      </v-col>
-                      <v-col
-                        cols="12"
-                        sm="6"
-                        md="4"
-                      >
-                        <v-text-field
-                          v-model="editedItem.protein"
-                          label="Protein (g)"
+                          :editor="editor"
+                          :config="editorConfig"
                         />
                       </v-col>
                     </v-row>
@@ -161,8 +194,22 @@
 
 <script>
 import axios from 'axios';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   export default {
     data: () => ({
+      editor: ClassicEditor,
+      selectable: false,
+      deleted_at: null,
+       editorConfig: {
+           language: {
+            // The UI will be English.
+            ui: 'ar',
+
+            // But the content will be edited in Arabic.
+            content: 'ar'
+        }
+        },
+
       dialog: false,
       headers: [
         {
@@ -257,5 +304,9 @@ import axios from 'axios';
 <style scoped>
 .section-articals{
     width: 100%;
+}
+.ck.ck-editor__main>.ck-editor__editable {   
+    border-radius: 0;
+    height: 70vh !important;
 }
 </style>

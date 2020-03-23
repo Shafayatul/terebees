@@ -13,10 +13,12 @@ import 'bootstrap'
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.use(VueAxios, axios);
 Vue.use( CKEditor );
-axios.defaults.headers.common['Authorization'] = `Bearer ${store.state.token}`;
+// axios.defaults.headers.common['Authorization'] = `Bearer ${store.state.token}`;
 
 
 // import 'bootstrap/dist/css/bootstrap.css'
+import VueCoreVideoPlayer from 'vue-core-video-player'
+Vue.use(VueCoreVideoPlayer)
 
 global.jQuery = jQuery
 global .$ = jQuery

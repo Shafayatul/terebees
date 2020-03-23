@@ -30,7 +30,7 @@
              
               <v-card-text>
                 <v-text-field
-                  v-model="user.username"
+                  v-model="form.username"
                   prepend-icon="person"
                   name="username"
                   label="username"
@@ -40,7 +40,7 @@
                 />
 
                 <v-text-field
-                  v-model="user.password"
+                  v-model="form.password"
                   prepend-icon="lock"
                   name="password"
                   label="Password"
@@ -84,7 +84,10 @@ export default {
   name: 'Login',
   data() {
     return {
-      user: new User('', ''),
+      form:{
+        username:null,
+        password:null
+      },
       loading: false,
       message: '',
       valid: true,
@@ -112,19 +115,18 @@ export default {
   login() {
       this.loading = true;
       this.$refs.form.validate()
-        if (this.user.username && this.user.password) {
-          this.$store.dispatch('auth/login', this.user).then(
-            () => {
-              this.$router.push('/dashboard/profile');
-            },
-            error => {
-              this.loading = false;
-              this.message =
-                (error.response && error.response.data) ||
-                error.message ||
-                error.toString();
-            }
-          );
+        if (this.form.username && this.form.password) {
+          const response =  AuthService.login(this.form);
+          // console.log(response)
+          this.$router.push('/dashboard/profile');
+            // error => {
+            //   this.loading = false;
+            //   this.message =
+            //     (error.response && error.response.data) ||
+            //     error.message ||
+            //     error.toString();
+            // }
+          
         }
       }
     }

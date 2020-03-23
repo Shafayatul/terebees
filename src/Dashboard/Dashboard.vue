@@ -140,7 +140,7 @@
         to="/profile"
         class="nav-link"
       >
-        {{ currentUser.username }}
+        <!-- {{ currentUser.username }} -->
 
       </router-link>
       <a class="nav-link" href @click.prevent="logOut">

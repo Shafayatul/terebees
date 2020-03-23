@@ -79,7 +79,6 @@
               v-model="profile_image"             
               placeholder="Upload your documents"
               label="File input"
-              multiple
               prepend-icon="mdi-paperclip"
             />
             <v-card-actions>      
@@ -110,7 +109,7 @@ export default {
       first_name: '',
       last_name: '',
       family: '',
-      age: 0,
+      age: '',
       email: '',
       password:'',
       password_confirmation: '',      
@@ -150,9 +149,14 @@ export default {
   });
   },
   methods: {
+    getFormData(formData,object) {
+        // const formData = new FormData();
+        Object.keys(object).forEach(key => formData.append(key, object[key]));
+        return formData;
+    },
     signUp(){
-
-        const credentials = {
+        let formData = new FormData;
+        let credentials = {
          first_name: this.first_name,
          last_name: this.last_name,
          family: this.family,
@@ -162,7 +166,10 @@ export default {
          password_confirmation: this.password_confirmation,
         //  profile_image: this.profile_image,
         };
-        console.log(credentials);
+        this.getFormData(formData,credentials)
+        console.log(this.profile_image)
+        formData.append('profile_image',this.profile_image)
+          
 
         // this.$http.post('/api', data, {
         //   headers: {
@@ -171,12 +178,14 @@ export default {
         // })
 
         client().post('/customer/signup', 
-                   credentials
+                   formData
                 )
-              .then(function (response) {
-                console.log(response);
+              .then(response=> {
+                this.$router.push({
+                  name: 'login'
+                })
               })
-              .catch(function (error) {
+              .catch(error=> {
                 console.log(error.data);
               });
     }

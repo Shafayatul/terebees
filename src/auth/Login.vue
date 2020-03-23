@@ -87,10 +87,12 @@ export default {
     username: this.username,
     password: this.password
     };
-    const response = await AuthService.login(credentials);   
-    const token = response.token;
-    const user = response.user;
-    this.$store.dispatch('login', { token, user });
+    const response = await AuthService.login(credentials);
+    this.msg = response.msg;
+    console.log(response)
+    const token = response.access_token;
+    // const user = response.user;
+    this.$store.dispatch('login', { token });
     this.$router.push('/dashboard');
     } catch (error) {
     

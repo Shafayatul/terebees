@@ -3,71 +3,58 @@
 <template>
   <div class="section-articals">
     <div class="container"> 
-         <v-row justify="end">
-    <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
-      <template v-slot:activator="{ on }">
-        <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
-      </template>
-      <v-card>
-        <v-toolbar dark color="primary">
-          <v-btn icon dark @click="dialog = false">
-            <v-icon>mdi-close</v-icon>
-          </v-btn>
-          <v-toolbar-title>Settings</v-toolbar-title>
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-btn dark text @click="dialog = false">Save</v-btn>
-          </v-toolbar-items>
-        </v-toolbar>
-        <v-list three-line subheader>
-          <v-subheader>User Controls</v-subheader>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>Content filtering</v-list-item-title>
-              <v-list-item-subtitle>Set the content filtering level to restrict apps that can be downloaded</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>Password</v-list-item-title>
-              <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-        <v-divider></v-divider>
-        <v-list three-line subheader>
-          <v-subheader>General</v-subheader>
-          <v-list-item>
-            <v-list-item-action>
-              <v-checkbox v-model="notifications"></v-checkbox>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Notifications</v-list-item-title>
-              <v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-action>
-              <v-checkbox v-model="sound"></v-checkbox>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Sound</v-list-item-title>
-              <v-list-item-subtitle>Auto-update apps at any time. Data charges may apply</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-action>
-              <v-checkbox v-model="widgets"></v-checkbox>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>Auto-add widgets</v-list-item-title>
-              <v-list-item-subtitle>Automatically add home screen widgets</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-card>
-    </v-dialog>
-  </v-row>
+        <v-row justify="end">
+          <v-dialog v-model="dialog"   transition="dialog-bottom-transition">
+            <template v-slot:activator="{ on }">
+              <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+            </template>
+            <v-card>
+              <v-toolbar dark color="primary">
+                <v-btn icon dark @click="close">
+                  <v-icon>mdi-close</v-icon>
+                </v-btn>
+                <v-toolbar-title>Settings</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                  <v-btn dark text @click="addVideo">Save</v-btn>
+                </v-toolbar-items>
+              </v-toolbar>
+
+                <v-card-text>
+                  <v-container>
+                    <v-row>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="12"
+                        lg="6"
+                      >
+                        <v-text-field
+                          v-model="title"
+                          label="العنوان"
+                          outlined
+                        />
+                      </v-col>            
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="12"
+                        lg="6"
+                      >
+                        <v-file-input
+                          v-model="video"
+                          placeholder="إختر صورة المقال"
+                          label="صورة المقال"
+                          outlined
+                        />
+                      </v-col>                   
+                     
+                    </v-row>
+                  </v-container>
+                </v-card-text>
+            </v-card>
+          </v-dialog>
+        </v-row>
          <v-card
           v-for="(item,index) in videos.data"
           :key="index"
@@ -77,7 +64,11 @@
         >
             <video :src="item.video.path" width="100%" height="200px" controls="controls" style="background: black;"></video>
             
-            <v-card-text class="text--primary">
+            <v-card-text  class="jutify-content-between text--primary">
+            
+              <!-- <v-btn icon  @click="deleteItem(item.id)">
+                <v-icon>mdi-close</v-icon>
+              </v-btn> -->
               <div>{{item.title}}</div>
             </v-card-text>
 
@@ -102,6 +93,8 @@
 export default {
   data() {
     return {
+      title:null,
+      video:[],
       dialog: false,
       notifications: false,
       sound: true,
@@ -112,6 +105,56 @@ export default {
     }
   },
   methods: {
+    deleteItem(id){
+        confirm('Are you sure you want to delete this item?') && this.deleteVideo(id)
+    },
+    deleteVideo(id){
+      axios.delete(`http://api.tarabees.com//api/admin/videos/${id}`)
+      .then((result) => {
+        
+      }).catch((err) => {
+        
+      });
+    },
+    close(){
+      this.dialog = false;
+      this.title=null
+      this.video=[]
+
+    },
+    addVideo(){
+      let formData = new FormData;
+      
+      formData.append('video',this.video) 
+      
+      formData.append('title',this.title) 
+      axios.post('http://api.tarabees.com//api/admin/videos',formData)
+      .then((result) => {
+        axios.get(`http://api.tarabees.com//api/admin/videos/${result.data.id}`)
+        .then((result) => {
+          
+          Toast.fire({
+              icon: 'success',
+              title: 'Added successfully'
+          })
+          this.videos.data.unshift(result.data.data)
+
+        }).catch((err) => {
+          
+        });
+      }).catch((err) => {
+        
+      });
+    },
+    create(){
+      axios.post('http://api.tarabees.com//api/admin/videos')
+      .then((result) => {
+        console.log()
+      }).catch((err) => {
+        console.log(err)
+        
+      });
+    },
     changePage(value){
       axios.get('http://api.tarabees.com//api/admin/videos?page='+value)
       .then((result) => {

@@ -6,7 +6,7 @@
         <v-row justify="end">
           <v-dialog v-model="dialog"   transition="dialog-bottom-transition">
             <template v-slot:activator="{ on }">
-              <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+              <v-btn color="primary" dark v-on="on">Add Video</v-btn>
             </template>
             <v-card>
               <v-toolbar dark color="primary">

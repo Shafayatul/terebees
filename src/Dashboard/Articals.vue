@@ -255,7 +255,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     methods: {
          initialize(page=1) {
-	       axios.get("http://api.tarabees.com//api/articles?page="+page, 
+	       axios.get("http://api.tarabees.com/api/admin/articles?page="+page, 
 				  {params: {  }},
 				  { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
 		)

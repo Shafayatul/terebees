@@ -1304,7 +1304,7 @@ export default {
   components: { VueSlickCarousel  },
   data() {
     return {
-      dialog: false,
+     
        settings: {
           arrows: false,
           dots: true,

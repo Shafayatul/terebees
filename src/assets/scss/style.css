@@ -2427,6 +2427,10 @@ a:hover {
   font-size: 48px;
 }
 
+.ck-content {
+  height: 250px;
+}
+
 .bc-container {
   bottom: 0;
   left: 50%;

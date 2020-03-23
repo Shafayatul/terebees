@@ -100,7 +100,7 @@
 </template>
 
 <script>
-import AuthService from '@/services/AuthService.js';
+import AuthService from '@/services/auth.service.js';
 import client from '../module/client'
 export default {
  

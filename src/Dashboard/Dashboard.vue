@@ -136,6 +136,16 @@
       >
         <v-icon>mdi-account</v-icon>
       </v-btn>
+      <router-link
+        to="/profile"
+        class="nav-link"
+      >
+        {{ currentUser.username }}
+
+      </router-link>
+      <a class="nav-link" href @click.prevent="logOut">
+           LogOut
+       </a>
     </v-app-bar>
 
 
@@ -164,15 +174,11 @@
   </v-app>
 </template>
 <script>
-  import AuthService from '@/services/AuthService.js';
-  export default {
-     props: {
-      source: String,
-    },   
+  import AuthService from '@/services/auth.service.js';
+  export default {      
     data () {
       return {
-        drawer: null,       
-        username: '',
+        drawer: null,
         notifications: [
         'Mike John Responded to your email',
         'You have 5 new tasks',
@@ -191,8 +197,36 @@
         ],
        
       }
+    },
+   computed: {
+    currentUser() {
+      return this.$store.state.auth.user;
+    },
+    showAdminBoard() {
+      if (this.currentUser && this.currentUser.roles) {
+        return this.currentUser.roles.includes('ROLE_ADMIN');
+      }
+
+      return false;
+    },
+    showModeratorBoard() {
+      if (this.currentUser && this.currentUser.roles) {
+        return this.currentUser.roles.includes('ROLE_MODERATOR');
+      }
+
+      return false;
     }
+  },
+  methods: {
+    logOut() {
+      this.$store.dispatch('auth/logout');
+      this.$router.push('/login');
     }
+  }
+};
+   
+
+   
 </script>
 <style scoped>
 .bg-img{

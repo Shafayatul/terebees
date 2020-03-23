@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Dashboard from '../Dashboard/Dashboard.vue'
+import Profile from '../Dashboard/Profile.vue'
 import Admin from '../Dashboard/Admin.vue'
 import Articals from '../Dashboard/Articals.vue'
 import AskCouch from '../Dashboard/AskCouch.vue'
@@ -21,6 +22,7 @@ import Subscribe from '../views/Subscriptions.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import login from '../auth/Login.vue'
+import Adminlogin from '../auth/Adminlogin.vue'
 import SignupCustomer from '../auth/SignupCustomer.vue'
 
 Vue.use(VueRouter)
@@ -33,7 +35,8 @@ const routes = [
     meta: {
       footerTop: true,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -41,14 +44,15 @@ const routes = [
     name: '',
     redirect: "/dashboard",
     component: Dashboard,
-    meta:{footer: false},    
+    meta:{footer: false, requiresAuth: true,},    
     children: [       
       { path: '/dashboard', component: Admin, name:' لوحة التحكم',},
       { path: '/dashboard/askCouch', component: AskCouch, name:' إسأل المدرب',},
       { path: '/dashboard/gallery', component: Gallery, name: 'مكتبة الفيديو',},
       { path: '/dashboard/training', component: Training , name:' جداول التدريب ',},
       { path: '/dashboard/packages', component: Packages , name:' الحزم',},
-      { path: '/dashboard/articals', component: Articals , name:'المقالات الرياضية', },     
+      { path: '/dashboard/articals', component: Articals , name:'المقالات الرياضية', }, 
+      { path: '/dashboard/profile', component: Profile , name:'F', },    
 
       // ...other sub routes
     ],   
@@ -60,6 +64,7 @@ const routes = [
     meta: {
       footerTop: false,
       header:false,
+      requiresVisitor: true,
       
     }
   },
@@ -73,7 +78,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
 
     }
   },
@@ -84,7 +90,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -94,7 +101,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -104,7 +112,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -114,7 +123,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -123,7 +133,8 @@ const routes = [
     component: Gallery,
     meta: {
       footerTop: false,
-      header: true
+      header: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -133,7 +144,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -143,7 +155,8 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
     }
   },
  
@@ -154,7 +167,9 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
+
     }
   },
   {
@@ -164,17 +179,20 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
 
     }
   },
-  { path: '/singup',
+  { path: '/signup',
     component: SignupCustomer,
     name: 'singup',
     meta: {
       footerTop: false,
       header: false,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
+
       
     }
    },
@@ -188,14 +206,25 @@ const routes = [
       
     }
    },
-   { path: '/',
+   { path: '/login',
     component: login,
     name: 'login',
     meta: {
       footerTop: false,
       header: false,
-      footer: true
+      footer: true,
+      requiresVisitor: true,
       
+    }
+  },
+    { path: '/adminlogin',
+    component: Adminlogin,
+    name: 'Adminlogin',
+    meta: {
+      footerTop: false,
+      header: false,
+      footer: true,
+      requiresVisitor: true,
     }
    },
   
@@ -211,6 +240,25 @@ const router = new VueRouter({
   routes
 })
 
-
+// router.beforeEach((to, from, next) => {
+//   if (to.matched.some(record => record.meta.requiresAuth)) {
+//       var user = localStorage.loggedIn;
+//       if (!user ) {
+//         next({
+//           path: '/login',
+//         })
+//       } else {
+//         next()
+//       }
+//     }else if (to.matched.some(record => record.meta.requiresVisitor)) {
+//       if (user) {
+//         next({
+//           path: '/',
+//         })
+//       } else {
+//         next()
+//       }
+//     }
+// })
 
 export default router

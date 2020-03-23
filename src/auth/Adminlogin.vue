@@ -15,7 +15,11 @@
           md="6"
           offset-md="3"
         >
-          <v-form>
+          <v-form
+            ref="form"
+           v-model="valid"
+           lazy-validation
+          >
             <v-card class="elevation-12">
               <v-toolbar
                 dark
@@ -26,19 +30,23 @@
              
               <v-card-text>
                 <v-text-field
-                  v-model="username"
+                  v-model="user.username"
                   prepend-icon="person"
                   name="username"
                   label="username"
                   type="text"
+                  required
+                  :rules="userRules"
                 />
 
                 <v-text-field
-                  v-model="password"
+                  v-model="user.password"
                   prepend-icon="lock"
                   name="password"
                   label="Password"
                   type="password"
+                  required
+                  :rules="password"
                 />
               </v-card-text>
               <v-divider light />
@@ -71,32 +79,56 @@
 </template>
 <script>
 import AuthService from '@/services/auth.service.js';
+import User from '../stores/modules/user';
 export default {
-    data() {
+  name: 'Login',
+  data() {
     return {
-    username: '',
-    password: '',   
-    
-   
+      user: new User('', ''),
+      loading: false,
+      message: '',
+      valid: true,
+      password : [
+        v => !!v || 'Name is required',
+        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+      ],    
+     userRules: [
+        v => !!v || 'E-mail is required',
+        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      ],
     };
-    },
-    methods: {
-    async login() {
-    try {
-    const credentials = {
-    username: this.username,
-    password: this.password
-    };
-    const response = await AuthService.login(credentials);   
-    const token = response.token;
-    const user = response.user;
-    this.$store.dispatch('login', { token, user });
-    this.$router.push('/dashboard');
-    } catch (error) {
-    
+  },
+  computed: {
+    loggedIn() {
+      return this.$store.state.auth.status.loggedIn;
     }
+  },
+  created() {
+    if (this.loggedIn) {
+      this.$router.push('/dashboard/profile');
     }
+  },
+  methods: {
+  login() {
+      this.loading = true;
+      this.$refs.form.validate()
+        if (this.user.username && this.user.password) {
+          this.$store.dispatch('auth/login', this.user).then(
+            () => {
+              this.$router.push('/dashboard/profile');
+            },
+            error => {
+              this.loading = false;
+              this.message =
+                (error.response && error.response.data) ||
+                error.message ||
+                error.toString();
+            }
+          );
+        }
+      }
     }
+  
 };
 </script>
 <style scoped>

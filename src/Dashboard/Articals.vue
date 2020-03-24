@@ -75,14 +75,14 @@
                     <v-btn
                       dark
                       text
-                      @click="dialog = false"
+                      @click="save"
                     >
                       Save
                     </v-btn>
                     <v-btn
                       icon
                       dark
-                      @click="dialog = false"
+                      @click="close"
                     >
                       <v-icon>mdi-close</v-icon>
                     </v-btn>
@@ -99,20 +99,11 @@
                         lg="10"
                       >
                         <v-text-field
-                          v-model="editedItem.title"
+                          v-model="form.title"
                           label="العنوان"
                           outlined
                         />
-                      </v-col>                   
-                      <v-col
-                        lg="2"
-                        md="2"
-                      >
-                        <v-switch
-                          v-model="selectable"
-                          label="نشر"
-                        />
-                      </v-col>
+                      </v-col>             
                       <v-col
                         cols="12"
                         sm="6"
@@ -120,7 +111,7 @@
                         lg="6"
                       >
                         <v-file-input
-                          v-model="editedItem.image"
+                          v-model="image"
                           placeholder="إختر صورة المقال"
                           label="صورة المقال"
                           outlined
@@ -133,24 +124,11 @@
                         lg="6"
                       >
                         <v-text-field
-                          v-model="editedItem.url"
+                          v-model="form.content"
                           label="رابط للفيدبو"
                           outlined
                         />
-                      </v-col>                   
-                     
-                      <v-col
-                        cols="12"
-                        sm="6"
-                        md="12"
-                        lg="12"
-                      >                    
-                        <ckeditor
-                          v-model="editedItem.content"
-                          :editor="editor"
-                          :config="editorConfig"
-                        />
-                      </v-col>
+                      </v-col>            
                     </v-row>
                   </v-container>
                 </v-card-text>
@@ -198,7 +176,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     data: () => ({
       editor: ClassicEditor,
       selectable: false,     
-       editorConfig: {
+      editorConfig: {
            language: {
             // The UI will be English.
             ui: 'ar',
@@ -221,17 +199,21 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
         { text: 'الحاله', value: 'الحاله' },       
         { text: 'Actions', value: 'actions', sortable: false },
       ],
-    meta : {},  
-    desserts: [ ],
+      meta : {},  
+      desserts: [ ],
       editedIndex: -1,
       editedItem: {
      
       },
-      // defaultItem: {
-      //   title: '',
-      //  content: '',
-       
-      // },
+      form:{
+        title: null,
+        content: null,
+      },
+      image:[],
+      defaultItem: {
+        title: '',
+       content: ''
+      },
     }),
 
     computed: {
@@ -251,47 +233,88 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     },
 
     methods: {
-         initialize(page=1) {
-	   UserService.getArticlesContent()
-		.then((response) => {
-			this.desserts = response.data.data;
-			this.meta = response.data.meta;
-            console.log(this.meta)
+      getFormData(formData,object) {
+          // const formData = new FormData();
+          Object.keys(object).forEach(key => formData.append(key, object[key]));
+          return formData;
+      },
+
+      save () {
+        let formData = new FormData;
+
+        this.getFormData(formData,this.form)
+        formData.append('image',this.image)
+        if (this.editedIndex > -1) {
+          // Object.assign(this.desserts[this.editedIndex], this.form)
+          formData.append('_method','PUT')
+          axios.post(`http://api.tarabees.com//api/admin/articles/${this.form.id}`,formData)
+          .then((result) => {
+            axios.get(`http://api.tarabees.com//api/admin/articles/${result.data.id}`)
+            .then((result) => {
+              console.log(result.data)
+              Object.assign(this.desserts[this.editedIndex], result.data.data)
+            }).catch((err) => {
+              
+            });
+          }).catch((err) => {
             
-		})
-		.catch((error) => {
-			console.log(error);
-		});
-    },     
+          });
+        } else {
+          this.desserts.push(this.editedItem)
+          axios.post('http://api.tarabees.com//api/admin/articles',formData)
+          .then((result) => {
+            axios.get(`http://api.tarabees.com//api/admin/articles/${result.data.id}`)
+            .then((result) => {
+              console.log(result.data)
+              this.desserts.unshift(result.data.data)
+            }).catch((err) => {
+              
+            });
+          }).catch((err) => {
+            
+          });
+
+        }
+        this.close()
+      },
+      initialize(page=1) {
+        UserService.getArticlesContent()
+        .then((response) => {
+          this.desserts = response.data.data;
+          this.meta = response.data.meta;
+                console.log(this.meta)
+                
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      },     
 
       editItem (item) {
-       UserService.updateArticles()
+       
         this.editedIndex = this.desserts.indexOf(item)
-        this.editedItem = Object.assign({}, item)
+        this.form = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (item) {
-        UserService.deleteArticles()
         const index = this.desserts.indexOf(item)
-        confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
+        confirm('Are you sure you want to delete this item?') && this.deleteArticle(item.id,index)
+      },
+      deleteArticle(id,index){
+        
+        axios.post(`/api/admin/articles/${id}`,{_method:'DELETE'})
+        .then(res=>{
+          this.desserts.splice(index, 1)  
+        })
       },
 
       close () {
         this.dialog = false
         setTimeout(() => {
-          this.editedItem = Object.assign({}, this.defaultItem)
+          this.form = Object.assign({}, this.defaultItem)
           this.editedIndex = -1
         }, 300)
-      },
-
-      save () {
-        if (this.editedIndex > -1) {
-          Object.assign(this.desserts[this.editedIndex], this.editedItem)
-        } else {
-          this.desserts.push(this.editedItem)
-        }
-        this.close()
       },
     },
   }

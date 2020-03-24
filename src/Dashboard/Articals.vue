@@ -14,23 +14,23 @@
               :key="item.id"
             >
               <td>{{ item.title }}</td>
-              <td>{{ item.content }}</td>
+              <td>{{ item.content.substring(0,20)+".." }}</td>
               <td>{{ item.published_at }}</td>
               
               <td>منشور</td>
               <td>   
                 <v-icon
-                  small
-                  class="mr-2"
+                 
+                  class="mr-2 item-font"
                   @click="editItem(item)"
                 >
                   mdi-pencil
                 </v-icon>
                 <v-icon               
-                  small
+                  
                   @click="deleteItem(item)"
                 >
-                  mdi-delete
+                  mdi-delete-outline
                 </v-icon>
               </td>
             </tr>
@@ -61,10 +61,12 @@
                   class="mb-2"
                   v-on="on"
                 >
-                  New Item
+                 مقال جديد
                 </v-btn>
               </template>
-              <v-card>
+              <v-card
+                color="grey lighten-3"
+              >
                 <v-toolbar
                   dark
                   color="primary"
@@ -77,7 +79,7 @@
                       text
                       @click="save"
                     >
-                      Save
+                     <v-icon>mdi-content-save</v-icon>
                     </v-btn>
                     <v-btn
                       icon
@@ -103,6 +105,12 @@
                           label="العنوان"
                           outlined
                         />
+                      </v-col>
+                      <v-col>
+                        <v-switch
+                          v-model="switch1"
+                          label="نشر"
+                        />
                       </v-col>             
                       <v-col
                         cols="12"
@@ -124,32 +132,27 @@
                         lg="6"
                       >
                         <v-text-field
-                          v-model="form.content"
-                          label="رابط للفيدبو"
+                          v-model="form.url"
+                          label="العنوان"
                           outlined
+                        />
+                      </v-col>
+                      <v-col
+                        cols="12"
+                        sm="6"
+                        md="12"
+                        lg="12"
+                      >
+                        <ckeditor
+                          v-model="form.content"
+                          :editor="editor"
+                          :config="editorConfig"
                         />
                       </v-col>            
                     </v-row>
                   </v-container>
                 </v-card-text>
 
-                <v-card-actions>
-                  <v-spacer />
-                  <v-btn
-                    color="blue darken-1"
-                    text
-                    @click="close"
-                  >
-                    Cancel
-                  </v-btn>
-                  <v-btn
-                    color="blue darken-1"
-                    text
-                    @click="save"
-                  >
-                    Save
-                  </v-btn>
-                </v-card-actions>
               </v-card>
             </v-dialog>
           </v-toolbar>
@@ -175,7 +178,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   export default {
     data: () => ({
       editor: ClassicEditor,
-      selectable: false,     
+     switch1: true,   
       editorConfig: {
            language: {
             // The UI will be English.
@@ -218,7 +221,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     computed: {
       formTitle () {
-        return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+        return this.editedIndex === -1 ? 'مقال جديد' : 'Edit Item'
       },
     },
 

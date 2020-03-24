@@ -42,6 +42,11 @@ class UserService {
   getAdminBoard() {
     return axios.get(API_URL + 'admin/dashboard-statistics', { headers: authHeader() });
   }
+  subscriptionsadit() {
+    return axios.get(API_URL + 'admin/customer-subscriptions/{subscription_id}/diets ', { headers: authHeader() });
+  
+  }
+
 }
 
 export default new UserService();

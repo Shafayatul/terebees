@@ -49,7 +49,9 @@
               hide-overlay
               transition="dialog-bottom-transition"
             >
-              <v-card>
+              <v-card
+              color="grey lighten-3"
+              >
                 <v-toolbar
                   dark
                   color="primary"
@@ -82,7 +84,7 @@
                       </v-row>
                       <v-row>
                         <v-col
-                           cols="12"
+                          cols="12"
                           sm="4"
                           md="4"
                           lg="4"
@@ -92,7 +94,7 @@
                           </h2>
                         </v-col>
                         <v-col
-                           cols="12"
+                          cols="12"
                           sm="4"
                           md="4"
                           lg="4"
@@ -122,7 +124,7 @@
                           </h2>
                         </v-col>
                         <v-col
-                           cols="12"
+                          cols="12"
                           sm="4"
                           md="4"
                           lg="4"
@@ -152,7 +154,7 @@
                           </h2>
                         </v-col>
                         <v-col
-                           cols="12"
+                          cols="12"
                           sm="4"
                           md="4"
                           lg="4"
@@ -162,7 +164,7 @@
                           </h2>
                         </v-col>
                         <v-col
-                           cols="12"
+                          cols="12"
                           sm="4"
                           md="4"
                           lg="4"

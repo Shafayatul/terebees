@@ -1,5 +1,7 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire"
+   
+  >
     <v-navigation-drawer
     
       v-model="drawer"
@@ -149,7 +151,7 @@
     </v-app-bar>
 
 
-    <v-content>
+    <v-content class="grey lighten-3">
       <v-container
         class=" fill-width"
         fluid

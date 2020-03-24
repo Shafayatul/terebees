@@ -189,7 +189,7 @@ const routes = [
     name: 'singup',
     meta: {
       footerTop: false,
-      header: false,
+      header: true,
       footer: true,
       requiresVisitor: true,
 
@@ -211,7 +211,7 @@ const routes = [
     name: 'login',
     meta: {
       footerTop: false,
-      header: false,
+      header: true,
       footer: true,
       requiresVisitor: true,
       

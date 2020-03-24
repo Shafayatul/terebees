@@ -1,68 +1,67 @@
 <template>
-  <v-app
-    id="inspire"
-    class="site-main dark-bg top-half"
-  >
-    <v-container
-      fill-height
+  <main class="site-main about grey-background">
+    <section class="page-header">
+      <h1 class="text-center text-white text-uppercase fw-700 mb-0">
+       إنشاء حساب
+      </h1>
+    </section>
+    <!-- end .page-header -->
+    <v-row 
+      class="justify-center"
     >
-      <v-layout
-        align-center
-        justify-center
+      <v-col 
+        cols="12"
+        lg="4"
+        md="4"
+        sm="8"
+        max="auto"
       >
-        <v-col
-          
-          md="6"
-         
-          class="mx-auto mt-12"
-        >
-          <v-form
+         <v-form
             ref="form"
             v-model="valid"
+            class="signup"
           >
             <v-text-field
               v-model="first_name"
-              prepend-icon="person"
+             
               name="first_name"
-              label="Frist Name"
+              label="اسم العائلة"
               required
               :rules="rules.name"
             />
             <v-text-field
               v-model="last_name"
-              prepend-icon="person"
+             
               name="last_name"
-              label="Lest Name"
+              label="الاسم"
               required
               :rules="rules.name"
             /> 
             <v-text-field
               v-model="family"
-              prepend-icon="person"
+             
               name="family"
-              label="family"
+              label="الاسم"
               :rules="rules.family"
               required
             />
             <v-text-field
               v-model="age"
-              prepend-icon="person"
+             
               name="age"
               label="Age"
               required
             /> 
             <v-text-field
               v-model="email"
-              :rules="rules.email"
-              prepend-icon="email"
+              :rules="rules.email"              
               name="email"
               label="Email"
               required            
             />
 
             <v-text-field
-              v-model="password"
-              prepend-icon="lock"
+              v-model="password"             
               name="password"
               label="Password"
               type="password"
@@ -70,7 +69,7 @@
 
             <v-text-field
               v-model="password_confirmation"
-              prepend-icon="lock"
+             
               name="password"
               label="Confirm Password"
               type="password"              
@@ -78,24 +77,56 @@
             <v-file-input
               v-model="profile_image"             
               placeholder="Upload your documents"
-              label="File input"
-              prepend-icon="mdi-paperclip"
+              label="File input"             
             />
             <v-card-actions>      
               <v-btn
                 :disabled="!valid"
-                color="black"
+                class=""
                 @click="signUp"
               >
                 Register
-                <v-icon>keyboard_arrow_up</v-icon>
+               
               </v-btn>
             </v-card-actions>
           </v-form>
-        </v-col>
-      </v-layout>
-    </v-container>
-  </v-app>
+      </v-col>
+    </v-row>
+
+    <section
+      id="about"
+      class="top-full bottom-half"
+    >
+      <div class="container">      
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <figure class="about-man">
+              <img
+                src="@/assets/img/about-man.png"
+                class="img-fluid"
+                alt=""
+              >
+            </figure>
+          </div> <!-- end .col-12.col-md-6 -->
+          <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
+            <article class="about-article">
+              <h2 class="fw-700 gradient-text text-uppercase">
+                المشروععنوان  <br> رئيسي عن الصفحة او
+              </h2>
+              <p class="text-white ">
+                الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز
+              </p>
+              <p class="d-none d-sm-block d-md-none">
+                ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك
+              </p>
+            </article>
+          </div> <!-- end .col-12.col-md-6 -->
+        </div> <!-- end .row -->
+      </div> <!-- end .container -->
+    </section> <!-- end #about -->
+    <!-- end .row -->
+    <!-- end #our-trainers -->
+  </main> <!-- end .site-main -->
 </template>
 
 <script>
@@ -192,3 +223,12 @@ export default {
   }
 };
 </script>
+<style scoped>
+.signup{
+   border: 3px solid #ca0000;    
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    color: #fff;
+}
+</style>

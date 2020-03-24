@@ -1,5 +1,5 @@
 <template>
-    <footer class="site-footer"  v-if="$route.path !== '/login'">
+    <footer class="site-footer"  >
         <div v-if="$route.meta.footer === true" :class="$route.meta.footer === true ? 'bottom-full': 'section-full'">  
         <div class="footer-top-shape"  v-if="$route.meta.footerTop === true">
              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 341" style="enable-background:new 0 0 1920 341;" xml:space="preserve">                

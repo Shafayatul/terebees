@@ -3,9 +3,9 @@
     <div class="container">  
       <v-data-table        
         :headers="headers"
-        :items="desserts"        
-        sort-by="title"
+        :items="desserts"      
         class="elevation-1"
+        hide-default-footer
       >
         <template v-slot:body="{ items }">
           <tbody>
@@ -168,6 +168,17 @@
           </v-btn>
         </template>
       </v-data-table>
+        
+        <div class="text-center">
+          <v-pagination
+            v-model="page"
+            :length="meta.last_page"
+            @input="getPage"
+
+            prev-icon="mdi-menu-left"
+            next-icon="mdi-menu-right"
+          ></v-pagination>
+        </div>
     </div>
   </div>
 </template>
@@ -208,6 +219,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
       editedItem: {
      
       },
+      page:1,
       form:{
         title: null,
         content: null,
@@ -249,8 +261,12 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
         formData.append('image',this.image)
         if (this.editedIndex > -1) {
           // Object.assign(this.desserts[this.editedIndex], this.form)
-          formData.append('_method','PUT')
-          axios.post(`http://api.tarabees.com//api/admin/articles/${this.form.id}`,formData)
+          let form = new FormData;
+          form.append('image',this.image)
+          form.append('title',this.form.title)
+          form.append('content',this.form.content)
+          form.append('_method','PUT')
+          axios.post(`http://api.tarabees.com//api/admin/articles/${this.form.id}`,form)
           .then((result) => {
             axios.get(`http://api.tarabees.com//api/admin/articles/${result.data.id}`)
             .then((result) => {
@@ -291,12 +307,24 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
         .catch((error) => {
           console.log(error);
         });
+      }, 
+      getPage(page) {
+        axios.get('/api/admin/articles?page='+page)
+        .then((response) => {
+          this.desserts = response.data.data;
+          this.meta = response.data.meta;
+                console.log(this.meta)
+                
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       },     
 
       editItem (item) {
        
         this.editedIndex = this.desserts.indexOf(item)
-        this.form = Object.assign({}, item)
+        this.form = Object.assign({title:null ,content: null}, item)
         this.dialog = true
       },
 

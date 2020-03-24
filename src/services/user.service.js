@@ -1,15 +1,38 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'http://localhost:8080/api/test/';
+const API_URL = 'http://api.tarabees.com/api/';
 
 class UserService {
-  getPublicContent() {
-    return axios.get(API_URL + 'all');
+  getArticlesContent() {
+    return axios.get(API_URL + 'admin/articles', { headers: authHeader() });
+
+
+  }
+  createArticles() {
+    return axios.post(API_URL + 'admin/articles', { headers: authHeader() });
+
+
+  }
+  updateArticles() {
+    return axios.put(API_URL + 'admin/articles/{article}', { headers: authHeader() });
+
+
+  }
+  deleteArticles() {
+    return axios.delete(API_URL + 'admin/articles/{article}', { headers: authHeader() });
+
+
   }
 
-  getUserBoard() {
-    return axios.get(API_URL + 'user', { headers: authHeader() });
+
+  subscriptions() {
+    return axios.get(API_URL + 'admin/customer-subscriptions', { headers: authHeader() });
+  }
+
+  subscriptionsadit() {
+    return axios.get(API_URL + 'admin/customer-subscriptions/{subscription_id}/diets ', { headers: authHeader() });
+  
   }
 
   getModeratorBoard() {
@@ -17,7 +40,7 @@ class UserService {
   }
 
   getAdminBoard() {
-    return axios.get(API_URL + 'admin', { headers: authHeader() });
+    return axios.get(API_URL + 'admin/dashboard-statistics', { headers: authHeader() });
   }
 }
 

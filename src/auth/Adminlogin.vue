@@ -79,7 +79,6 @@
 </template>
 <script>
 import AuthService from '@/services/auth.service.js';
-import User from '../stores/modules/user';
 export default {
   name: 'Login',
   data() {
@@ -118,14 +117,14 @@ export default {
         if (this.form.username && this.form.password) {
           const response =  AuthService.login(this.form);
           // console.log(response)
-          this.$router.push('/dashboard/profile');
-            // error => {
-            //   this.loading = false;
-            //   this.message =
-            //     (error.response && error.response.data) ||
-            //     error.message ||
-            //     error.toString();
-            // }
+          this.$router.push('/login');
+            error => {
+              this.loading = false;
+              this.message =
+                (error.response && error.response.data) ||
+                error.message ||
+                error.toString();
+            }
           
         }
       }

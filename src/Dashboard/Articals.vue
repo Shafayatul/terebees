@@ -26,8 +26,7 @@
                 >
                   mdi-pencil
                 </v-icon>
-                <v-icon
-                v-model="deleted_at"
+                <v-icon               
                   small
                   @click="deleteItem(item)"
                 >
@@ -193,13 +192,12 @@
 </template>
 
 <script>
-import axios from 'axios';
+import UserService from '../services/user.service';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   export default {
     data: () => ({
       editor: ClassicEditor,
-      selectable: false,
-      deleted_at: null,
+      selectable: false,     
        editorConfig: {
            language: {
             // The UI will be English.
@@ -227,14 +225,13 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     desserts: [ ],
       editedIndex: -1,
       editedItem: {
-       title: '',
-       content: '',
+     
       },
-      defaultItem: {
-        title: '',
-       content: '',
+      // defaultItem: {
+      //   title: '',
+      //  content: '',
        
-      },
+      // },
     }),
 
     computed: {
@@ -255,10 +252,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
     methods: {
          initialize(page=1) {
-	       axios.get("http://api.tarabees.com/api/admin/articles?page="+page, 
-				  {params: {  }},
-				  { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
-		)
+	   UserService.getArticlesContent()
 		.then((response) => {
 			this.desserts = response.data.data;
 			this.meta = response.data.meta;
@@ -271,12 +265,14 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
     },     
 
       editItem (item) {
+       UserService.updateArticles()
         this.editedIndex = this.desserts.indexOf(item)
         this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
 
       deleteItem (item) {
+        UserService.deleteArticles()
         const index = this.desserts.indexOf(item)
         confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
       },

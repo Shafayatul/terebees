@@ -9,10 +9,12 @@
         xl="6"
       >
         <v-card
-          class="mx-auto"          
+          class="mx-auto"
+            v-for=" card in  saticcs"
+          :key="card.id"         
         >
           <v-card-text>
-            <div>Word of the Day</div>
+            <div>{{ card.videos }}</div>
             <p class="display-1 text--primary">
               be•nev•o•lent
             </p>
@@ -32,7 +34,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col     
+      <!-- <v-col     
         cols="auto"
         md="6"
         lg="6"
@@ -62,13 +64,35 @@
             </v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
 
 <script>
+import UserService from '../services/user.service';
 export default {
-    
+  data() {
+    return {
+       saticcs : []
+    }
+   
+  },
+   created () {
+      this.AdminBoard();
+    },
+    methods: {
+      AdminBoard() {
+          UserService.getAdminBoard()
+          .then((response) => {
+            this.saticc = response.data.data;		       
+            
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+    }, 
+
+    }
 }
 </script>

@@ -117,7 +117,7 @@ export default {
         if (this.form.username && this.form.password) {
           const response =  AuthService.login(this.form);
           // console.log(response)
-          this.$router.push('/login');
+          this.$router.push('/dashboard');
             error => {
               this.loading = false;
               this.message =

@@ -534,17 +534,17 @@ import UserService from '../services/user.service';
     },
 
     methods: {
-         initialize(page=1) {
-	   UserService.subscriptions()
-		.then((response) => {
-			this.desserts = response.data.data;
-			this.meta = response.data.meta;
-       console.log(this.meta)
-            
-		})
-		.catch((error) => {
-			console.log(error);
-		});
+      initialize(page=1) {
+        UserService.subscriptions()
+        .then((response) => {
+        this.desserts = response.data.data;
+        this.meta = response.data.meta;
+        console.log(this.meta)
+                  
+        })
+        .catch((error) => {
+        console.log(error);
+      });
     },     
 
       editItem (item) {
@@ -564,6 +564,9 @@ import UserService from '../services/user.service';
       },
 
       save () {
+
+        axios.post(`/api/admin/subscription/${1}`,{})
+
         if (this.editedIndex > -1) {
           Object.assign(this.desserts[this.editedIndex], this.editedItem)
         } else {

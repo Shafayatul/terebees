@@ -108,7 +108,7 @@
       <div class="text-center">
         <v-pagination
           v-model="page"
-          :length="meta.total"
+          :length="meta.last_page"
           prev-icon="mdi-menu-left"
 
           next-icon="mdi-menu-right"

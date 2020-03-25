@@ -2,7 +2,7 @@
   <main class="site-main about grey-background">
     <section class="page-header">
       <h1 class="text-center text-white text-uppercase fw-700 mb-0">
-       تسجيل دخول
+        تسجيل دخول
       </h1>
     </section>
     <!-- end .page-header -->
@@ -15,45 +15,54 @@
         md="4"
         sm="8"
         max="auto"
+         class="sl"
       >
+         <v-card
+          class="overflow-hidden"
+          color="purple lighten-1"
+          dark
+        >
         <v-form class="loginForm">
-          <v-card class="elevation-12">
             <v-card-text>
-              <v-text-field
-                v-model="username"               
-                name="username"
-                label="البريد الالكتروني*"
-                type="text"
-              />
+              <v-card-text>
+                <v-text-field
+                  v-model="username"                
+                  name="username"
+                  label="البريد الالكتروني*"
+                  type="text"
+                  required
+                  :rules="userRules"
+                />
 
-              <v-text-field
-                v-model="password"              
-                name="password"
-                label="كلمة السر*"
-                type="password"
-              />
+                <v-text-field
+                  v-model="password"                
+                  name="password"
+                  label="كلمة السر*"
+                  type="password"
+                  required
+                  :rules="password"
+                />
+              </v-card-text>
+         
+              <v-card-actions>
+                <button
+                  type="submit"                  
+                  class="btn btn-theme"                    
+                  @click="login"
+                >
+                   تسجيل دخول 
+                </button>
+                <v-spacer />
+                <a
+                 class="text-white"
+                  href="/signup"
+                >
+                  إنشاء حساب
+                </a>
+              </v-card-actions>
             </v-card-text>
-            <v-divider light />
-            <v-card-actions>
-              <v-btn                  
-                 class="btn btn-theme"
-                dark
-                @click="login"
-              >
-               تسجيل دخول
-               
-              </v-btn>
-              <v-spacer />
-              <v-btn
-                to="/signup"                  
-                color="indigo"
-                dark
-              >
-                Sign up
-              </v-btn>
-            </v-card-actions>
-          </v-card>
         </v-form>
+          </v-card>
       </v-col>
     </v-row>
 
@@ -134,7 +143,9 @@ export default {
     color: #fff;
 }
 
-
+.sl{
+  margin-top: -12px;
+}
 
 </style>
    

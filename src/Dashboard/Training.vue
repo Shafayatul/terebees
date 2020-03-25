@@ -48,8 +48,8 @@
               transition="dialog-bottom-transition"
             >
               <v-card
-              color="grey lighten-3" 
-               >
+                color="grey lighten-3" 
+              >
                 <v-toolbar
                   dark
                   color="primary"
@@ -67,8 +67,7 @@
 
                 <section class="PackagesForm">
                   <v-form novalidate="novalidate">
-                    <v-container>                    
-                     
+                    <v-container>
                       <v-row>
                         <v-col
                           cols="12"
@@ -253,20 +252,20 @@
                       <v-row>
                         <v-col 
                           cols="8"
-                          sm="8"
-                          md="8"
-                          lg="8"
+                          sm="6"
+                          md="6"
+                          lg="6"
                         >
                           <v-card
-                            flat=""
-                            class="subbody"
+                            flat
                           > 
                             <v-tabs
                               v-model="tab"
                               background-color="write"
-                              dark
+                              fixed-header
                             >
                               <v-tab
+                               
                                 v-for="tabitem in tabitems"
                                 :key="tabitem.tab"
                               >
@@ -276,37 +275,89 @@
 
                             <v-tabs-items v-model="tab">
                               <v-tab-item>
-                                <v-card flat>
+                                <v-card
+                                  flat
+                                  class="subbody"
+                                >
                                   <v-list>
                                     <v-list-item>
                                       <v-list-item-content>
-                                        <v-list-item-title>Single-line item</v-list-item-title>
-                                        <v-list-item-subtitle>Secondary text</v-list-item-subtitle>
-                                        <v-row align="center"> 
-                                          <v-col
-                                            class="d-flex"
-                                            cols="12"
-                                            sm="6"
-                                          >
-                                            <v-select
-                                              :items="desserts"
-                                              label="Outlined style"
-                                              outlined
-                                            />
-                                          </v-col>
-
-                                          <v-col
-                                            class="d-flex"
-                                            cols="12"
-                                            sm="6"
-                                          >
-                                            <v-select
-                                              :items="desserts"
-                                              label="Solo field"
-                                              solo
-                                            />
-                                          </v-col>
-                                        </v-row>
+                                        <v-list-item-title>ترابيس بالدامبلز</v-list-item-title>  
+                                        <v-col
+                                          cols="12"
+                                          sm="6"
+                                          md="6"
+                                        >
+                                          <v-text-field
+                                            label="Solo"
+                                            placeholder="ترابيس بالدامبلز"
+                                            solo
+                                          />
+                                        </v-col>
+                                      </v-list-item-content>
+                                    </v-list-item>
+                                    <v-list-item>
+                                      <v-list-item-content>
+                                        <v-list-item-title>ترابيس بالدامبلز</v-list-item-title>  
+                                        <v-col
+                                          cols="12"
+                                          sm="6"
+                                          md="6"
+                                        >
+                                          <v-text-field
+                                            label="Solo"
+                                            placeholder="ترابيس بالدامبلز"
+                                            solo
+                                          />
+                                        </v-col>
+                                      </v-list-item-content>
+                                    </v-list-item>
+                                    <v-list-item>
+                                      <v-list-item-content>
+                                        <v-list-item-title>ترابيس بالدامبلز</v-list-item-title>  
+                                        <v-col
+                                          cols="12"
+                                          sm="6"
+                                          md="6"
+                                        >
+                                          <v-text-field
+                                            label="Solo"
+                                            placeholder="ترابيس بالدامبلز"
+                                            solo
+                                          />
+                                        </v-col>
+                                      </v-list-item-content>
+                                    </v-list-item>
+                                    <v-list-item>
+                                      <v-list-item-content>
+                                        <v-list-item-title>ترابيس بالدامبلز</v-list-item-title>  
+                                        <v-col
+                                          cols="12"
+                                          sm="6"
+                                          md="6"
+                                        >
+                                          <v-text-field
+                                            label="Solo"
+                                            placeholder="ترابيس بالدامبلز"
+                                            solo
+                                          />
+                                        </v-col>
+                                      </v-list-item-content>
+                                    </v-list-item>
+                                    <v-list-item>
+                                      <v-list-item-content>
+                                        <v-list-item-title>ترابيس بالدامبلز</v-list-item-title>  
+                                        <v-col
+                                          cols="12"
+                                          sm="6"
+                                          md="6"
+                                        >
+                                          <v-text-field
+                                            label="Solo"
+                                            placeholder="ترابيس بالدامبلز"
+                                            solo
+                                          />
+                                        </v-col>
                                       </v-list-item-content>
                                     </v-list-item>
                                   </v-list>  
@@ -319,35 +370,92 @@
                               </v-tab-item>
                             </v-tabs-items>
                           </v-card>
+                          <div class="my-2">
+                            <v-btn                            
+                              color="primary"
+                            >
+                             حفظ
+                            </v-btn>
+                          </div>
                         </v-col>
                         <v-col
-                          cols="4"
-                          sm="4"
-                          md="4"
-                          lg="4"
+                          cols="6"
+                          sm="6"
+                          md="6"
+                          lg="6"
                         >
                           <v-card
-                            class="mx-auto"
+                            class="px-3 "
                           >
-                            <v-card-text>
-                              <div>Word of the Day</div>
-                              <p class="display-1 text--primary">
-                                be•nev•o•lent
-                              </p>
-                              <p>adjective</p>
-                              <div class="text--primary">
-                                well meaning and kindly.<br>
-                                "a benevolent smile"
-                              </div>
-                            </v-card-text>
-                            <v-card-actions>
-                              <v-btn
-                                text
-                                color="deep-purple accent-4"
+                            <v-row>
+                              <v-col 
+                                cols="12"
                               >
-                                Learn More
-                              </v-btn>
-                            </v-card-actions>
+                                <span class="headline">صدر و تراي</span>
+                                <v-textarea
+                                  counter
+                                  label="الملاحظات"
+                                  :rules="rules"
+                                  :value="value"
+                                />
+                              </v-col>
+                              <v-col 
+                                cols="12"
+                              >
+                                <span class="headline">ظهر و باي</span>
+                                <v-textarea
+                                  counter
+                                  label="الملاحظات"
+                                  :rules="rules"
+                                  :value="value"
+                                />
+                              </v-col>
+                              <v-col 
+                                cols="12"
+                              >
+                                <span class="headline">رجلين</span>
+                                <v-textarea
+                                  counter
+                                  label="الملاحظات"
+                                  :rules="rules"
+                                  :value="value"
+                                />
+                              </v-col>
+                              <v-col 
+                                cols="12"
+                              >
+                                <span class="headline">أكتاف</span>
+                                <v-textarea
+                                  counter
+                                  label="الملاحظات"
+                                  :rules="rules"
+                                  :value="value"
+                                />
+                              </v-col>
+                              <v-col 
+                                cols="12"
+                              >
+                                <span class="headline">ترابيس</span>
+                                <v-textarea
+                                  counter
+                                  label="ترابيس"
+                                  :rules="rules"
+                                  :value="value"
+                                />
+                              </v-col>
+                              <v-col 
+                                cols="12"
+                              >
+                                <span class="headline">سواعد</span>
+                                <v-textarea
+                                  counter
+                                  label="سواعد"
+                                  :rules="rules"
+                                  :value="value"
+                                />
+                              </v-col>
+                              <v-row />
+                            </v-row>
                           </v-card>
                         </v-col>
                       </v-row>
@@ -384,19 +492,21 @@ import UserService from '../services/user.service';
       ],
     tab: null,
         tabitems: [
-          { tab: 'الكاربوهيدرات ',},
-          { tab: 'البروتينات',  },
-          { tab: 'الفواكه والسكريات',  },
-          { tab: 'الفواكه والسكريات',  },
-          { tab: 'المكملات الرياضية', },
-          { tab: 'المكملات من الصيدلية', },
+          { tab: 'صدر و تراي ',},
+          { tab: 'ظهر و باي',  },
+          { tab: 'رجلين',  },
+          { tab: 'أكتاف',  },
+          { tab: 'ترابيس', },         
+          { tab: 'سواعد', }
         
          
         ],
       meta : {},  
       desserts: [ ],
       editedIndex: -1,
-      editedItem:{}
+      editedItem:{},
+      rules: [v => v.length <= 120 || 'Max 120 characters'],
+      value: '',
      
     }),
 

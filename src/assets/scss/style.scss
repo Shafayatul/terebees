@@ -117,3 +117,10 @@ v-application .primary {
     background-color: #8c180c !important;
     border-color: #8c180c !important;
 }
+.theme--light.v-input, .theme--light.v-input input, .theme--light.v-input textarea {
+    color: #fff;
+}
+theme--light.v-label {
+    color: #fff !important;
+    font-size: 18px !important;
+}

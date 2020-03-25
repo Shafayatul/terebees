@@ -3,78 +3,73 @@
     id="inspire"
     class="site-main dark-bg"
   >
-  <section class="login">
-    <v-container
-      fill-height
-    >
-      <v-layout
-        align-center
-        justify-center
+    <section class="login">
+      <v-container
+        fill-height
       >
-        <v-col
-          md="6"
-          offset-md="3"
+        <v-layout
+          align-center
+          justify-center
         >
-          <v-form
-            ref="form"
-           v-model="valid"
-           lazy-validation
+          <v-col
+            md="4"
+            max="auto"
           >
-            <v-card class="elevation-12">
-              <v-toolbar
-                dark
-                color="blue"
-              >
-                <v-toolbar-title>Login form</v-toolbar-title>
-              </v-toolbar>
-             
-              <v-card-text>
-                <v-text-field
-                  v-model="form.username"
-                  prepend-icon="person"
-                  name="username"
-                  label="username"
-                  type="text"
-                  required
-                  :rules="userRules"
-                />
+            <v-form
+              ref="form"             
+              lazy-validation
+            >
+              <v-card 
+                class="overflow-hidden"
+              > 
+                <div class="text-center">
+                  <img max="auto" width="70%"  src="@/assets/img/tarabees_character.png">
+                </div>           
+                <v-card-text>
+                  <v-text-field
+                    v-model="form.username"                  
+                    name="username"
+                    label="البريد الإلكتروني"
+                    type="text"                
+                   
+                    outlined                    
+                  />
 
-                <v-text-field
-                  v-model="form.password"
-                  prepend-icon="lock"
-                  name="password"
-                  label="Password"
-                  type="password"
-                  required
-                  :rules="password"
-                />
-              </v-card-text>
-              <v-divider light />
-              <v-card-actions>
-                <v-btn
-                  to="/signup"                  
-                  color="indigo"
-                  dark
-                >
-                  Sign up
-                </v-btn>
-                <v-spacer />
-                <v-btn                  
-                  color="primary"
-                  dark
-                  @click="login"
-                >
-                  Login
-                  <v-icon>keyboard_arrow_right</v-icon>
-                </v-btn>
-              </v-card-actions>
-            
-            </v-card>
-          </v-form>
-        </v-col>
-      </v-layout>
-    </v-container>
-  </section>
+                  <v-text-field
+                    v-model="form.password"                  
+                    name="password"
+                    label="كلمة السر"
+                    type="password"
+                    outlined
+                  />
+                </v-card-text>           
+                <v-card-actions>
+                  <v-btn
+                    x-large
+                    block
+                    color="primary"                
+                                    
+                    @click="login"
+                  >
+                    تسجيل الدخول
+                  </v-btn>
+                </v-card-actions>
+                <div class="text-center">
+                  <span class="black--text">
+                    <img
+                      src="@/assets/img/logo-color.png"
+                      alt="logo"
+                      width="150px"
+                    ><br> © 2020
+                  </span>
+                </div>
+              </v-card>
+               <p v-if="message">{{ message }}</p>
+            </v-form>
+          </v-col>
+        </v-layout>
+      </v-container>
+    </section>
   </v-app>
 </template>
 <script>
@@ -89,15 +84,7 @@ export default {
       },
       loading: false,
       message: '',
-      valid: true,
-      password : [
-        v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters',
-      ],    
-     userRules: [
-        v => !!v || 'E-mail is required',
-        v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-      ],
+     
     };
   },
   computed: {
@@ -117,7 +104,7 @@ export default {
         if (this.form.username && this.form.password) {
           const response =  AuthService.login(this.form);
           // console.log(response)
-          this.$router.push('/login');
+          this.$router.push('/dashboard');
             error => {
               this.loading = false;
               this.message =

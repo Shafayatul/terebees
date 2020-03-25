@@ -2,10 +2,11 @@
   <main class="site-main about grey-background">
     <section class="page-header">
       <h1 class="text-center text-white text-uppercase fw-700 mb-0">
-       إنشاء حساب
+        إنشاء حساب
       </h1>
     </section>
     <!-- end .page-header -->
+
     <v-row 
       class="justify-center"
     >
@@ -15,81 +16,157 @@
         md="4"
         sm="8"
         max="auto"
+        class="sl"
       >
-         <v-form
+        <v-card
+          class="overflow-hidden"
+          color="purple lighten-1"
+          dark
+        >
+          <v-form
             ref="form"
             v-model="valid"
-            class="signup"
+            class="signup purple lighten-1"
+            color=""
+            dark
           >
-            <v-text-field
-              v-model="first_name"
+            <v-row>
+              <v-col 
+                cols="12"
+                lg="6"
+                md="6"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="first_name"             
+                  name="first_name"
+                  label="الاسم"
+                  required
+                  :rules="rules.name"
+                />
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="6"
+                md="6"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="last_name"
              
-              name="first_name"
-              label="اسم العائلة"
-              required
-              :rules="rules.name"
-            />
-            <v-text-field
-              v-model="last_name"
+                  name="last_name"
+                  label="اسم العائلة"
+                  required
+                  :rules="rules.name"
+                /> 
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="12"
+                md="12"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="family"
              
-              name="last_name"
-              label="الاسم"
-              required
-              :rules="rules.name"
-            /> 
-            <v-text-field
-              v-model="family"
+                  name="family"
+                  label="العائلة"
+                  :rules="rules.family"
+                  required
+                />
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="12"
+                md="12"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="age"
+                  class="text-write text--white"
+                  name="age"
+                  label="العمر"
+                  required
+                /> 
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="12"
+                md="12"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="email"
+                  :rules="rules.email"              
+                  name="email"
+                  label="البريد الالكتروني"
+                  required
+                  class="text--primary"            
+                />
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="12"
+                md="12"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="password"
              
-              name="family"
-              label="الاسم"
-              :rules="rules.family"
-              required
-            />
-            <v-text-field
-              v-model="age"
+                  name="password"
+                  label="كلمة السر"
+                  type="password"
+                  class="text--primary"            
+                />
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="12"
+                md="12"
+                sm="12"
+                max="auto"
+              >
+                <v-text-field
+                  v-model="password_confirmation"
              
-              name="age"
-              label="Age"
-              required
-            /> 
-            <v-text-field
-              v-model="email"
-              :rules="rules.email"              
-              name="email"
-              label="Email"
-              required            
-            />
-
-            <v-text-field
-              v-model="password"             
-              name="password"
-              label="Password"
-              type="password"
-            />
-
-            <v-text-field
-              v-model="password_confirmation"
-             
-              name="password"
-              label="Confirm Password"
-              type="password"              
-            />
-            <v-file-input
-              v-model="profile_image"             
-              placeholder="Upload your documents"
-              label="File input"             
-            />
+                  name="password"
+                  label="كلمة السر"
+                  type="password"
+                  class="text--primary"            
+                />
+              </v-col>
+              <v-col 
+                cols="12"
+                lg="12"
+                md="12"
+                sm="12"
+                max="auto"
+              >
+                <v-file-input
+                  v-model="profile_image"
+                  color="white"             
+                  placeholder="Upload your documents"
+                  label="الصوره الشخصية"             
+                />
+              </v-col>
+            </v-row>
             <v-card-actions>      
-              <v-btn
+              <button
                 :disabled="!valid"
-                class=""
+                class="btn btn-theme"
                 @click="signUp"
               >
-                Register
-               
-              </v-btn>
+                إنشاء حساب
+              </button>
             </v-card-actions>
           </v-form>
+        </v-card>
       </v-col>
     </v-row>
 
@@ -170,7 +247,7 @@ export default {
   },
   created(){
       // GET /someUrl
-    client().get('/articles').then(response => {
+    client().get('/signup').then(response => {
 
     // get body data
     console.log(response)
@@ -195,7 +272,7 @@ export default {
          email: this.email,
          password: this.password,
          password_confirmation: this.password_confirmation,
-        //  profile_image: this.profile_image,
+         profile_image: this.profile_image,
         };
         this.getFormData(formData,credentials)
         console.log(this.profile_image)
@@ -231,4 +308,8 @@ export default {
     padding: 30px;
     color: #fff;
 }
+.sl{
+  margin-top: -12px;
+}
+
 </style>

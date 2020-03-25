@@ -217,13 +217,13 @@ const routes = [
       
     }
   },
-    { path: '/adminlogin',
+    { path: '/dashboard/adminlogin',
     component: Adminlogin,
     name: 'Adminlogin',
     meta: {
       footerTop: false,
       header: false,
-      footer: true,
+      footer: false,
       requiresVisitor: true,
     }
    },
@@ -240,25 +240,26 @@ const router = new VueRouter({
   routes
 })
 
-// router.beforeEach((to, from, next) => {
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//       var user = localStorage.loggedIn;
-//       if (!user ) {
-//         next({
-//           path: '/login',
-//         })
-//       } else {
-//         next()
-//       }
-//     }else if (to.matched.some(record => record.meta.requiresVisitor)) {
-//       if (user) {
-//         next({
-//           path: '/',
-//         })
-//       } else {
-//         next()
-//       }
-//     }
-// })
+router.beforeEach((to, from, next) => {
+  
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+      var user = localStorage.loggedIn;
+      if (!user ) {
+        next({
+          path: '/dashboard/adminlogin',
+        })
+      } else {
+        next()
+      }
+    }else if (to.matched.some(record => record.meta.requiresVisitor)) {
+      if (user) {
+        next({
+          path: '/dashboard',
+        })
+      } else {
+        next()
+      }
+    }
+})
 
 export default router

@@ -1,6 +1,6 @@
 <template>
-  <v-app id="inspire"
-   
+  <v-app
+    id="inspire"
   >
     <v-navigation-drawer
     
@@ -143,11 +143,14 @@
         class="nav-link"
       >
         <!-- {{ currentUser.username }} -->
-
       </router-link>
-      <a class="nav-link" href @click.prevent="logOut">
-           LogOut
-       </a>
+      <a
+        class="nav-link"
+        href
+        @click.prevent="logOut"
+      >
+        LogOut
+      </a>
     </v-app-bar>
 
 
@@ -222,7 +225,7 @@
   methods: {
     logOut() {
       this.$store.dispatch('auth/logout');
-      this.$router.push('/adminlogin');
+      this.$router.push('/dashboard/adminlogin');
     }
   }
 };

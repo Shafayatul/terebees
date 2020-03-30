@@ -17,6 +17,7 @@ import OurTrainer from '../views/OurTrainer.vue'
 import Ask_Trainer from '../views/Ask_Trainer.vue'
 // import Gallery from '../views/Gallery.vue'
 import BlogList from '../views/BlogList.vue'
+import Diet from '../views/DietTraning.vue'
 import BlogSingle from '../views/BlogSingle.vue'
 import Subscribe from '../views/Subscriptions.vue'
 import About from '../views/About.vue'
@@ -81,6 +82,17 @@ const routes = [
       footer: true,
       requiresVisitor: true,
 
+    }
+  },
+  {
+    path: '/dietTraning',
+    name: 'Diet',
+    component:Diet,
+    meta: {
+      footerTop: false,
+      header: true,
+      footer: true,
+      requiresVisitor: true,
     }
   },
   {
@@ -240,26 +252,26 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
+// router.beforeEach((to, from, next) => {
   
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-      var user = localStorage.loggedIn;
-      if (!user ) {
-        next({
-          path: '/dashboard/adminlogin',
-        })
-      } else {
-        next()
-      }
-    }else if (to.matched.some(record => record.meta.requiresVisitor)) {
-      if (user) {
-        next({
-          path: '/dashboard',
-        })
-      } else {
-        next()
-      }
-    }
-})
+//   if (to.matched.some(record => record.meta.requiresAuth)) {
+//       var user = localStorage.loggedIn;
+//       if (!user ) {
+//         next({
+//           path: '/dashboard/adminlogin',
+//         })
+//       } else {
+//         next()
+//       }
+//     }else if (to.matched.some(record => record.meta.requiresVisitor)) {
+//       if (user) {
+//         next({
+//           path: '/dashboard',
+//         })
+//       } else {
+//         next()
+//       }
+//     }
+// })
 
 export default router

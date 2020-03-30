@@ -70,11 +70,7 @@
               class="blog-post mb-50"
             >
               <figure class="post-media animated-border p-relative mb-35">
-                <img
-                  :src="''+post.image.path+''"
-                  class="img-fluid w-100"
-                  alt=""
-                >
+                <img src="@/assets/img/blog_home/layer-4.png" class="img-fluid" alt="">
                 <span class="gradient-border transition" />
                 <figcaption class="transition">
                   <div class="tags">
@@ -99,11 +95,16 @@
                 </figcaption>
               </figure>
               <div class="excerpt">
-                <router-link :to="'/article/' + post.id" 
+                <router-link
+                  :to="'/article/' + post.id" 
                   class="read-more hover-effect-1 left gradient-bg"
-                ><i class="ti-plus" /></router-link>									
+                >
+                  <i class="ti-plus" />
+                </router-link>									
                 <h4 class="text-uppercase fw-700">
-                 <router-link :to="'/article/' + post.id" >{{ post.title }}</router-link>
+                  <router-link :to="'/article/' + post.id">
+                    {{ post.title }}
+                  </router-link>
                 </h4>
                 <p>{{ post.content }}</p>
               </div>
@@ -179,8 +180,7 @@
                 <div class="form-group material-input mb-0 w-100">
                   <input
                     v-model="advanced"
-                    type="search"
-                    placeholder="search"
+                    type="search"                   
                     class="form-control input-tp"
                   >
                   <label

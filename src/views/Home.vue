@@ -1,4 +1,5 @@
 <template>
+<v-app>
   <main
     :key="componentKey"
     class="site-main home grey-background"
@@ -1139,6 +1140,7 @@
     </section>
     <!-- end #our-pricing -->
       
+      
     <section
       id="latest-posts"
       class="section-full pt-0"
@@ -1291,8 +1293,9 @@
     
       <!-- end .container -->
     </section>
-    <!-- end #latest-posts -->
+   
   </main>
+  </v-app>
 </template>
 
 <script>
@@ -1304,7 +1307,7 @@ export default {
   components: { VueSlickCarousel  },
   data() {
     return {
-     
+      dialog: false,
        settings: {
           arrows: false,
           dots: true,

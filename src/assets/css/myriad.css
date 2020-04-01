@@ -6,13 +6,30 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'kharabeesh_fontnormal';
+    src: url('../fonts/kharabeesh-font-webfont.woff2') format('woff2'),
+         url('../fonts/kharabeesh-font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'Myriad Arabic';
     src: url('../fonts/ArbFONTS-MyriadArabic-Bold.otf') format('otf'),
         url('../fonts/ArbFONTS-MyriadArabic-Bold.otf') format('otf');
     font-weight: bold;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Kharabeesh Font';
+    src: url('../fonts/Kharabeesh.eot');
+    src: url('../fonts/Kharabeesh.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Kharabeesh.woff2') format('woff2'),
+        url('../fonts/Kharabeesh.woff') format('woff'),
+        url('../fonts/Kharabeesh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Myriad Arabic';

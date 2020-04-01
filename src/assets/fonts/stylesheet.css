@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Kharabeesh Font';
+    src: url('Kharabeesh.eot');
+    src: url('Kharabeesh.eot?#iefix') format('embedded-opentype'),
+        url('Kharabeesh.woff2') format('woff2'),
+        url('Kharabeesh.woff') format('woff'),
+        url('Kharabeesh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

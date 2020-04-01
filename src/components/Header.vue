@@ -16,6 +16,7 @@
         <img
           src="@/assets/img/logo-color.png"
           alt="logo"
+          width="100px"
         >
       </router-link><!-- end .navbar-brand -->
       <button
@@ -35,100 +36,63 @@
         class="primary-nav collapse navbar-collapse"
       >
         <ul class="navbar-nav ml-auto">
-          <li class="has-submenu">
-            <router-link
-              to="/login"
-              data-text="تسجيل الدخول "
-            >
-              <span>تسجيل الدخول </span>
-            </router-link>
-          </li>
-          <li class="has-submenu">
-            <router-link
-              to="/"
-              data-text="الرئيسية"
-            >
-              <span>الرئيسية</span>
-            </router-link>
-          </li>
           <li>
             <router-link
-              to="/about"
-              data-text="About"
+              to="/login"
+              data-text="تسجيل الدخول"
             >
               <span>تسجيل الدخول</span>
             </router-link>
           </li>
           <li>
             <router-link
-              to="/class-schedule"
-              data-text="Schedules"
+              to="/"
+              data-text="الصفحة الرئيسية"
             >
-              <span>المقالات الرياضية </span>
+              <span> الصفحة الرئيسية</span>
             </router-link>
-          </li>
-          <li>
-            <a
-              href="javascript:void(0)"
-              data-text="Pricing"
-            ><span>إسأل المدرب</span></a>
           </li>
           <li>
             <router-link
-              to="#"
-              data-text="Pages"
+              to="/about"
+              data-text="معلومات عن"
             >
-              <span>Pages</span>
+              <span>معلومات عن</span>
             </router-link>
-            <ul class="submenu">
-              <li>
-                <router-link to="/clasess">
-                  Classes
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/class-detail">
-                  Class Details
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/our-trainer">
-                  Our Trainers
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/Ask_Trainer">
-                  Ask Trainers
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/gallery">
-                  Gallery
-                </router-link>
-              </li>
-              <li>
-                <router-link to="/404">
-                  404
-                </router-link>
-              </li>
-            </ul>
           </li>
           <li>
             <router-link 
               to="/article"
               data-text="المقالات الرياضية"
             >
-              <span>المقالات الرياضية </span>
+              <span>المقالات الرياضية</span>
             </router-link>
-          </li>
+          </li>         
           <li>
             <router-link
-              to="/contact"
-              data-text="Contact"
+              to="/Ask_Trainer"
+              data-text="إسأل المدرب"
             >
-              <span> تواصل معنا</span>
+              <span>إسأل المدرب</span>
             </router-link>
           </li>
+            <li>
+            <router-link
+              to="/dietTraning"
+              data-text="برامج التدريب والاشتراكات"
+            >
+              <span>برامج التدريب والاشتراكات </span>
+            </router-link>
+          </li>
+           <li>
+            <router-link
+              to="/contact"
+              data-text="تواصل معنا"
+            >
+              <span>تواصل معنا </span>
+            </router-link>
+          </li>
+         
           <!--   <li><div id="google_translate_element"></div></li> -->
         </ul> <!-- end .navbar-nav -->
       </nav> <!-- end #primary-nav -->

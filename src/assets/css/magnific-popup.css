@@ -415,7 +415,11 @@ img.mfp-img {
  
 }
 .chat-content{
-  max-width: 350px !important;
+  width: 350px !important;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 2000;
 }
 
 
@@ -469,7 +473,6 @@ img.mfp-img {
 
 }
 .chat-content .modal-content .modal-header .modal-title{
- color:#fff;
  position: absolute;
 }
 .chat-content .modal-content .modal-footer{
@@ -479,8 +482,7 @@ background: #B50805;
 justify-content: center;
 border-top: none;
 }
-.btn-te{
-  color: #fff;
+.btn-te{ 
   text-align: center;
   padding: 5px;
   display: block;

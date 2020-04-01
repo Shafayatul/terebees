@@ -30,6 +30,7 @@
 		font-weight: 500;
 		position: relative;
 		text-transform: uppercase;
+		color: $text-color;
 	}
 	.caption1 {
 		top: 270px;
@@ -282,7 +283,7 @@
 }
 
 #about .watermark-title {
-	bottom: 0;
+	bottom: 100px;
 	left: -230px;
 }
 
@@ -293,9 +294,9 @@
  */
 
 #our-services .watermark-title {
-	bottom: 100px;
+	bottom: 0px;
 	right: -230px;
-	position: relative;
+	position: absolute;
 	
 }
 
@@ -554,8 +555,10 @@
 	}
 }
 .cart-overlay{
-	 top: -390px !important;
-	 right:-130px;
+	top: -114px !important;
+	position: absolute;
+	z-index: 200000;
+
      .over-text {
      position: absolute;
      right: 35%;

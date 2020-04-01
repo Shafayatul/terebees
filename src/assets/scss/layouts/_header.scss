@@ -26,10 +26,10 @@
 	}
 	> li {
 		> a {
-			color: #fff;
+			color: $text-color;
 			display: block;
-			font-size: 15px;
-			padding: 35px 22px 34px;
+			font-size: 13px;
+			padding: 35px 15px 34px;
 			position: relative;
 			font-weight: bold;
 			&::before {

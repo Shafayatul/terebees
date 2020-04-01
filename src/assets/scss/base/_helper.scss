@@ -272,7 +272,7 @@
 		-webkit-text-fill-color: unset;
 		&.light {
 		}
-		color: #fff;
+		color: #000000;
 		&::before {
 			@include transform(scaleY(0));
 		}

@@ -1,0 +1,56 @@
+<header class="main_menu">
+        <div class="sub_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="sub_menu_right_content">
+                          <a href="/">
+                            <span> <img src="@/assets/img/logo.png" alt="logo"></span>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 col-md-6">
+                        <div class="sub_menu_social_icon">
+                            <a v-if="this.$root.$data.cart" @click="profile" class="lang mr-2" href=""><i class="fas fa-shopping-cart mr-2"></i>Cart</a>
+                            <a @click="profile" class="lang " href="" v-if="flag"><i class="fas fa-user mr-2"></i>Profile</a>
+                            <a data-toggle="tooltip" data-placement="bottom" title="Select your language" class="lang" href="#"><img src="@/assets/img/lenbd.png" alt=""></a>
+                            <!-- <a class="list-pro" ><span>List your property</span></a> -->
+                            <a data-toggle="tooltip" v-show="flag===false" v-for="(item,index) in items" :key="index" :href="item.to"  data-placement="bottom" title="Become a member for exclusive Secret Deals"  class="btn reg-btn"  >{{item.title}}</a>
+                            
+                            <a data-toggle="tooltip" href="" v-show="flag"  @click="logout" data-placement="bottom" title="Become a member for exclusive Secret Deals"  class="btn reg-btn"  >Log-out</a>
+                            <!-- <a data-toggle="tooltip" href="/login" data-placement="bottom" title="Get a more personalized search" class="btn reg-btn" href="#" >Login</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu_iner">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse main-menu-item "
+                                id="navbarSupportedContent">
+                                <ul class="navbar-nav nav-tabs" id="myTab" role="tablist">
+                                    <li   @click="rideshare()" class="nav-item" :class="activeRide">
+                                        <a class="nav-link"><i class="fas fa-car mr-2"></i>Ride-Share</a>
+                                    </li>
+                                    <li   @click="shipment()" class="nav-item " :class="activeShip">
+                                        <a class="nav-link"><i class="fas fa-briefcase mr-2"></i>Shipment</a>
+                                    </li>
+                                    <!--  -->
+                                    <!--  -->
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

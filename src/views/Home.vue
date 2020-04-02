@@ -220,30 +220,45 @@
 
 
    
-    
-    <div
-      id="myModal"
-      class="modal fade"
-      role="dialog"
-    >
-      <div class="modal-dialog  modal-lg">      
-        <div class="modal-content embed-responsive embed-responsive-16by9">          
+    <section class="hidevideo">
+      <div
+        id="myModal"
+        class="modal fade"
+        role="dialog"
+      >
+        <div class="modal-dialog  modal-lg">             
+          <div class="modal-content ">
+            <button
+              type="button"
+              class="close iconclose"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
        
-            <vimeo-player
-        class="vimeo"
-        ref="player"       
-         :video-id="184323035"
-        @ready="onReady"
-        :autoplay="true"
-        :player-height="320"
-        :player-width="640"
-        loop="1"
-      ></vimeo-player>
+         
+            <div class="modal-body embed-responsive embed-responsive-16by9">
+              <video
+                id="video"
+                muted
+                autoplay
+                width="320"
+                height="240"
+                controls
+              >
+                <source
+                  src="@/assets/img/Tarabees_Introduction_HD.mp4"
+                  type="video/mp4"
+                >
+  
+ 
+              </video>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-        
-         
+    </section>     
 
                    
     
@@ -1304,8 +1319,9 @@ font-weight: bold;
     border-radius: 25px;
     z-index: 2000;
     border: 2px solid #fd2c1d;
-    color: #fff;
     opacity: 5;
+    width: 50px;
+    color: #fd2c1d;
 }
 .iconclose:hover .btnspan{
   background:#fd2c1d;

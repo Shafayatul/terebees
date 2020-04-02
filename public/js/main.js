@@ -4,15 +4,28 @@ window.$router = true;
 /*setInterval(() => {
     alert(window.$router);
 }, 5000);*/
-  
+
 
 $( document ).ready(function() {
+    $('.hidevideo').click(function() {
+        location.reload();
+        vimeoWrap = $('.modal-body');
+        vimeoWrap.html( vimeoWrap.html() );
+     });
+     var vid = document.getElementById("video");
+     vid.muted = true;
+
     if (document.cookie.indexOf('visited=true') == -1){
-      // load the overlay
-      $('#myModal').modal({show:true});
-    //   $('.vimeo').on('ended', function(e){
-    //       alert('shhffhhf')
-    //   )};
+        vid.muted = false;
+      $(".close").hide();
+      $('#myModal').modal({
+          show:true,
+         
+         
+         });
+        
+         
+         
       var year = 1000*60*60*24*365;
       var expires = new Date((new Date()).valueOf() + year);
       document.cookie = "visited=true;expires=" + expires.toUTCString();

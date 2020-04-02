@@ -11,11 +11,10 @@ import CKEditor from '@ckeditor/ckeditor5-vue';
 import { ValidationProvider } from 'vee-validate';
 import Swal from 'sweetalert2'
 import 'bootstrap'
-import vueVimeoPlayer from 'vue-vimeo-player'
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.use(VueAxios, axios);
 Vue.use( CKEditor );
-Vue.use(vueVimeoPlayer);
+
 
 window.Toast = Swal.mixin({
   toast: true,

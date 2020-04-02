@@ -221,43 +221,34 @@
 
    
     <section class="hidevideo">
-      <div
-        id="myModal"
-        class="modal fade"
-        role="dialog"
-      >
-        <div class="modal-dialog  modal-lg">             
-          <div class="modal-content ">
-            <button
-              type="button"
-              class="close iconclose"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+    <div
+      id="myModal"
+      class="modal fade"
+      role="dialog"
+    >
+      <div class="modal-dialog  modal-lg">             
+        <div class="modal-content ">
+          
+        <button type="button" class="close iconclose" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
        
          
-            <div class="modal-body embed-responsive embed-responsive-16by9">
-              <video
-                id="video"
-                muted
-                autoplay
-                width="320"
-                height="240"
-                controls
-              >
-                <source
-                  src="@/assets/img/Tarabees_Introduction_HD.mp4"
-                  type="video/mp4"
-                >
+        <div class="modal-body embed-responsive embed-responsive-16by9">
+           
+      <video id="video"  muted autoplay width="320" height="240" controls>
+  <source src="@/assets/img/Tarabees_Introduction_HD.mp4" type="video/mp4">
   
  
-              </video>
-            </div>
-          </div>
+</video>
+   
+   
         </div>
+        </div>
+      
       </div>
+    </div>
+        
     </section>     
 
                    

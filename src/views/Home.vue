@@ -250,7 +250,11 @@
     </div>
         
     </section>     
-
+  <!-- <video id="videofr"  muted autoplay width="320" height="240" controls>
+  <source src="@/assets/img/Tarabees_Introduction_HD.mp4" type="video/mp4">
+  
+ 
+</video> -->
                    
     
    

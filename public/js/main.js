@@ -12,25 +12,21 @@ $( document ).ready(function() {
         vimeoWrap = $('.modal-body');
         vimeoWrap.html( vimeoWrap.html() );
      });
-     var vid = document.getElementById("video");
-     vid.muted = true;
+    //  var vid = document.getElementById("video")[0].webkitEnterFullscreen();
+    //  vid.muted = true;
+     
 
     if (document.cookie.indexOf('visited=true') == -1){
-        vid.muted = false;
-      $(".close").hide();
-      $('#myModal').modal({
-          show:true,
-         
-         
-         });
-        
-         
-         
       var year = 1000*60*60*24*365;
       var expires = new Date((new Date()).valueOf() + year);
       document.cookie = "visited=true;expires=" + expires.toUTCString();
-  
+      window.location.href = "/video"; 
     }
+    document.getElementById('video').addEventListener('ended',myHandler,false);
+       function myHandler(e) {
+// What you want to do after the event
+  window.location.href = "/"; 
+}
   }); 
 
 $(window).on('load', function() {

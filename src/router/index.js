@@ -15,7 +15,7 @@ import Clasess from '../views/Clasess.vue'
 import ClassDetail from '../views/ClassDetail.vue'
 import OurTrainer from '../views/OurTrainer.vue'
 import Ask_Trainer from '../views/Ask_Trainer.vue'
-// import Gallery from '../views/Gallery.vue'
+import Video from '../views/Video.vue'
 import BlogList from '../views/BlogList.vue'
 import Diet from '../views/DietTraning.vue'
 import BlogSingle from '../views/BlogSingle.vue'
@@ -92,6 +92,17 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
+      requiresVisitor: true,
+    }
+  },
+  {
+    path: '/video',
+    name: 'Video',
+    component:Video,
+    meta: {
+      footerTop: false,
+      header: false,
+      footer: false,
       requiresVisitor: true,
     }
   },

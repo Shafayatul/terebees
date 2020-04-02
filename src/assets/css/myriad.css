@@ -1,26 +1,4 @@
 @font-face {
-    font-family: 'Kharabeesh';
-    src: url('../fonts/Kharabeesh-Font.ttf') format('ttf'),
-        url('../fonts/Kharabeesh-Font.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'kharabeesh_fontnormal';
-    src: url('../fonts/kharabeesh-font-webfont.woff2') format('woff2'),
-         url('../fonts/kharabeesh-font-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'Myriad Arabic';
-    src: url('../fonts/ArbFONTS-MyriadArabic-Bold.otf') format('otf'),
-        url('../fonts/ArbFONTS-MyriadArabic-Bold.otf') format('otf');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Kharabeesh Font';
     src: url('../fonts/Kharabeesh.eot');
     src: url('../fonts/Kharabeesh.eot?#iefix') format('embedded-opentype'),
@@ -30,36 +8,50 @@
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/ArbFONTS-Graphology_Light.otf') format('otf'),
-        url('../fonts/ArbFONTS-Graphology_Light.otf') format('otf');
-    font-weight: bold;
+    src: url('../fonts/transfonter/MyriadArabic-Regular.eot');
+    src: url('../fonts/transfonter/MyriadArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/transfonter/MyriadArabic-Regular.woff2') format('woff2'),
+        url('../fonts/transfonter/MyriadArabic-Regular.woff') format('woff'),
+        url('../fonts/transfonter/MyriadArabic-Regular.ttf') format('truetype'),
+        url('../fonts/transfonter/MyriadArabic-Regular.svg#MyriadArabic-Regular') format('svg');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/ArbFONTS-MyriadArabic-BoldIt.otf') format('otf'),
-        url('../fonts/ArbFONTS-MyriadArabic-BoldIt.otf') format('otf');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Myriad Arabic';
-    src: url('../fonts/ArbFONTS-MyriadArabic-It.otf') format('otf'),
-        url('../fonts/ArbFONTS-MyriadArabic-It.otf') format('otf');
+    src: url('../fonts/transfonter/MyriadArabic-It.eot');
+    src: url('../fonts/transfonter/MyriadArabic-It.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/transfonter/MyriadArabic-It.woff2') format('woff2'),
+        url('../fonts/transfonter/MyriadArabic-It.woff') format('woff'),
+        url('../fonts/transfonter/MyriadArabic-It.ttf') format('truetype'),
+        url('../fonts/transfonter/MyriadArabic-It.svg#MyriadArabic-It') format('svg');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Myriad Arabic';
-    src: url('../fonts/ArbFONTS-MyriadArabic-Regular.otf') format('otf'),
-        url('../fonts/ArbFONTS-MyriadArabic-Regular.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../fonts/transfonter/MyriadArabic-BoldIt.eot');
+    src: url('../fonts/transfonter/MyriadArabic-BoldIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/transfonter/MyriadArabic-BoldIt.woff2') format('woff2'),
+        url('../fonts/transfonter/MyriadArabic-BoldIt.woff') format('woff'),
+        url('../fonts/transfonter/MyriadArabic-BoldIt.ttf') format('truetype'),
+        url('../fonts/transfonter/MyriadArabic-BoldIt.svg#MyriadArabic-BoldIt') format('svg');
+    font-weight: bold;
+    font-style: italic;
 }
 
+@font-face {
+    font-family: 'Myriad Arabic';
+    src: url('../fonts/transfonter/MyriadArabic-Bold.eot');
+    src: url('../fonts/transfonter/MyriadArabic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/transfonter/MyriadArabic-Bold.woff2') format('woff2'),
+        url('../fonts/transfonter/MyriadArabic-Bold.woff') format('woff'),
+        url('../fonts/transfonter/MyriadArabic-Bold.ttf') format('truetype'),
+        url('../fonts/transfonter/MyriadArabic-Bold.svg#MyriadArabic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}

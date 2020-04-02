@@ -41,11 +41,11 @@
             href="#"
             class="play-icon mfp-iframe"
             data-toggle="modal"
-            data-target="#myModal"
+            data-target="#myModal"            
           >
             <span class="gradient-bg flex align-center justify-center">
               <i class="ti-control-play" />
-            </span>
+            </span> 
           </a>
           <div>
             <h6 class="text-uppercase tzzzzext-white">
@@ -226,20 +226,19 @@
       class="modal fade"
       role="dialog"
     >
-      <div class="modal-dialog  modal-lg">
-        <button
-          type="button"
-          class="close iconclose"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="modal-content embed-responsive embed-responsive-16by9">
-          <vimeo-player
-            ref="player"
-            :video-id="184323035"
-          />
+      <div class="modal-dialog  modal-lg">      
+        <div class="modal-content embed-responsive embed-responsive-16by9">          
+       
+            <vimeo-player
+        class="vimeo"
+        ref="player"       
+         :video-id="184323035"
+        @ready="onReady"
+        :autoplay="true"
+        :player-height="320"
+        :player-width="640"
+        loop="1"
+      ></vimeo-player>
         </div>
       </div>
     </div>
@@ -1068,7 +1067,7 @@
                     اسم المقال
                   </h4>
                   <p class="mb-0 dark-color">
-                   الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية 
+                    الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية 
                   </p>
                 </figcaption>
               </figure>
@@ -1297,7 +1296,7 @@ font-weight: bold;
     border-top: none;
 }
 .modal-lg {
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .iconclose{

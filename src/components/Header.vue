@@ -35,7 +35,7 @@
         id="primary-nav"
         class="primary-nav collapse navbar-collapse"
       >
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mx-auto ">
           <li>
             <router-link
               to="/login"

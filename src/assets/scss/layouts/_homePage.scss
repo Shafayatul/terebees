@@ -555,9 +555,10 @@
 	}
 }
 .cart-overlay{
-	top: -114px !important;
-	position: absolute;
-	z-index: 200000;
+	position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 2000;
 
      .over-text {
      position: absolute;

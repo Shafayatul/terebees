@@ -32,7 +32,7 @@
             data-paroller-type="foreground"
             data-paroller-direction="horizontal"
           >
-            <h3>#خليك</h3>
+            <h3>خليك#</h3>
           </div>
         </div>
         <!-- end .banner-content -->
@@ -84,7 +84,7 @@
             data-paroller-direction="horizontal"
           >
             <!--<p>Fitness Reveals Pleasure</p>-->
-            <h3>#خليك</h3>
+            <h3>خليك#</h3>
           </div>
         </div>
         <!-- end .banner-content -->
@@ -136,7 +136,7 @@
             data-paroller-direction="horizontal"
           >
             <!--<p>Fitness Reveals Pleasure</p>-->
-            <h3>#خليك</h3>
+            <h3>خليك#</h3>
           </div>
         </div>
         <!-- end .banner-content -->
@@ -188,7 +188,7 @@
             data-paroller-direction="horizontal"
           >
             <!--<p>Fitness Reveals Pleasure</p>-->
-            <h3>#خليك</h3>
+            <h3>خليك#</h3>
           </div>
         </div>
         <!-- end .banner-content -->
@@ -221,36 +221,45 @@
 
    
     <section class="hidevideo">
-    <div
-      id="myModal"
-      class="modal fade"
-      role="dialog"
-    >
-      <div class="modal-dialog  modal-lg">             
-        <div class="modal-content ">
-          
-        <button type="button" class="close iconclose" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div
+        id="myModal"
+        class="modal fade"
+        role="dialog"
+      >
+        <div class="modal-dialog  modal-lg">             
+          <div class="modal-content ">
+            <button
+              type="button"
+              class="close iconclose"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
        
          
-        <div class="modal-body embed-responsive embed-responsive-16by9">
-           
-      <video id="video"  muted autoplay width="320" height="240" controls>
-  <source src="@/assets/img/Tarabees_Introduction_HD.mp4" type="video/mp4">
+            <div class="modal-body embed-responsive embed-responsive-16by9">
+              <video
+                id="video"
+                muted
+                autoplay
+                width="320"
+                height="240"
+                controls
+              >
+                <source
+                  src="@/assets/img/Tarabees_Introduction_HD.mp4"
+                  type="video/mp4"
+                >
   
  
-</video>
-   
-   
+              </video>
+            </div>
+          </div>
         </div>
-        </div>
-      
       </div>
-    </div>
-        
     </section>     
-  <!-- <video id="videofr"  muted autoplay width="320" height="240" controls>
+    <!-- <video id="videofr"  muted autoplay width="320" height="240" controls>
   <source src="@/assets/img/Tarabees_Introduction_HD.mp4" type="video/mp4">
   
  
@@ -312,24 +321,7 @@
       <div class="container z-index-1 p-relative">
         <div class="row">
           <!-- end .col-12 -->
-          <div class="col-md-4 col-12 p2">
-            <div class=" cart-overlay">
-              <a
-                v-show="isNinja"
-                href="#"
-                class="rel"
-                @click="isNinja = !isNinja"
-              >
-                <img
-                  width="300"
-                  src="@/assets/img/home/chat.png"
-                >
-                <div class="overlay top-img">
-                  <span class="over-text">اسأل <br> المدرب</span>
-                </div>
-              </a>
-            </div>
-          </div>
+          <div class="col-md-4 col-12 p2" />
           <div class="col-12 col-md-4 offset-2 section-heading mb-100 text-center">
             <p class="gradient-text text-uppercase fw-500 inline-flex align-items-center">
               <svg
@@ -1116,6 +1108,22 @@
     
       <!-- end .container -->
     </section>
+    <div class=" cart-overlay">
+      <a
+        v-show="isNinja"
+        href="#"
+        class="rel"
+        @click="isNinja = !isNinja"
+      >
+        <img
+          width="300"
+          src="@/assets/img/home/chat.png"
+        >
+        <div class="overlay top-img">
+          <span class="over-text">اسأل <br> المدرب</span>
+        </div>
+      </a>
+    </div>
     <div
       v-show="!isNinja"
       class="chat-content"

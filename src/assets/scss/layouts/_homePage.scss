@@ -308,7 +308,7 @@
 		opacity: 1;
 		backface-visibility: hidden;
 
-		@include position(absolute, null,  0 !important,  0, 40px !important);
+		@include position(absolute, null,  0 !important,  0, 0px !important);
 		@include transition(all 0.3s ease-out 0s);
 
 		@include transform(rotateY(0deg));

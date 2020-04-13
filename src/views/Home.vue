@@ -47,14 +47,7 @@
               <i class="ti-control-play" />
             </span> 
           </a>
-          <div>
-            <h6 class="text-uppercase tzzzzext-white">
-              اهد المقدمةتلمتحركة
-            </h6>
-            <p class="mb-0 font-primary">
-              سوف تحب رؤيه هذا التدريب
-            </p>
-          </div>
+        <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section>
@@ -99,14 +92,7 @@
               <i class="ti-control-play" />
             </span>
           </a>
-          <div>
-            <h6 class="text-uppercase tzzzzext-white">
-              اهد المقدمةتلمتحركة
-            </h6>
-            <p class="mb-0  font-primary">
-              سوف تحب رؤيه هذا التدريب
-            </p>
-          </div>
+          <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section> 
@@ -151,14 +137,7 @@
               <i class="ti-control-play" />
             </span>
           </a>
-          <div>
-            <h6 class="text-uppercase tzzzzext-white">
-              اهد المقدمةتلمتحركة
-            </h6>
-            <p class="mb-0  font-primary">
-              سوف تحب رؤيه هذا التدريب
-            </p>
-          </div>
+        <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section>
@@ -203,14 +182,7 @@
               <i class="ti-control-play" />
             </span>
           </a>
-          <div>
-            <h6 class="text-uppercase tzzzzext-white">
-              اهد المقدمةتلمتحركة
-            </h6>
-            <p class="mb-0  font-primary">
-              سوف تحب رؤيه هذا التدريب
-            </p>
-          </div>
+          <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section>    
@@ -241,8 +213,7 @@
             <div class="modal-body embed-responsive embed-responsive-16by9">
               <video
                 id="video"
-                muted
-                autoplay
+                muted              
                 width="320"
                 height="240"
                 controls
@@ -295,9 +266,9 @@
                 معلومات عنا
               </h2>                   
               <p class="font-primary">
-                الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك
+                كتير بنواجه مشكلة ضيق الوقت الي بيمنعنا من إنه نروح على النوادي الرياضية والجيمات. غير عن إنه هاي النوادي ما بتعطيك الاهتمام اللي أنت محتاجه بما إنه في غيرك متدربين كثير و ما رح يكون في مدرب خاص الك يشجعك ويعطيك النصائح اللي أنت محتاجها. بس هسا مع ترابيس صار بإمكانك توخذ جدول تدريبي خاص فيك سواء كنت بدك تنحف أو تتخن شوي أو يصير عندك بنية ضخمة زي أبطال كمال الأجسام. كمان ترابيس بقدملك كثير من جداول التغذية اللي رح تضمنلك اخذك المكملات الغذائية المناسبة الك. 
               </p>
-              <button class="btn btn-theme-1 mb-30">
+              <button class="float-left btn btn-theme-1 mb-30">
                 اعرف اكثر
               </button>
             </article>
@@ -322,7 +293,7 @@
         <div class="row">
           <!-- end .col-12 -->
           <div class="col-md-4 col-12 p2" />
-          <div class="col-12 col-md-4 offset-2 section-heading mb-100 text-center">
+          <div class="col-12 col-md-4 offset-2 section-heading mb-100 text-center">           
             <p class="gradient-text text-uppercase fw-500 inline-flex align-items-center">
               <svg
                 version="1.1"
@@ -532,7 +503,7 @@
               </svg>
             </p>
             <h2 class="font-primary fw-700 text-uppercase mb-25">
-              جداول التدريب والتغذية
+              مدربينا 
             </h2>
             <p class="mb-0 font-primary">
               الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً <br> في المصاريف الشهرية
@@ -637,9 +608,9 @@
       <!-- end .container -->
     </section>
     <!-- end #our-trainers -->
-    <section
+   <section
       id="testimonials"
-      class="section-full p-relative section-arrow paroller"
+      class=" p-relative section-arrow paroller"
     >
       <img
         class="top-img"
@@ -680,73 +651,7 @@
         </svg>
       </div>
       <div class="container">
-        <VueSlickCarousel
-          class=""
-          v-bind="testimonials"
-        >
-          <article class="testimonial-item swiper-slide text-center">
-            <figure class="author mb-40">
-              <div class="inline-flex align-center">
-                <svg
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 19 30"
-                  style="enable-background:new 0 0 19 30;"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        class="svg-fill-text"
-                        d="M14,0v30h5V0H14z M7,30h5V0H7V30z M0,25h5V5H0V25z"
-                      />
-                    </g>
-                  </g>
-                </svg>
-                <img
-                  src="@/assets/img/author-1.jpg"
-                  class="ml-20 mr-20 mb-25"
-                  alt=""
-                >
-                <svg
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  x="0px"
-                  y="0px"
-                  viewBox="0 0 19 30"
-                  style="enable-background:new 0 0 19 30;"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        class="svg-fill-text"
-                        d="M0,30h5V0H0V30z M7,30h5V0H7V30z M14,5v20h5V5H14z"
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <figcaption>
-                <h4 class="fw-700 fs-18 text-uppercase font-primary">
-                  Mahmoud Abushamaleh
-                </h4>
-                <h2 class="d-block gradient-text fs-60">
-                  ماهو السؤال
-                </h2>
-              </figcaption>
-            </figure>
-            <blockquote class="fs-18  font-primary">
-              الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك
-              الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشودز
-              ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية و يتوفر به جميع الأدوات والمعدات المطلوبة و نظافة المكان و أن تشعر فيه بالراحة. أما إذا كنت ترغب في ممارسة الرياضة في منزلك وهذا ما يفعله المعظم و طبعاً مزاياه لا رسوم دخول ولاحشود ويمكنك الأنتقال من تمرين إلى آخر دون راحة والعيب هو أنه ليس لديك أحد كي يشجعك أو يوجهك  
-            </blockquote>
-          </article>
-        </VueSlickCarousel>
+       
         <!-- end .testimonials -->
       </div>
       <!-- end .container -->
@@ -761,8 +666,11 @@
         الاشتراك
       </div>
       <div class="container z-index-1 p-relative">
+         
         <div class="row">
+           
           <div class="section-heading col-12 mb-100 text-center">
+           
             <p class="gradient-text text-uppercase fw-500 inline-flex align-items-center">
               <svg
                 version="1.1"
@@ -805,14 +713,14 @@
               </svg>
             </p>
             <h2 class="font-primary fw-700 text-uppercase mb-25">
-              الاشتراك
+                  الإشتراكات   
             </h2>
             <p class="mb-0">
               الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون <br>مناسباً في المصاريف الشهرية
             </p>
           </div>
           <!-- end .col-12 -->
-          <div class="col-12 col-md-6 col-lg-4 col-length-3">
+          <div class="col-12 col-md-4 col-lg-3 col-length-3">
             <div class="item-card animated-border item-card-pt p-relative">
               <figure class="pt-image p-relative mb-0">
                 <img
@@ -857,8 +765,51 @@
             </div>
             <!-- end .pt-item -->
           </div>
+          <div class="col-12 col-md-6 col-lg-3 col-length-3">
+            <div class="item-card animated-border item-card-pt p-relative">
+              <figure class="pt-image p-relative mb-0">
+                <img
+                  src="@/assets/img/layer-9.png"
+                  class="img-fluid w-100"
+                  alt=""
+                >
+                <figcaption class="pt-caption">
+                  <h4 class="text-uppercase fw-700 dark-color">
+                    اسم المدرب
+                  </h4>
+                  <p class="mb-0 dark-color">
+                    الذهاب إلى مركز رياضي أو ما يعرف
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- end .pt-image -->
+              <div
+                class="item-card-hover gradient-border flex align-end"
+                data-bgc="#030409,80"
+              >
+                <div>
+                  <a
+                    href="#"
+                    class="btn btn-theme-1"
+                  ><i class="ti-unlock ml-15" />إشترك الان</a>
+                  <span class="pt-tag gradient-text text-uppercase fw-700 title-font">200 د أ</span>
+                  <h4 class="fw-700 text-uppercase fs-18 font-primary mb-15">
+                    اسم التدريب
+                  </h4>
+                  <p>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </p>
+                  <ul class="list-double-arrow">
+                    <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                    <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                    <li>الذهاب إلى مركز رياضي أو ما يعرف   الذهاب  والإياب يجب أن يكون مناسباً في المصاريف الشهرية </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- end .pt-hover -->
+            </div>
+            <!-- end .pt-item -->
+          </div>
           <!-- end .col-12.col-md-4 -->
-          <div class="col-12 col-md-6 col-lg-4 col-length-3">
+          <div class="col-12 col-md-6 col-lg-3 col-length-3">
             <div class="item-card animated-border item-card-pt p-relative">
               <figure class="pt-image p-relative mb-0">
                 <img
@@ -904,7 +855,7 @@
             <!-- end .pt-item -->
           </div>
           <!-- end .col-12.col-md-4 -->
-          <div class="col-12 col-md-6 col-lg-4 col-length-3">
+          <div class="col-12 col-md-6 col-lg-3 col-length-3">
             <div class="item-card animated-border item-card-pt p-relative">
               <figure class="pt-image p-relative mb-0">
                 <img
@@ -1253,8 +1204,7 @@ export default {
 .trainer-slider{
 	position: relative;
 }
-.item-card .pt-caption{
-  right: 40px !important;
+.item-card .pt-caption{  
   left: 0 !important;
 }
 .custom-arrow{
@@ -1300,14 +1250,10 @@ height: 640px;
   top: -103px !important;
   left: 58px;
 }
-.tzzzzext-white{
- color:
-#C30000;
-right: 13%;
-position: absolute;
-top: -3%;
-font-size: 18px;
-font-weight: bold;
+.gradient-title{
+ color: rgb(202, 0, 0);
+
+
 }
 .site-footer {
     /* background: #010208 !important; */

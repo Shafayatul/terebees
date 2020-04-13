@@ -133,7 +133,7 @@ Last Update: 22.02.2019
 ------------------------------------------------------------*/
 body {
   color: #dfdfdf;
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: "Tajawal", sans-serif;
   font-size: 14px;
   line-height: 1.7;
   /* Better Font Rendering =========== */
@@ -151,11 +151,11 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: "Tajawal", sans-serif;
 }
 
 .btn {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
+  font-family: "Tajawal", sans-serif !important;
 }
 
 a {
@@ -490,7 +490,7 @@ a:hover {
 }
 
 .title-font {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: "Tajawal", sans-serif;
 }
 
 .section-full {
@@ -694,7 +694,7 @@ a:hover {
   border: 0 none;
   border-radius: 0;
   color: #fff;
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: "Tajawal", sans-serif;
   font-size: 15px;
   padding: 18px 50px 20px;
   position: relative;
@@ -1541,7 +1541,7 @@ a:hover {
 }
 
 .navbar-nav {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: Tajawal,sans-serif;
   text-transform: uppercase;
 }
 
@@ -1553,9 +1553,8 @@ a:hover {
   color: #dfdfdf;
   display: block;
   font-size: 13px;
-  padding: 35px 15px 34px;
+  padding: 35px 22px 34px;
   position: relative;
-  font-weight: bold;
 }
 
 .navbar-nav > li > a::before {
@@ -1567,6 +1566,7 @@ a:hover {
   position: absolute;
   right: 22px;
   left: initial;
+  color: #C24410;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: left top 0;
@@ -1786,7 +1786,7 @@ a:hover {
 }
 
 .banner-content h3 {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: "Tajawal", sans-serif;
   font-size: 100px;
   font-style: italic;
   font-weight: 700;
@@ -2121,7 +2121,7 @@ a:hover {
   position: absolute;
   right: 0 !important;
   bottom: 0;
-  left: 40px !important;
+  left: 0px !important;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   -webkit-transform: rotateY(0deg);
@@ -2404,8 +2404,10 @@ a:hover {
 }
 
 .cart-overlay {
-  top: -390px !important;
-  right: -130px;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 2000;
 }
 
 .cart-overlay .over-text {
@@ -3015,11 +3017,11 @@ a:hover {
   font-size: 13px;
   padding: 0 21px;
   position: relative;
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular";
+  font-family: "Tajawal", sans-serif;
 }
 
 .footer-nav li a .btn {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
+  font-family: "Tajawal", sans-serif !important;
 }
 
 .footer-nav li a::before {
@@ -3662,7 +3664,7 @@ a:hover {
 
 body {
   text-align: right !important;
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
+  font-family: "Tajawal", sans-serif !important;
 }
 
 /*------------------------------------------------
@@ -3699,7 +3701,7 @@ img {
 #testimonials > img.top-img {
   position: absolute;
   z-index: 1;
-  top: 0;
+  bottom: -200px;
   margin: auto;
   left: 0;
   right: 0;
@@ -3731,7 +3733,7 @@ h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5 {
 }
 
 .navbar-nav {
-  font-family: "Tahoma,AdobeInvisFont,MyriadPro-Regular" !important;
+  font-family: "Tajawal", sans-serif !important;
 }
 
 .list-unstyled {

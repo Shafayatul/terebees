@@ -78,7 +78,7 @@ img{max-width: 100%;}
 #testimonials > img.top-img {
     position: absolute;
     z-index: 1;
-    top: 0;
+    bottom: -200px;
     margin: auto;
     left: 0;
     right: 0;

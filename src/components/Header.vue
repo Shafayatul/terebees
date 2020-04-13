@@ -35,18 +35,18 @@
         id="primary-nav"
         class="primary-nav collapse navbar-collapse"
       >
-        <ul class="navbar-nav mx-auto ">
+        <ul class="navbar-nav  mx-auto ">
           <li>
             <router-link
               to="/login"
-              data-text="تسجيل الدخول"
+             data-text="تسجيل دخول"
             >
-              <span>تسجيل الدخول</span>
+              <span>تسجيل دخول</span>
             </router-link>
           </li>
           <li>
             <router-link
-              to="/"
+              to="/home"
               data-text="الصفحة الرئيسية"
             >
               <span> الصفحة الرئيسية</span>
@@ -55,9 +55,9 @@
           <li>
             <router-link
               to="/about"
-              data-text="معلومات عن"
+             data-text="معلومات عنا"
             >
-              <span>معلومات عن</span>
+              <span>معلومات عنا</span>
             </router-link>
           </li>
           <li>
@@ -71,27 +71,20 @@
           <li>
             <router-link
               to="/Ask_Trainer"
-              data-text="إسأل المدرب"
+              data-text="اسأل المدرب"
             >
-              <span>إسأل المدرب</span>
+              <span>اسأل المدرب</span>
             </router-link>
           </li>
             <li>
             <router-link
               to="/dietTraning"
-              data-text="برامج التدريب والاشتراكات"
+             data-text="برامج التداريب و الاشتراكات"
             >
-              <span>برامج التدريب والاشتراكات </span>
+              <span>برامج التداريب و الاشتراكات</span>
             </router-link>
           </li>
-           <li>
-            <router-link
-              to="/contact"
-              data-text="تواصل معنا"
-            >
-              <span>تواصل معنا </span>
-            </router-link>
-          </li>
+         
          
           <!--   <li><div id="google_translate_element"></div></li> -->
         </ul> <!-- end .navbar-nav -->
@@ -109,6 +102,14 @@ export default {
 };
 </script>
 <style  scoped>
-
+.router-link-active:before {
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+      }
+      
+.navbar-nav > li > a.router-link-active span {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+}      
 </style>>
     

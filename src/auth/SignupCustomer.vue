@@ -151,7 +151,7 @@
                 <v-file-input
                   v-model="profile_image"
                   color="white"             
-                  placeholder="Upload your documents"
+                  placeholder="Browser"
                   label="الصوره الشخصية"             
                 />
               </v-col>

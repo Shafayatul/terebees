@@ -67,13 +67,13 @@ Farhad Custom CSS
 
 img{max-width: 100%;}
 .navbar-brand img{max-width: 120px;}
-.grey-background{background: #171717;}
+.grey-background{background: #000000;}
 #fire-flame::before {
     content: "";
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(-30%, transparent), to(#171717)) !important;
-	background: linear-gradient(to bottom, transparent -30%, #171717 100%) !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-30%, transparent), to(#000000)) !important;
+	background: linear-gradient(to bottom, transparent -30%, #000000 100%) !important;
 }
-.svg-fill-dark{fill: #171717 !important;}
+.svg-fill-dark{fill: #000000 !important;}
 #testimonials{background: #000 !important;margin-top: 150px !important;padding-top: 200px !important;}
 #testimonials > img.top-img {
     position: absolute;
@@ -91,8 +91,8 @@ img{max-width: 100%;}
 }
 .site-footer.bottom-full{
     border-top: 0;
- //    background: -webkit-gradient(linear, left top, left top, color-stop(-30%, transparent), to(#171717)) !important;
-	// background: linear-gradient(to top, transparent -30%, #171717 100%) !important;
+ //    background: -webkit-gradient(linear, left top, left top, color-stop(-30%, transparent), to(#000000)) !important;
+	// background: linear-gradient(to top, transparent -30%, #000000 100%) !important;
 }
 [dir="rtl"] .slick-arrow{
     position: absolute;

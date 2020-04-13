@@ -1807,7 +1807,7 @@ a:hover {
 .banner-content .caption1 {
   top: 270px;
   z-index: 1;
-  left: calc(50% - 206px);
+  left: calc(50% - 270px);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -3679,17 +3679,17 @@ img {
 }
 
 .grey-background {
-  background: #171717;
+  background: #000000;
 }
 
 #fire-flame::before {
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-30%, transparent), to(#171717)) !important;
-  background: linear-gradient(to bottom, transparent -30%, #171717 100%) !important;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-30%, transparent), to(#000000)) !important;
+  background: linear-gradient(to bottom, transparent -30%, #000000 100%) !important;
 }
 
 .svg-fill-dark {
-  fill: #171717 !important;
+  fill: #000000 !important;
 }
 
 #testimonials {

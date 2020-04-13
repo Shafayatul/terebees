@@ -47,7 +47,7 @@
               <i class="ti-control-play" />
             </span> 
           </a>
-        <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
+        <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 mr-2 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section>
@@ -92,7 +92,7 @@
               <i class="ti-control-play" />
             </span>
           </a>
-          <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
+          <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 mr-2 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section> 
@@ -137,7 +137,7 @@
               <i class="ti-control-play" />
             </span>
           </a>
-        <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
+        <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 mr-2 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section>
@@ -182,7 +182,7 @@
               <i class="ti-control-play" />
             </span>
           </a>
-          <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 text-white">سوف تحب رؤية هذا التدريب</p></div>
+          <div><h6 class="text-uppercase text-bold text-left gradient-title"> شاهدة المقدمة المتحركة </h6><p class="mb-0 mr-2 text-white">سوف تحب رؤية هذا التدريب</p></div>
         </div>
         <div id="fire-flame" />
       </section>    

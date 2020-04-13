@@ -35,7 +35,7 @@
 	.caption1 {
 		top: 270px;
 		z-index: 1;
-		@include calc('left', '50% - 206px');
+		@include calc('left', '50% - 270px');
 		@include transform(translateX(-50%));
 		p {
 			margin: 19px 0 0 10px;

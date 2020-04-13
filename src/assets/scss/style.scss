@@ -74,7 +74,7 @@ img{max-width: 100%;}
 	background: linear-gradient(to bottom, transparent -30%, #000000 100%) !important;
 }
 .svg-fill-dark{fill: #000000 !important;}
-#testimonials{background: #000 !important;margin-top: 150px !important;padding-top: 200px !important;}
+
 #testimonials > img.top-img {
     position: absolute;
     z-index: 1;
@@ -82,7 +82,8 @@ img{max-width: 100%;}
     margin: auto;
     left: 0;
     right: 0;
-    @include transform(translateY(-50%));
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-19%);
     max-width: 320px;
 }
 .site-footer{

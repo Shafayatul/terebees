@@ -3692,12 +3692,6 @@ img {
   fill: #000000 !important;
 }
 
-#testimonials {
-  background: #000 !important;
-  margin-top: 150px !important;
-  padding-top: 200px !important;
-}
-
 #testimonials > img.top-img {
   position: absolute;
   z-index: 1;
@@ -3706,7 +3700,7 @@ img {
   left: 0;
   right: 0;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-19%);
   max-width: 320px;
 }
 

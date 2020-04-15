@@ -30,6 +30,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'main',
+    redirect: '/home'
+   
+  },
+  {
     path: '/home',
     name: 'home',
     component: Home,
@@ -37,7 +43,7 @@ const routes = [
       footerTop: true,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: false,
     }
   },
   {
@@ -45,7 +51,7 @@ const routes = [
     name: '',
     redirect: "/dashboard",
     component: Dashboard,
-    meta:{footer: false, requiresAuth: true,},    
+    meta:{footer: false, auth: true,},    
     children: [       
       { path: '/dashboard', component: Admin, name:' لوحة التحكم',},
       { path: '/dashboard/askCouch', component: AskCouch, name:' إسأل المدرب',},
@@ -65,7 +71,7 @@ const routes = [
     meta: {
       footerTop: false,
       header:false,
-      requiresVisitor: true,
+     auth: true,
       
     }
   },
@@ -80,7 +86,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
 
     }
   },
@@ -92,7 +98,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -103,7 +109,7 @@ const routes = [
       footerTop: false,
       header: false,
       footer: false,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -114,7 +120,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -125,7 +131,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -136,7 +142,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -147,7 +153,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -157,7 +163,7 @@ const routes = [
     meta: {
       footerTop: false,
       header: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -168,7 +174,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
   {
@@ -179,7 +185,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
     }
   },
  
@@ -191,7 +197,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
 
     }
   },
@@ -203,7 +209,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
 
     }
   },
@@ -214,7 +220,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
 
       
     }
@@ -236,7 +242,7 @@ const routes = [
       footerTop: false,
       header: true,
       footer: true,
-      requiresVisitor: true,
+     auth: true,
       
     }
   },
@@ -247,7 +253,7 @@ const routes = [
       footerTop: false,
       header: false,
       footer: false,
-      requiresVisitor: true,
+     auth: false,
     }
    },
   
@@ -263,26 +269,6 @@ const router = new VueRouter({
   routes
 })
 
-// router.beforeEach((to, from, next) => {
-  
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//       var user = localStorage.loggedIn;
-//       if (!user ) {
-//         next({
-//           path: '/dashboard/adminlogin',
-//         })
-//       } else {
-//         next()
-//       }
-//     }else if (to.matched.some(record => record.meta.requiresVisitor)) {
-//       if (user) {
-//         next({
-//           path: '/dashboard',
-//         })
-//       } else {
-//         next()
-//       }
-//     }
-// })
+
 
 export default router

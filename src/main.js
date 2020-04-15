@@ -2,6 +2,8 @@
 import App from './App.vue'
 import router from './router'
 import store from "./stores";
+import appstore from './helpers/AppStorage'
+import AuthService from './services/auth.service'
 import "@/assets/scss/style.scss";
 import jQuery from 'jquery'
 import axios from 'axios';
@@ -27,7 +29,8 @@ window.Toast = Swal.mixin({
     toast.addEventListener('mouseleave', Swal.resumeTimer)
   }
 })
-
+window.appstore = appstore;
+window.AuthService = AuthService;
 // import 'bootstrap/dist/css/bootstrap.css'
 import VueCoreVideoPlayer from 'vue-core-video-player'
 Vue.use(VueCoreVideoPlayer)
@@ -37,6 +40,13 @@ global .$ = jQuery
 
 Vue.config.productionTip = false
 
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.auth) && !AuthService.loggedIn()) {
+    next({ path: '/dashboard/adminlogin', query: { redirect: to.fullPath }});
+  } else {
+    next();
+  }
+});
 
 
 new Vue({

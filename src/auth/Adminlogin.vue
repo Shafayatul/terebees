@@ -23,11 +23,15 @@
                 class="overflow-hidden"
               > 
                 <div class="text-center">
-                  <img max="auto" width="70%"  src="@/assets/img/tarabees_character.png">
+                  <img
+                    max="auto"
+                    width="70%"
+                    src="@/assets/img/tarabees_character.png"
+                  >
                 </div>           
                 <v-card-text>
                   <v-text-field
-                    v-model="form.username"                  
+                    v-model="user.username"                  
                     name="username"
                     label="البريد الإلكتروني"
                     type="text"                
@@ -36,7 +40,7 @@
                   />
 
                   <v-text-field
-                    v-model="form.password"                  
+                    v-model="user.password"                  
                     name="password"
                     label="كلمة السر"
                     type="password"
@@ -47,10 +51,10 @@
                   <v-btn
                     x-large
                     block
-                    color="primary"                
-                                    
+                    color="primary"            
+                             
                     @click="login"
-                  >
+                  >                
                     تسجيل الدخول
                   </v-btn>
                 </v-card-actions>
@@ -64,9 +68,18 @@
                   </span>
                 </div>
               </v-card>
-               <p v-if="message">{{ message }}</p>
             </v-form>
           </v-col>
+         
+          <v-snackbar
+            v-model="snackbar"
+            :timeout="timeout"
+            right
+             color="primary"  
+          >
+            {{ text }}
+           
+          </v-snackbar>
         </v-layout>
       </v-container>
     </section>
@@ -78,12 +91,14 @@ export default {
   name: 'Login',
   data() {
     return {
-      form:{
+     user:{
         username:null,
-        password:null
-      },
-      loading: false,
-      message: '',
+        password:null,
+       
+      },        
+      snackbar: false,
+      text: 'حدث خطأ اثناء تسجيل الدخول البريد الالكتروني او كلمة السر غير صحيحة',
+      timeout: 2000,
      
     };
   },
@@ -92,26 +107,24 @@ export default {
       return this.$store.state.auth.status.loggedIn;
     }
   },
-  created() {
-    if (this.loggedIn) {
-      this.$router.push('/dashboard/profile');
-    }
-  },
+  
   methods: {
   login() {
       this.loading = true;
       this.$refs.form.validate()
-        if (this.form.username && this.form.password) {
-          const response =  AuthService.login(this.form);
-          // console.log(response)
-          this.$router.push('/dashboard');
-            error => {
-              this.loading = false;
-              this.message =
-                (error.response && error.response.data) ||
-                error.message ||
-                error.toString();
-            }
+        if (this.user.username && this.user.password) {
+              AuthService.login(this.user).then(
+              res=> {
+               this.snackbar = false 
+               AuthService.responseAfterLogin(res)
+             
+            } )
+            .catch(error=>{
+              this.snackbar = true
+               console.log(error)
+               this.errors = error
+            })
+         
           
         }
       }

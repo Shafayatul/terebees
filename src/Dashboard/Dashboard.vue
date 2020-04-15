@@ -87,70 +87,16 @@
       >
         <v-icon>mdi-view-dashboard</v-icon>
       </v-btn>
-      <v-menu
-        bottom
-        left
-        offset-y
-        origin="top right"
-        transition="scale-transition"
-      >
-        <template v-slot:activator="{ attrs, on }">
-          <v-btn
-            class="ml-2"
-            min-width="0"
-            text
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-badge
-              color="red"
-              overlap
-              bordered
-            >
-              <template v-slot:badge>
-                <span>5</span>
-              </template>
-
-              <v-icon>mdi-bell</v-icon>
-            </v-badge>
-          </v-btn>
-        </template>
-
-        <v-list
-          :tile="false"
-          nav
+    
+        <v-btn
+          class="ml-2"
+          min-width="0"
+          text
+        @click="logout"
         >
-          <div>
-            <app-bar-item
-              v-for="(n, i) in notifications"
-              :key="`item-${i}`"
-            >
-              <v-list-item-title v-text="n" />
-            </app-bar-item>
-          </div>
-        </v-list>
-      </v-menu>
-      <v-btn
-        class="ml-2"
-        min-width="0"
-        text
-        to="/profile/user"
-      >
-        <v-icon>mdi-account</v-icon>
-      </v-btn>
-      <router-link
-        to="/profile"
-        class="nav-link"
-      >
-        <!-- {{ currentUser.username }} -->
-      </router-link>
-      <a
-        class="nav-link"
-        href
-        @click.prevent="logOut"
-      >
-        LogOut
-      </a>
+          <v-icon>mdi-logout</v-icon>
+        </v-btn>
+     
     </v-app-bar>
 
 
@@ -169,7 +115,26 @@
         </v-row>
       </v-container>
     </v-content>
-
+    <v-dialog
+      v-model="loading"
+      hide-overlay
+      persistent
+      width="300"
+    >
+      <v-card
+        color="primary"
+        dark
+      >
+        <v-card-text>
+          Please stand by
+          <v-progress-linear
+            indeterminate
+            color="white"
+            class="mb-0"
+          />
+        </v-card-text>
+      </v-card>
+    </v-dialog>
     <v-footer
       id="core-footer"
       app
@@ -184,13 +149,7 @@
     data () {
       return {
         drawer: null,
-        notifications: [
-        'Mike John Responded to your email',
-        'You have 5 new tasks',
-        'You\'re now friends with Andrew',
-        'Another Notification',
-        'Another one',
-      ],
+        loading: false,      
         items:[
                 { icon: 'mdi-view-dashboard', title: 'لوحة التحكم',to:'/dashboard',show: true},
                 { icon: 'mdi-post-outline', title: 'المقالات الرياضية',to:'/dashboard/articals',show: true},
@@ -203,29 +162,12 @@
        
       }
     },
-   computed: {
-    currentUser() {
-      return this.$store.state.auth.user;
-    },
-    showAdminBoard() {
-      if (this.currentUser && this.currentUser.roles) {
-        return this.currentUser.roles.includes('ROLE_ADMIN');
-      }
-
-      return false;
-    },
-    showModeratorBoard() {
-      if (this.currentUser && this.currentUser.roles) {
-        return this.currentUser.roles.includes('ROLE_MODERATOR');
-      }
-
-      return false;
-    }
-  },
+ 
+    
   methods: {
-    logOut() {
-      this.$store.dispatch('auth/logout');
-      this.$router.push('/dashboard/adminlogin');
+    logout() {
+    AuthService.logout()
+     
     }
   }
 };

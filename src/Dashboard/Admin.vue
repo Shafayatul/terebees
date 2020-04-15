@@ -1,26 +1,160 @@
 <template>
   <v-container>
     <v-row>
-      <v-col
-        v-for="(item, index) in saticcs"
-        :key="item.id"
-        class="mx-auto" 
-        cols="auto"
+      <v-col      
         md="6"
-        lg="6"
-        sm="12"
+        col="auto"
         xl="6"
-        
+        sm="12"
       >
         <v-card
           class="text-center"
+          to="dashboard/articals"
         >
           <v-card-text>
+            <div class="v-card__text ">
+              <v-icon
+                class="primary--text"
+                style="font-size: 40px;"
+              >
+                mdi-post-outline
+              </v-icon>
+            </div>
             <div class="v-card__text display-2 primary--text">
-              {{ item }}
+              {{ saticcs.articles }}
             </div>
           </v-card-text>  
-          <span class="headline"> {{ index }} {{ item.title }} </span>      
+          <span class="headline">المقالات الرياضية</span>
+        </v-card>
+      </v-col>
+        <v-col      
+         md="6"
+        col="auto"
+        xl="6"
+        sm="12"
+      >
+        <v-card
+          class="text-center"
+          to="dashboard/askCouch"
+        >
+          <v-card-text>
+            <div class="v-card__text ">
+              <v-icon
+                class="primary--text"
+                style="font-size: 40px;"
+              >
+               mdi-frequently-asked-questions
+              </v-icon>
+            </div>
+            <div class="v-card__text display-2 primary--text">
+              {{ saticcs.questions }}
+            </div>
+          </v-card-text>  
+        <span class="headline">اسأل المدرب</span>
+        </v-card>
+      </v-col>
+        <v-col      
+         md="6"
+        col="auto"
+        xl="6"
+        sm="12"
+      >
+        <v-card
+          class="text-center"
+          to="dashboard/packages"
+        >
+          <v-card-text>
+            <div class="v-card__text ">
+              <v-icon
+                class="primary--text"
+                style="font-size: 40px;"
+              >
+                mdi-account-supervisor
+              </v-icon>
+            </div>
+            <div class="v-card__text display-2 primary--text">
+              {{ saticcs.customers }}
+            </div>
+          </v-card-text>  
+         <span class="headline">المستخدمين</span>
+        </v-card>
+      </v-col>
+        <v-col      
+         md="6"
+        col="auto"
+        xl="6"
+        sm="12"
+      >
+        <v-card
+          class="text-center"
+          to="dashboard/packages"
+        >
+          <v-card-text>
+            <div class="v-card__text ">
+              <v-icon
+                class="primary--text"
+                style="font-size: 40px;"
+              >
+                mdi-account-check
+              </v-icon>
+            </div>
+            <div class="v-card__text display-2 primary--text">
+              {{ saticcs.customers_has_subscription }}
+            </div>
+          </v-card-text>  
+         <span class="headline">مشتركين الحزم</span>
+        </v-card>
+      </v-col>
+        <v-col      
+         md="6"
+        col="auto"
+        xl="6"
+        sm="12"
+      >
+        <v-card
+          class="text-center"
+          to="dashboard/gallery"
+        >
+          <v-card-text>
+            <div class="v-card__text ">
+              <v-icon
+                class="primary--text"
+                style="font-size: 40px;"
+              >
+                mdi mdi-video
+              </v-icon>
+            </div>
+            <div class="v-card__text display-2 primary--text">
+              {{ saticcs.videos }}
+            </div>
+          </v-card-text>  
+          <span class="headline">مكتبة الفيديو</span>
+        </v-card>
+      </v-col>
+        <v-col      
+        md="6"
+        col="auto"
+        xl="6"
+        sm="12"
+      >
+        <v-card
+          class="text-center"
+          to="dashboard/articals"
+        >
+          <v-card-text>
+            <div class="v-card__text ">
+              <v-icon
+                class="primary--text"
+                style="font-size: 40px;"
+              >
+               mdi mdi-phone
+              </v-icon>
+            </div>
+            <div class="v-card__text display-2 primary--text">
+              {{ saticcs.calls }}
+            </div>
+          </v-card-text>  
+         <span class="headline">إتصالات</span>
         </v-card>
       </v-col>
     </v-row>
@@ -59,3 +193,7 @@ export default {
     }
 }
 </script>
+<style scoped>
+
+</style>
+

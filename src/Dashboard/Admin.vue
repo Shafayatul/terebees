@@ -61,7 +61,7 @@
       >
         <v-card
           class="text-center"
-          to="dashboard/packages"
+          to="dashboard/customer"
         >
           <v-card-text>
             <div class="v-card__text ">

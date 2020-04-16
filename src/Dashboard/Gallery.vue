@@ -110,7 +110,7 @@
           v-model="page"
           :length="meta.last_page"
           prev-icon="mdi-menu-left"
-
+          :total-visible="5"
           next-icon="mdi-menu-right"
           @input="changePage"
         />

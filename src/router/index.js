@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Dashboard from '../Dashboard/Dashboard.vue'
-import Profile from '../Dashboard/Profile.vue'
+import Customer from '../Dashboard/Customer.vue'
 import Admin from '../Dashboard/Admin.vue'
 import Articals from '../Dashboard/Articals.vue'
 import AskCouch from '../Dashboard/AskCouch.vue'
@@ -47,7 +47,7 @@ const routes = [
     }
   },
   {
-    path: '',
+    path: '/admin',
     name: '',
     redirect: "/dashboard",
     component: Dashboard,
@@ -59,7 +59,7 @@ const routes = [
       { path: '/dashboard/training', component: Training , name:' جداول التدريب ',},
       { path: '/dashboard/packages', component: Packages , name:' الحزم',},
       { path: '/dashboard/articals', component: Articals , name:'المقالات الرياضية', }, 
-      { path: '/dashboard/profile', component: Profile , name:'F', },    
+      { path: '/dashboard/customer', component: Customer , name:'Customer', },    
 
       // ...other sub routes
     ],   

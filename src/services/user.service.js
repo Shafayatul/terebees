@@ -35,17 +35,16 @@ class UserService {
   
   }
 
-  getModeratorBoard() {
-    return axios.get(API_URL + 'mod', );
-  }
-
+  customers() {
+    return axios.get(API_URL + 'admin/customers', );
+}
+AskCouch() {
+  return axios.get(API_URL + 'admin/questions', );
+}
   getAdminBoard() {
     return axios.get(API_URL + 'admin/dashboard-statistics', );
   }
-  subscriptionsadit() {
-    return axios.get(API_URL + 'admin/customer-subscriptions/{subscription_id}/diets ', );
-  
-  }
+ 
 
 }
 

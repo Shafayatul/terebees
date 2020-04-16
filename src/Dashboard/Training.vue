@@ -6,6 +6,8 @@
         :items="desserts"        
         sort-by="title"
         class="elevation-1"
+        hide-default-footer
+
       >
         <template v-slot:body="{ items }">
           <tbody>
@@ -13,7 +15,7 @@
               v-for="item in items"
               :key="item.id"
             > 
-              <td>{{ item.customer.first_name }} {{ item.customer.last_name }}</td>
+              <td v-if="item.customer !=null">{{ item.customer.first_name }} {{ item.customer.last_name }}</td>
               <td>{{ item.subscription_type }}</td> 
               <td>{{ item.created_at }}</td>
               
@@ -467,6 +469,16 @@
           </v-toolbar>
         </template>
       </v-data-table>
+       <div class="text-center">
+        <v-pagination
+          v-model="page"
+          :length="meta.last_page"
+          prev-icon="mdi-menu-left"
+          :total-visible="7" 
+          next-icon="mdi-menu-right"
+          @input="getPage"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -538,7 +550,19 @@ import UserService from '../services/user.service';
 		.catch((error) => {
 			console.log(error);
 		});
-    },     
+    },
+     getPage(page) {
+        axios.get('http://api.tarabees.com/api/admin/customer-subscriptions?page='+page)
+        .then((response) => {
+          this.desserts = response.data.data;
+          this.meta = response.data.meta;
+                console.log(this.meta)
+                
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      },      
 
       editItem (item) {
         UserService.subscriptionsadit()     

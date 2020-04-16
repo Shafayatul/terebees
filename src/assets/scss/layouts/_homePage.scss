@@ -7,6 +7,10 @@
 .main-banner {
 	opacity: 1 !important;
 }
+.theme--dark.v-list-item--active:before:first-child {
+	opacity: 0 !important;
+	}
+	v-list-item--active
 
 .banner-content {
 	height: 100vh;

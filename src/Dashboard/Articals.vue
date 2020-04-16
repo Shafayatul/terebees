@@ -61,7 +61,7 @@
                   class="mb-2"
                   v-on="on"
                 >
-                 مقال جديد
+                  مقال جديد
                 </v-btn>
               </template>
               <v-card
@@ -79,7 +79,7 @@
                       text
                       @click="save"
                     >
-                     <v-icon>mdi-content-save</v-icon>
+                      <v-icon>mdi-content-save</v-icon>
                     </v-btn>
                     <v-btn
                       icon
@@ -152,7 +152,6 @@
                     </v-row>
                   </v-container>
                 </v-card-text>
-
               </v-card>
             </v-dialog>
           </v-toolbar>
@@ -169,16 +168,16 @@
         </template>
       </v-data-table>
         
-        <div class="text-center">
-          <v-pagination
-            v-model="page"
-            :length="meta.last_page"
-            @input="getPage"
-
-            prev-icon="mdi-menu-left"
-            next-icon="mdi-menu-right"
-          ></v-pagination>
-        </div>
+      <div class="text-center">
+        <v-pagination
+          v-model="page"
+          :length="meta.last_page"
+          prev-icon="mdi-menu-left"
+          :total-visible="7" 
+          next-icon="mdi-menu-right"
+          @input="getPage"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -223,6 +222,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
       form:{
         title: null,
         content: null,
+        url: null,
       },
       image:[],
       defaultItem: {
@@ -264,11 +264,12 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
           let form = new FormData;
           form.append('image',this.image)
           form.append('title',this.form.title)
+          form.append('title',this.form.url)
           form.append('content',this.form.content)
           form.append('_method','PUT')
-          axios.post(`http://api.tarabees.com//api/admin/articles/${this.form.id}`,form)
+          axios.post(`http://api.tarabees.com/api/admin/articles/${this.form.id}`,form)
           .then((result) => {
-            axios.get(`http://api.tarabees.com//api/admin/articles/${result.data.id}`)
+            axios.get(`http://api.tarabees.com/api/admin/articles/${result.data.id}`)
             .then((result) => {
               console.log(result.data)
               Object.assign(this.desserts[this.editedIndex], result.data.data)
@@ -280,9 +281,9 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
           });
         } else {
           this.desserts.push(this.editedItem)
-          axios.post('http://api.tarabees.com//api/admin/articles',formData)
+          axios.post('http://api.tarabees.com/api/admin/articles',formData)
           .then((result) => {
-            axios.get(`http://api.tarabees.com//api/admin/articles/${result.data.id}`)
+            axios.get(`http://api.tarabees.com/api/admin/articles/${result.data.id}`)
             .then((result) => {
               console.log(result.data)
               this.desserts.unshift(result.data.data)
@@ -301,7 +302,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
         .then((response) => {
           this.desserts = response.data.data;
           this.meta = response.data.meta;
-                console.log(this.meta)
+               
                 
         })
         .catch((error) => {
@@ -309,7 +310,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
         });
       }, 
       getPage(page) {
-        axios.get('/api/admin/articles?page='+page)
+        axios.get('http://api.tarabees.com/api/admin/articles?page='+page)
         .then((response) => {
           this.desserts = response.data.data;
           this.meta = response.data.meta;
@@ -334,7 +335,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
       },
       deleteArticle(id,index){
         
-        axios.post(`/api/admin/articles/${id}`,{_method:'DELETE'})
+        axios.post(`http://api.tarabees.com/api/admin/articles/${id}`,{_method:'DELETE'})
         .then(res=>{
           this.desserts.splice(index, 1)  
         })

@@ -5,7 +5,9 @@
         :headers="headers"
         :items="desserts"        
         sort-by="title"
+        hide-default-footer
         class="elevation-1"
+
       >
         <template v-slot:body="{ items }">
           <tbody>
@@ -13,20 +15,26 @@
               v-for="item in items"
               :key="item.id"
             > 
-              <td>{{ item.customer.first_name }} {{ item.customer.last_name }}</td>
+              <td v-if="item.customer !=null">{{ item.customer.first_name }} {{ item.customer.last_name }}</td>
               <td>{{ item.subscription_type }}</td>                       
               <td>{{ item.is_vip }}</td>
               <td>{{ item.has_injuries }}</td>
               <td>{{ item.created_at }}</td>
               
-              <td>   
+              <td>
                 <v-icon
-                  small
-                  class="mr-2"
+                 
+                  class="mr-2 item-font"
                   @click="editItem(item)"
                 >
                   mdi-pencil
-                </v-icon>              
+                </v-icon>   
+                 <v-icon               
+                  
+                  @click="deleteItem(item)"
+                >
+                  mdi-delete-outline
+                </v-icon>            
               </td>
             </tr>
           </tbody>
@@ -474,6 +482,16 @@
           </v-toolbar>
         </template>
       </v-data-table>
+        <div class="text-center">
+        <v-pagination
+          v-model="page"
+          :length="meta.last_page"
+          prev-icon="mdi-menu-left"
+          :total-visible="7" 
+          next-icon="mdi-menu-right"
+          @input="getPage"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -510,7 +528,8 @@ import UserService from '../services/user.service';
         
          
         ],
-      meta : {},  
+      meta : {},
+      page:1,  
       desserts: [ ],
       editedIndex: -1,
       editedItem:{}
@@ -545,7 +564,29 @@ import UserService from '../services/user.service';
         .catch((error) => {
         console.log(error);
       });
-    },     
+    },
+     getPage(page) {
+        axios.get('http://api.tarabees.com/api/admin/customer-subscriptions?page='+page)
+        .then((response) => {
+          this.desserts = response.data.data;
+          this.meta = response.data.meta;
+                console.log(this.meta)
+                
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      },        
+    deleteItem (item) {
+        const index = this.desserts.indexOf(item)
+        confirm('Are you sure you want to delete this item?') && this.deleteCustomersub(item.id,index)
+      },
+      deleteCustomersub(id,index){        
+        axios.post(`http://api.tarabees.com/api/admin/customer-subscriptions/${id}`,{_method:'DELETE'})
+        .then(res=>{
+          this.desserts.splice(index, 1)  
+        })
+      },     
 
       editItem (item) {
         UserService.subscriptionsadit()     
@@ -565,7 +606,7 @@ import UserService from '../services/user.service';
 
       save () {
 
-        axios.post(`/api/admin/subscription/${1}`,{})
+        UserService.subscriptionsadit()   
 
         if (this.editedIndex > -1) {
           Object.assign(this.desserts[this.editedIndex], this.editedItem)

@@ -88,15 +88,14 @@
         <v-icon>mdi-view-dashboard</v-icon>
       </v-btn>
     
-        <v-btn
-          class="ml-2"
-          min-width="0"
-          text
+      <v-btn
+        class="ml-2"
+        min-width="0"
+        text
         @click="logout"
-        >
-          <v-icon>mdi-logout</v-icon>
-        </v-btn>
-     
+      >
+        <v-icon>mdi-logout</v-icon>
+      </v-btn>
     </v-app-bar>
 
 
@@ -157,6 +156,7 @@
                 { icon: 'mdi-frequently-asked-questions', title: 'اسأل المدرب',to:'/dashboard/askCouch',show: true},
                 { icon: 'mdi-package-variant', title: 'الحزم',to:'/dashboard/packages',show: true},
                 { icon: 'mdi-dumbbell', title: 'التدريب',to:'/dashboard/Training',show: true},
+                { icon: 'mdi-account-supervisor', title: 'الزبون',to:'/dashboard/customer',show: true},
                
         ],
        
@@ -186,7 +186,5 @@
     text-align: center;
     margin: 0 auto;
 }
-.v-list .v-list-item--active:first-child {
-background: none ;
-}
+
 </style>

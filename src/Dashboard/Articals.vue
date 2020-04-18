@@ -13,8 +13,8 @@
               v-for="item in items"
               :key="item.id"
             >
-              <td>{{ item.title }}</td>
-              <td>{{ item.content.substring(0,20)+".." }}</td>
+              <td  v-if="item.title">{{ item.title.slice(0, 10) }}</td>
+              <td  v-if="item.content">{{ item.content.slice(0, 20)}}</td>
               <td>{{ item.published_at }}</td>
               
               <td>منشور</td>
@@ -119,7 +119,7 @@
                         lg="6"
                       >
                         <v-file-input
-                          v-model="image"
+                          v-model="form.image"
                           placeholder="إختر صورة المقال"
                           label="صورة المقال"
                           outlined
@@ -178,6 +178,19 @@
           @input="getPage"
         />
       </div>
+        <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+    >
+      {{ text }}
+   
+    </v-snackbar>
+      <v-snackbar
+      v-model="snackbarerror"
+      :timeout="timeout" >
+      {{  error }}
+     
+    </v-snackbar>
     </div>
   </div>
 </template>
@@ -187,8 +200,13 @@ import UserService from '../services/user.service';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
   export default {
     data: () => ({
+      snackbar: false,
+     snackbarerror: false,
+      text: 'has been added successfully',
+      error:'has been added error',
+      timeout: 2000,
       editor: ClassicEditor,
-     switch1: true,   
+      switch1: true,   
       editorConfig: {
            language: {
             // The UI will be English.
@@ -223,12 +241,10 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
         title: null,
         content: null,
         url: null,
+        image:[],
       },
-      image:[],
-      defaultItem: {
-        title: '',
-       content: ''
-      },
+     
+     
     }),
 
     computed: {
@@ -259,39 +275,30 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
         this.getFormData(formData,this.form)
         formData.append('image',this.image)
-        if (this.editedIndex > -1) {
-          // Object.assign(this.desserts[this.editedIndex], this.form)
+        if (this.editedIndex > -1) {               
           let form = new FormData;
-          form.append('image',this.image)
+          form.append('image',this.form.image)
           form.append('title',this.form.title)
-          form.append('title',this.form.url)
+          form.append('url',this.form.url)
           form.append('content',this.form.content)
           form.append('_method','PUT')
           axios.post(`http://api.tarabees.com/api/admin/articles/${this.form.id}`,form)
           .then((result) => {
-            axios.get(`http://api.tarabees.com/api/admin/articles/${result.data.id}`)
-            .then((result) => {
-              console.log(result.data)
-              Object.assign(this.desserts[this.editedIndex], result.data.data)
-            }).catch((err) => {
-              
-            });
+            this.snackbar = true
+             this.dialog = false
+            this.getPage(this.desserts)
           }).catch((err) => {
-            
+            this.snackbarerror = true
           });
         } else {
           this.desserts.push(this.editedItem)
           axios.post('http://api.tarabees.com/api/admin/articles',formData)
           .then((result) => {
-            axios.get(`http://api.tarabees.com/api/admin/articles/${result.data.id}`)
-            .then((result) => {
-              console.log(result.data)
-              this.desserts.unshift(result.data.data)
-            }).catch((err) => {
-              
-            });
+            this.initialize()
+             this.dialog = false
+            this.snackbar = true
           }).catch((err) => {
-            
+            this.snackbarerror = true
           });
 
         }
@@ -325,7 +332,7 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
       editItem (item) {
        
         this.editedIndex = this.desserts.indexOf(item)
-        this.form = Object.assign({title:null ,content: null}, item)
+        this.form = Object.assign({}, item)
         this.dialog = true
       },
 

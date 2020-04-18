@@ -1,110 +1,45 @@
 
 
 <template>
-  <div class="section-articals">
-    <div class="container"> 
-      <v-row justify="end">
-        <v-dialog
-          v-model="dialog"
-          transition="dialog-bottom-transition"
+  <div class="section-articals pr-5 pl-5">
+    <div class="container">
+      <v-row> 
+        <v-col 
+          cols="12"
         >
-          <template v-slot:activator="{ on }">
-             <v-col
-                    cols="12"
-                    sm="6"
-                    md="12"
-                    lg="11"
-                  >
-            <v-btn
-              color="primary"
-              dark
-              v-on="on"
-            >
-              <v-icon>mdi-cloud-upload</v-icon><span class="mx-2"> تحميل </span>
-            </v-btn>
-             </v-col>
-          </template>
+          <v-btn
+            color="primary"
+            dark
+            @click="dialog=true"
+          >
+            <v-icon>mdi-cloud-upload</v-icon><span class="mx-2"> تحميل </span>
+          </v-btn>
+        </v-col> 
+        <v-col 
+          v-for="(item,index) in videos.data"
+          :key="index"
+          cols="auto"
+          md="6"
+          lg="6"
+        >  
           <v-card>
-            <v-toolbar
-              dark
-              color="primary"
-            >
-              <v-btn
-                icon
-                dark
-                @click="close"
-              >
-                <v-icon>mdi-close</v-icon>
-              </v-btn>
-              <v-toolbar-title>Settings</v-toolbar-title>
-              <v-spacer />
-              <v-toolbar-items>
-                <v-btn
-                  dark
-                  text
-                  @click="addVideo"
-                >
-                  Save
-                </v-btn>
-              </v-toolbar-items>
-            </v-toolbar>
-
-            <v-card-text>
-              <v-container>
-                <v-row>
-                  <v-col
-                    cols="12"
-                    sm="6"
-                    md="12"
-                    lg="6"
-                  >
-                    <v-text-field
-                      v-model="title"
-                      label="العنوان"
-                      outlined
-                    />
-                  </v-col>            
-                  <v-col
-                    cols="12"
-                    sm="6"
-                    md="12"
-                    lg="6"
-                  >
-                    <v-file-input
-                      v-model="video"
-                      placeholder="إختر صورة المقال"
-                      label="صورة المقال"
-                      outlined
-                    />
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card-text>
-          </v-card>
-        </v-dialog>
-      </v-row>
-      <v-card
-        v-for="(item,index) in videos.data"
-        :key="index"
-        class="pull-left ml-3 my-3"
-        width="500"
-      >
-        <video
-          :src="item.video.path"
-          width="100%"
-          height="200px"
-          controls="controls"
-          style="background: black;"
-        />
+            <video
+              :src="item.video.path"
+              width="100%"
+              height="200px"
+              controls="controls"
+              style="background: black;"
+            />
             
-        <v-card-text class="jutify-content-between text--primary">
-          <!-- <v-btn icon  @click="deleteItem(item.id)">
+            <v-card-text class="jutify-content-between text--primary">
+              <!-- <v-btn icon  @click="deleteItem(item.id)">
                 <v-icon>mdi-close</v-icon>
               </v-btn> -->
-          <div>{{ item.title }}</div>
-        </v-card-text>
-      </v-card>
-        
+              <div>{{ item.title }}</div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row> 
       <div class="text-center">
         <v-pagination
           v-model="page"
@@ -116,6 +51,74 @@
         />
       </div>
     </div>
+    <v-dialog
+      v-model="dialog"
+      transition="dialog-bottom-transition"
+      width="600px"
+    >
+      <v-card>
+        <v-toolbar
+          dark
+          color="primary"
+        >
+          <v-btn
+            icon
+            dark
+            @click="close"
+          >
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Settings</v-toolbar-title>
+          <v-spacer />
+          <v-toolbar-items>
+            <v-btn
+              dark
+              text
+              @click="addVideo"
+            >
+              Save
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
+
+        <v-card-text>
+          <v-container>
+            <v-row>
+              <v-col
+                cols="12"
+              >
+                <v-text-field
+                  v-model="title"
+                  label="العنوان"
+                  outlined
+                />
+              </v-col>            
+              <v-col
+                cols="12"
+              >
+                <v-file-input
+                  v-model="video"
+                  placeholder="إختر صورة المقال"
+                  label="صورة المقال"
+                  outlined
+                />
+              </v-col>
+              <v-col 
+                cols="12"
+              >
+                <v-btn
+                  color="primary"
+                  dark
+                  @click="addVideo"
+                >
+                  <v-icon>mdi-cloud-upload</v-icon><span class="mx-2"> تحميل </span>
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 

@@ -86,6 +86,19 @@ img{max-width: 100%;}
     transform: translateY(-19%);
     max-width: 320px;
 }
+#latest-posts{
+    position: relative;
+}
+#latest-posts > img.top-img {
+    position: absolute;
+    z-index: 1;
+    top:0%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-78%);
+    max-width: 200px;
+}
 .site-footer{
     background: #010208 !important;
     border-top: 5px solid #FD1831;

@@ -27,8 +27,8 @@
           <span class="headline">المقالات الرياضية</span>
         </v-card>
       </v-col>
-        <v-col      
-         md="6"
+      <v-col      
+        md="6"
         col="auto"
         xl="6"
         sm="12"
@@ -43,18 +43,18 @@
                 class="primary--text"
                 style="font-size: 40px;"
               >
-               mdi-frequently-asked-questions
+                mdi-frequently-asked-questions
               </v-icon>
             </div>
             <div class="v-card__text display-2 primary--text">
               {{ saticcs.questions }}
             </div>
           </v-card-text>  
-        <span class="headline">اسأل المدرب</span>
+          <span class="headline">اسأل المدرب</span>
         </v-card>
       </v-col>
-        <v-col      
-         md="6"
+      <v-col      
+        md="6"
         col="auto"
         xl="6"
         sm="12"
@@ -76,11 +76,11 @@
               {{ saticcs.customers }}
             </div>
           </v-card-text>  
-         <span class="headline">المستخدمين</span>
+          <span class="headline">المستخدمين</span>
         </v-card>
       </v-col>
-        <v-col      
-         md="6"
+      <v-col      
+        md="6"
         col="auto"
         xl="6"
         sm="12"
@@ -102,11 +102,11 @@
               {{ saticcs.customers_has_subscription }}
             </div>
           </v-card-text>  
-         <span class="headline">مشتركين الحزم</span>
+          <span class="headline">مشتركين الحزم</span>
         </v-card>
       </v-col>
-        <v-col      
-         md="6"
+      <v-col      
+        md="6"
         col="auto"
         xl="6"
         sm="12"
@@ -131,7 +131,7 @@
           <span class="headline">مكتبة الفيديو</span>
         </v-card>
       </v-col>
-        <v-col      
+      <v-col      
         md="6"
         col="auto"
         xl="6"
@@ -147,14 +147,14 @@
                 class="primary--text"
                 style="font-size: 40px;"
               >
-               mdi mdi-phone
+                mdi mdi-phone
               </v-icon>
             </div>
             <div class="v-card__text display-2 primary--text">
               {{ saticcs.calls }}
             </div>
           </v-card-text>  
-         <span class="headline">إتصالات</span>
+          <span class="headline">إتصالات</span>
         </v-card>
       </v-col>
     </v-row>

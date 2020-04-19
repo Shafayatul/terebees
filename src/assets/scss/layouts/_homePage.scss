@@ -565,13 +565,14 @@
     z-index: 2000;
 
      .over-text {
-     position: absolute;
-     right: 35%;
-    color:#fff;
-     top: 13%;
-     line-height: 0.9;
-}
+		position: absolute;
+		color: #fff;
+		line-height: 0.9;
+		left: 13%;
+		top: 46%;
 	}
+}
+	
 .rel img{
 	position: relative;
 }	

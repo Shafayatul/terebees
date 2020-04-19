@@ -37,7 +37,7 @@
                         <a href="#" class="btn btn-bottom-border mr-20 ">انستجرام <i class="mr-2 fa fa-instagram ft-icon"></i></a>
                         <a href="#" class="btn btn-bottom-border  mr-20">فيسبوك <i class="mr-2 fa fa-linkedin ft-icon"></i></a>
                     </div>
-                    <p class="text-center mt-45 mb-0">Copyright &copy; {{currentDate.getFullYear()}} All Rights Reserved </p>
+                    <p class="text-center mt-45 mb-0">حقوق النشر &copy; {{currentDate.getFullYear()}} كل الحقوق محفوظة</p>
                 </div>
             </div> <!-- end .row -->
         </div>
@@ -68,7 +68,7 @@ export default{
     .step-2{fill:#6E0001;}
  .ft-icon {
     background-image: -webkit-gradient(linear, left top, right top, from(#fe3e0b), to(#fa004a));
-    padding: 6px 10px;
+    padding: 6px 8px;
     border-radius: 68%;
     color: #000000;
 }

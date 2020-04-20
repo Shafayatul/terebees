@@ -1068,7 +1068,7 @@
       <a
         v-show="isNinja"
         href="#"
-        class="rel"
+        class="rel"        
         @click="isNinja = !isNinja"
       >
         <img
